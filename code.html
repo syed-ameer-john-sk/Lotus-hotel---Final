@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lotus Restaurant | Journal Privé du Chef</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&amp;family=Poppins:wght@300;400;600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@200;300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e6c364",
+                        "on-primary": "#3d2e00",
+                        "background": "#080808",
+                        "surface": "#121212",
+                        "outline": "#99907e",
+                        "secondary": "#ffb690",
+                        "warm-white": "#F5F0E8"
+                    },
+                    fontFamily: {
+                        "headline": ["Playfair Display", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "serif-display": ["Playfair Display", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { 
+                background-color: #050505; 
+                color: #F5F0E8; 
+                background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 100%);
+            }
+        }
+        .journal-page {
+            box-shadow: 0 30px 60px -12px rgba(0,0,0,0.5), 0 18px 36px -18px rgba(0,0,0,0.5);
+            background: linear-gradient(to right, #111 0%, #161616 2%, #121212 5%, #121212 95%, #161616 98%, #111 100%);
+        }
+        .journal-border {
+            border-left: 20px solid #1a150e;
+            border-right: 4px solid #1a150e;
+        }
+        .annotation {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            position: relative;
+        }
+        .annotation::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 10px;
+            width: 15px;
+            height: 1px;
+            background: #e6c364;
+            opacity: 0.5;
+        }
+        .gold-divider { 
+            height: 1px; 
+            background: linear-gradient(90deg, transparent, #e6c364, transparent); 
+        }
+        .bilingual-sub { font-family: 'Playfair Display', serif; font-style: italic; color: #e6c364; font-size: 0.85rem; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="font-body selection:bg-primary selection:text-on-primary min-h-screen">
+<nav class="fixed top-0 w-full z-50 mix-blend-difference px-8 py-6 flex justify-between items-center pointer-events-none">
+<div class="text-xl font-serif-display italic tracking-widest text-primary pointer-events-auto">LOTUS</div>
+<div class="pointer-events-auto">
+<a class="border border-primary/40 text-primary px-6 py-2 text-[10px] font-label uppercase tracking-[0.3em] hover:bg-primary hover:text-on-primary transition-all" href="#reservation">Book a Table</a>
+</div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-4 py-20 lg:py-32">
+<section class="journal-page journal-border mb-32 relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[921px]">
+<div class="lg:col-span-8 relative h-[614px] lg:h-auto overflow-hidden">
+<img alt="Dramatic Tandoor" class="w-full h-full object-cover scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFkMeAbEN5lUVQ2OaFoJRe8P-LoTgc1I274-q5wZ8EyTriYlFrCpvBT98wn99fQC7twUxdGhYqtMS9FoKNBImh6zKvYBv_d1Q3BP-SyZDjLSHgwIRxOyqb-z9GDZZEuufH3XzEd4tfiLl4f7Zw8lTdmmaqFsqQDKUOSZO2xlt6u3t5ohW974p77j3QxywOEcNhMljMO89TRU6duEk0wCVY8KLxaO4bC1Q-06772sKEr7KMc4dpxsM8sBGZkh8x4VXKxgyrRpCmEPiU"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+</div>
+<div class="lg:col-span-4 p-8 lg:p-16 flex flex-col justify-center bg-surface/80 backdrop-blur-sm">
+<span class="text-primary font-label uppercase tracking-[0.5em] text-[10px] mb-8 block">Entrée #001 — Toulouse</span>
+<h1 class="font-serif-display text-5xl lg:text-7xl text-warm-white leading-[0.9] mb-12">
+                    L'Art de la <br/>
+<span class="italic text-primary">Gastronomie</span>
+</h1>
+<div class="annotation text-lg opacity-90 max-w-sm leading-relaxed mb-12">
+                    Une immersion sensorielle au cœur de l'Inde millénaire.
+                    <span class="block mt-4 text-xs italic font-body text-warm-white/60">The Silk Road Experience • Toulouse</span>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">filter_vintage</span>
+</div>
+<span class="text-[10px] uppercase tracking-widest text-primary/60 flex items-center">Scroll to read journal</span>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-32">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+<div class="lg:col-span-2 space-y-8">
+<div class="journal-page p-4">
+<img alt="Tandoor Cooking" class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-mexAmYfb79oqlu6YtRofiLphI9E_lvieET8IE7AUFn6Z7e9GNK4H6gTPra-YqKpzwjAvwjS4g1gTd2s4Z3ppD96MDgRnRa4vqYJGW46gAxehRyVSoe-iMkKgn_WoPH4Cn2drTqgzOYMeHFQY0hgsWYCtGRqOLdXb04ysTQu7g1-D-Vs3UW_SsLGZJmaar-t2y8XnbOkekaxl62RYxtwVRbdSzjuC2C5KxbjcJ8AbYqvqXYbgL6F6RN8v93VrZcnb5N3qPXUshakI"/>
+</div>
+<div class="flex gap-8">
+<div class="max-w-xs journal-page journal-border p-8">
+<h4 class="font-serif-display text-2xl text-primary mb-4 italic">Le Feu du Tandoor</h4>
+<p class="text-sm text-warm-white/60 leading-loose">Un four d'argile traditionnel chauffé à blanc pour une cuisson qui préserve le jus.</p>
+<p class="bilingual-sub mt-4 uppercase text-[9px] tracking-widest">Ancient art of clay-oven roasting.</p>
+</div>
+<div class="flex-1 journal-page p-4 grayscale hover:grayscale-0 transition-all">
+<img alt="Spices" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3EE5Bb6O3TLE4_98rxJNEu3M4pvUgOgFTJSqfP-7DTib_q3ffZsVSQQBjuCTWkskaopcqMr6PrIVN9ZP3TVkL1PACBSkJhUSmmK6VX91ibNzQAYQDt3QpkadSibDPglnincf8u-jm9Eo4h5ryFndKh8OWoU1I80klzWPVbGoS9tvqlj_kU3hyvj2844rN0r3Csd5EvsFoenGWc3MgDLQOnHvQRaFYegCokkhf97sbsZJB69Ks3ONAK9iZh-3N5xEVgedS-h0AD1zV"/>
+</div>
+</div>
+</div>
+<div class="space-y-12 pt-12">
+<div class="annotation">
+<span class="text-primary font-label uppercase tracking-widest text-[9px] mb-2 block">Entry #042 — Technique</span>
+<h3 class="font-serif-display text-4xl text-warm-white italic mb-6 leading-tight">L'Expérience Sensorielle</h3>
+<p class="text-sm text-warm-white/50 leading-relaxed mb-8">Notes: The balance of spices is a language of its own. We source from the Silk Road producers directly.</p>
+<div class="gold-divider w-24"></div>
+</div>
+<div class="journal-page journal-border p-6 mt-8">
+<img alt="Plating" class="w-full aspect-[4/5] object-cover mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDhAfqGBbEyVm2dvH13LEuj7DxPTuBRjSKE7Ti-k_xyJFWmWHWXnMW9bJIweTE5dvlVR-1yTxusgK6SyhLNKWS0g-I-pr4ovQ_U7LI8eV3CbVni3xD-Wk-7mUEqPonoOA_6OmeaNmjxkQQSH1xbYMh71VhfH7--HKs_HjOw7SkZvI8kG-UhyuQrriSmztz1TrBmkuZkA8PtOqI-pDRyQkUdyN5Pj2aTfEHLOg_Dl5iTQju0AwY-aX_vqEnV6A3KaOunlPmS7jimD0Y"/>
+<h4 class="font-serif-display text-xl text-primary mb-2 italic">Dressage Signature</h4>
+<p class="text-[11px] text-warm-white/60 tracking-wide uppercase">Where French elegance meets Indian soul.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-32">
+<div class="flex flex-col lg:flex-row gap-4 items-stretch">
+<div class="lg:w-1/4 p-12 bg-primary/5 flex items-center justify-center text-center">
+<div class="rotate-0 lg:-rotate-90 whitespace-nowrap">
+<span class="text-primary font-label uppercase tracking-[0.8em] text-sm">Formules Signatures</span>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-1">
+<div class="journal-page p-8 hover:bg-surface transition-colors cursor-pointer border-r border-white/5">
+<h4 class="font-serif-display text-xl text-primary mb-2">Midi</h4>
+<div class="text-2xl font-serif-display text-warm-white mb-6">19€</div>
+<ul class="text-[10px] space-y-4 text-warm-white/40 uppercase tracking-widest leading-loose">
+<li>Entrée du Jour</li>
+<li>Plat au Choix</li>
+<li>Naan Nature</li>
+</ul>
+</div>
+<div class="journal-page p-8 bg-surface border-t-2 border-primary">
+<span class="bg-primary text-on-primary text-[8px] font-bold px-2 py-0.5 mb-4 inline-block">FAVORI</span>
+<h4 class="font-serif-display text-xl text-primary mb-2">Lotus</h4>
+<div class="text-2xl font-serif-display text-warm-white mb-6">32€</div>
+<ul class="text-[10px] space-y-4 text-warm-white/70 uppercase tracking-widest leading-loose">
+<li>Duo d'Entrées</li>
+<li>Plat Signature</li>
+<li>Naan Fromage</li>
+<li>Dessert</li>
+</ul>
+</div>
+<div class="journal-page p-8 hover:bg-surface transition-colors cursor-pointer border-r border-white/5">
+<h4 class="font-serif-display text-xl text-primary mb-2">India</h4>
+<div class="text-2xl font-serif-display text-warm-white mb-6">28€</div>
+<ul class="text-[10px] space-y-4 text-warm-white/40 uppercase tracking-widest leading-loose">
+<li>Samosa / Pakora</li>
+<li>Tikka Masala</li>
+<li>Riz Basmati</li>
+<li>Lassi</li>
+</ul>
+</div>
+<div class="journal-page p-8 hover:bg-surface transition-colors cursor-pointer border-r border-white/5">
+<h4 class="font-serif-display text-xl text-primary mb-2">Royal</h4>
+<div class="text-2xl font-serif-display text-warm-white mb-6">45€</div>
+<ul class="text-[10px] space-y-4 text-warm-white/40 uppercase tracking-widest leading-loose">
+<li>Gambas Tandoori</li>
+<li>Shahi Korma</li>
+<li>Café Gourmand</li>
+</ul>
+</div>
+<div class="journal-page p-8 hover:bg-surface transition-colors cursor-pointer">
+<h4 class="font-serif-display text-xl text-primary mb-2">Enfant</h4>
+<div class="text-2xl font-serif-display text-warm-white mb-6">14€</div>
+<ul class="text-[10px] space-y-4 text-warm-white/40 uppercase tracking-widest leading-loose">
+<li>Poulet Doux</li>
+<li>Riz ou Frites</li>
+<li>Glace</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-32 space-y-24">
+<div class="text-center max-w-2xl mx-auto mb-20">
+<h3 class="font-serif-display text-5xl text-warm-white mb-6">Les Plats d'Or</h3>
+<p class="bilingual-sub uppercase tracking-[0.3em]">Signature Plates Log</p>
+<div class="gold-divider mt-8"></div>
+</div>
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<div class="lg:w-3/5 journal-page p-4">
+<img alt="Butter Chicken" class="w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCln6bPJT91PMUs_CLUBKN2882Xc1FicHndu2QTvMX-87_yUIsWuUQ9llo9yZTkPpEOsK8kuBs4Vf0QAVYsSiIz8XGMYJHWJelp_mRzbwv90MRNXSZrQ-J8BOZGrQASYy7fRnsLw9pHQYFCXabU3tPrSe6LMZbOKyyTw6DJz0fNBKszlbWOKa9eAUyG7f17UEn1EHiUgaBFYHHsLvwWhWlBX4Vx11Zi7iqB_q1gGQamjjUJxj_85_WVK0MknOZz6zm4_FAfVjPrmmQH"/>
+</div>
+<div class="lg:w-2/5 annotation space-y-6">
+<h5 class="font-serif-display text-4xl text-warm-white italic">Butter Chicken Signature</h5>
+<div class="text-primary font-serif-display italic text-2xl">18.50€</div>
+<p class="text-sm text-warm-white/50 leading-relaxed">Poulet fermier grillé au tandoor, mijoté pendant 12 heures dans une sauce onctueuse à la tomate cerise et au beurre clarifié.</p>
+<div class="pt-4 border-t border-primary/20">
+<p class="text-[10px] text-primary/40 uppercase tracking-[0.4em]">Note: The sauce must be velvet-smooth.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row-reverse gap-12 items-center">
+<div class="lg:w-3/5 journal-page p-4">
+<img alt="Biryani Royal" class="w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARVRDJoCPDwZQfYUvtihII2JmY7Yu8NKV9dZqgO8vuqA5hJAlRVImzNBEyy_KdBWuXVHFoNs3ILt3ITyTDNuABeIyYUSvfglJbSIGdOAYjNhBnPvtcxgAuj-YCCB7WhSJqWz3sWoY7cLjv4C82eby0uxLs2svPeUgvCtr0_kwqHl-YFX9j-bDH2PyVsH-rEcEVZq3Vs399KnHytg81tcYCD5jOqVx2NBDi4cXSj8Ag5Bai97MRz-R6-467t50xBkmCLufsEnkkfN7F"/>
+</div>
+<div class="lg:w-2/5 annotation lg:text-right space-y-6">
+<h5 class="font-serif-display text-4xl text-warm-white italic">Lamb Dum Biryani</h5>
+<div class="text-primary font-serif-display italic text-2xl">22.00€</div>
+<p class="text-sm text-warm-white/50 leading-relaxed">Riz basmati extra-long infusé au safran du Cachemire, agneau fondant et fruits secs caramélisés.</p>
+<div class="pt-4 border-t border-primary/20 flex lg:justify-end">
+<p class="text-[10px] text-primary/40 uppercase tracking-[0.4em]">Note: Slow-cooked under a dough crust.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-32 flex justify-center" id="menu">
+<div class="journal-page journal-border max-w-3xl w-full p-12 lg:p-24 relative">
+<div class="absolute top-8 right-8 text-primary/10">
+<span class="material-symbols-outlined text-[120px]">filter_vintage</span>
+</div>
+<div class="text-center mb-16">
+<span class="text-primary font-label uppercase tracking-[0.4em] text-[10px] block mb-4">Le Menu du Lotus</span>
+<h3 class="font-serif-display text-4xl text-warm-white italic">La Carte Gastronomique</h3>
+<div class="flex flex-wrap justify-center gap-6 mt-12 text-[9px] uppercase tracking-widest text-primary/60">
+<span class="text-primary border-b border-primary">Entrées</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Plats</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Végétarien</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Desserts</span>
+</div>
+</div>
+<div class="space-y-10">
+<div class="flex justify-between items-baseline group">
+<div>
+<h6 class="font-serif-display text-lg text-warm-white group-hover:text-primary transition-colors">Samosa Légumes Bio</h6>
+<p class="bilingual-sub text-[8px] uppercase mt-1">Crispy vegetable pastries</p>
+</div>
+<span class="font-serif-display text-primary italic">7.50€</span>
+</div>
+<div class="flex justify-between items-baseline group">
+<div>
+<h6 class="font-serif-display text-lg text-warm-white group-hover:text-primary transition-colors">Oignon Bhajia à la Truffe</h6>
+<p class="bilingual-sub text-[8px] uppercase mt-1">Hint of black truffle</p>
+</div>
+<span class="font-serif-display text-primary italic">9.00€</span>
+</div>
+<div class="flex justify-between items-baseline group">
+<div>
+<h6 class="font-serif-display text-lg text-warm-white group-hover:text-primary transition-colors">Chicken Tikka Malai</h6>
+<p class="bilingual-sub text-[8px] uppercase mt-1">Marinated in cream and cardamom</p>
+</div>
+<span class="font-serif-display text-primary italic">11.50€</span>
+</div>
+</div>
+<div class="mt-20 flex justify-center">
+<button class="text-[9px] font-label uppercase tracking-[0.4em] border border-primary/30 px-12 py-5 hover:bg-primary/10 transition-colors">Full Journal View</button>
+</div>
+</div>
+</section>
+<section class="mb-32" id="gallery">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="col-span-2 row-span-2 journal-page p-2 h-[600px]">
+<img alt="Interior" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmJ63F2ZXPB5WAFcrgeE9CaG6BWCbVQ1jAU6kmrc9W75uZMdkC3vP_TXt4VglScomdW8yRwPfjeqhVNx5VX5ugSPWxBKnP9LxnBeKe4k0-XblF1oJ3fXqTEjRED7La8TWEQsi90-ilR5MTjU0xyDit3VyCN9Zb9lC81QhHmyDpdO7HlEKKSfpsYUTQMjE5gaOqe8goAkBW-cwsBcZB6pzyxfITcMp-xHN54mgG_qU8ZK11WM2NcBGyCaZjuyOEQp9g3zXpOHHiaQzh"/>
+</div>
+<div class="journal-page p-2 h-[290px]">
+<img alt="Chef" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvFZOc6kbc7ghaqEb3hcmd6MfRxdaro3E-lvU44FrOZaGm_BpxejRpBbBfWJlbsQmqGxa58Rz6ZWUq0_Ad95bBBbhN_Lfg7zJPv251GDd7633B6xPUDnj26EciyR845clHtwjLJMgbYDyqJLJNZQKTW1vjdGmIAHkAIY5nzvdp1LBvEfUOMGeTok9_2A1BYOjzi00ULa4lla6nXDo8HNde8K3ZGsGjpgATyj8sja10e66fh4IOB_fan879-mHgPSjKJZth2ZcITnO0"/>
+</div>
+<div class="journal-page p-2 h-[290px]">
+<img alt="Spice detail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBfOzSaC2-APEkaPTpIVt1TlFopFQ-K1wirXpsAyBVa7XfLO1QjkUbRXg102asGuLV28Wr2f4i4UdAxWGlDhfcC7lS5XWdZUuJbMoUjuXdJ8K8vB6ubH0nQuuKsHxElVuZ7Db_OPRql0TKjdt3f0ECyWDH5vGjzjkfOJzvwgVMa1b6QhTYoocZCBMifjmsA8kA06VoQ7VTarxxlOxc9dH8Do3jcFvPvG0R_7G3KXPx1heF9R-EB38oHhLLNgwxd2m8-_Bshr4XbP00"/>
+</div>
+<div class="col-span-2 journal-page p-2 h-[290px]">
+<img alt="Toulouse" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYOQey8XBRldijUubCcSr5_i17U02WhU-rtSpIzbTQOL49EF4aSWvxM9hVVnIOs9AKJktlMHb_kxN4y0vbmsZkN-j-aHMF94z-KHMzazLRZiEsAKuqZrXEvQywHeD3TY_RBk0C7WIsr6_Htpmevt-hP2UaCpuqF7BwMtDmSAfPhSetR2Yuc7bcMxdE866_kZhPeUx_keL6zD90S3-5EcuKs-sk9j-0OJfXhy0_JtsM1nrpBK3gqncFmNMJtwA-4xI3VWoHy7WSYOrA"/>
+</div>
+</div>
+</section>
+<section class="max-w-4xl mx-auto" id="reservation">
+<div class="journal-page journal-border p-12 lg:p-20 relative bg-stone-900">
+<div class="text-center mb-16">
+<h3 class="font-serif-display text-4xl text-warm-white italic mb-4">Réserver l'Instant</h3>
+<p class="bilingual-sub uppercase tracking-widest text-xs">Request Entry into the Lotus Journal</p>
+<div class="gold-divider w-24 mx-auto mt-6"></div>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-1">
+<label class="block text-[9px] uppercase tracking-[0.3em] text-primary/60">Nom Complet</label>
+<input class="w-full bg-transparent border-b border-primary/20 focus:border-primary outline-none py-3 text-warm-white text-sm" placeholder="Nom..." type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block text-[9px] uppercase tracking-[0.3em] text-primary/60">Email</label>
+<input class="w-full bg-transparent border-b border-primary/20 focus:border-primary outline-none py-3 text-warm-white text-sm" placeholder="Email..." type="email"/>
+</div>
+<div class="space-y-1">
+<label class="block text-[9px] uppercase tracking-[0.3em] text-primary/60">Date &amp; Heure</label>
+<input class="w-full bg-transparent border-b border-primary/20 focus:border-primary outline-none py-3 text-warm-white text-sm" type="datetime-local"/>
+</div>
+<div class="space-y-1">
+<label class="block text-[9px] uppercase tracking-[0.3em] text-primary/60">Convives</label>
+<select class="w-full bg-transparent border-b border-primary/20 focus:border-primary outline-none py-3 text-warm-white text-sm appearance-none">
+<option class="bg-stone-900">2 Personnes</option>
+<option class="bg-stone-900">4 Personnes</option>
+<option class="bg-stone-900">6+ Personnes</option>
+</select>
+</div>
+<div class="md:col-span-2 mt-12 flex justify-center">
+<button class="w-full lg:w-auto bg-primary text-on-primary px-16 py-6 font-label uppercase tracking-[0.5em] text-[10px] hover:shadow-[0_15px_30px_rgba(230,195,100,0.2)] transition-all">Sign the Guestbook</button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<footer class="bg-black py-24 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-3 gap-16 text-center lg:text-left">
+<div class="space-y-8">
+<h4 class="text-primary font-serif-display italic text-3xl">LOTUS</h4>
+<p class="font-body text-stone-500 text-xs leading-loose max-w-xs mx-auto lg:mx-0">L'excellence de la haute gastronomie indienne au cœur de la Ville Rose depuis 2018.</p>
+</div>
+<div class="space-y-6">
+<h5 class="text-warm-white font-label uppercase text-[10px] tracking-[0.4em]">Horaires</h5>
+<p class="text-[10px] text-stone-500 uppercase tracking-widest leading-loose">Lun - Sam : 12h-14h30 / 19h-23h<br/>Dimanche : 19h-23h</p>
+</div>
+<div class="space-y-6">
+<h5 class="text-warm-white font-label uppercase text-[10px] tracking-[0.4em]">Contact</h5>
+<p class="text-[10px] text-stone-500 uppercase tracking-widest leading-loose">12 Rue d'Alsace-Lorraine, 31000 Toulouse</p>
+<p class="text-primary text-xl font-serif-display italic">05 61 23 45 67</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 mt-24 pt-12 border-t border-white/5">
+<p class="text-[8px] text-stone-700 uppercase tracking-[0.5em] text-center">© 2024 LOTUS RESTAURANT • ARTISANAL JOURNAL EDITION</p>
+</div>
+</footer>
+
+</body></html>
