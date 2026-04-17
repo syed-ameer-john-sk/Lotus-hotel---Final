@@ -22,7 +22,6 @@ window.addEventListener('load', () => {
 
 function initAll() {
   initI18n();
-  initEntry();
   initNav();
   initScrollReveal();
   initMenuTabs();
@@ -167,16 +166,6 @@ function initLangSelector() {
       selector.classList.remove('open');
     });
   });
-}
-
-/* ==========================================================
-   ENTRY SCREEN
-   ========================================================== */
-function initEntry() {
-  const screen = document.getElementById('entry-screen');
-  if (!screen) return;
-  screen.style.display = 'none';
-  document.body.style.overflow = '';
 }
 
 /* ==========================================================
