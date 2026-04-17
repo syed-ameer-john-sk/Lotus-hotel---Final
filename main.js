@@ -7,18 +7,20 @@
 /* ==========================================================
    GLOBAL STATE
    ========================================================== */
-let currentLang = localStorage.getItem('lotus_lang') || 'fr';
+let currentLang = (typeof localStorage !== 'undefined' && localStorage.getItem('lotus_lang')) || 'fr';
 
 /* ==========================================================
    LOADING SCREEN
    ========================================================== */
-window.addEventListener('load', () => {
-  const loader = document.getElementById('loader');
-  if (loader) {
-    setTimeout(() => loader.classList.add('hide'), 800);
-  }
-  initAll();
-});
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    if (loader) {
+      setTimeout(() => loader.classList.add('hide'), 800);
+    }
+    initAll();
+  });
+}
 
 function initAll() {
   initI18n();
@@ -97,51 +99,55 @@ function translateMenu(lang) {
    I18N ENGINE
    ========================================================== */
 function t(key) {
-  const lang = translations[currentLang] || translations['fr'];
-  return lang[key] || translations['fr'][key] || key;
+  const lang = (typeof translations !== 'undefined' && translations[currentLang]) || (typeof translations !== 'undefined' && translations['fr']) || {};
+  return lang[key] || (typeof translations !== 'undefined' && translations['fr'] && translations['fr'][key]) || key;
 }
 
 function applyTranslations(lang) {
   currentLang = lang;
-  localStorage.setItem('lotus_lang', lang);
-  document.documentElement.lang = lang;
-  // RTL
-  if (RTL_LANGS.includes(lang)) {
-    document.documentElement.dir = 'rtl';
-  } else {
-    document.documentElement.dir = 'ltr';
+  if (typeof localStorage !== 'undefined') {
+    localStorage.setItem('lotus_lang', lang);
   }
-  // Apply all data-i18n elements
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    const val = t(key);
-    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-      el.placeholder = val;
+  if (typeof document !== 'undefined') {
+    document.documentElement.lang = lang;
+    // RTL
+    if (typeof RTL_LANGS !== 'undefined' && RTL_LANGS.includes(lang)) {
+      document.documentElement.dir = 'rtl';
     } else {
-      el.textContent = val;
+      document.documentElement.dir = 'ltr';
     }
-  });
-  // Placeholders
-  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
-    el.placeholder = t(el.getAttribute('data-i18n-ph'));
-  });
-  // HTML content (allow em tags)
-  document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    el.innerHTML = t(el.getAttribute('data-i18n-html'));
-  });
-  // Update active lang button
-  document.querySelectorAll('.lang-option').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-  // Update lang btn label
-  const langBtn = document.getElementById('lang-btn-label');
-  if (langBtn && LANG_META[lang]) {
-    langBtn.textContent = LANG_META[lang].flag + ' ' + lang.toUpperCase();
+    // Apply all data-i18n elements
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const val = t(key);
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+    // Placeholders
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+      el.placeholder = t(el.getAttribute('data-i18n-ph'));
+    });
+    // HTML content (allow em tags)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      el.innerHTML = t(el.getAttribute('data-i18n-html'));
+    });
+    // Update active lang button
+    document.querySelectorAll('.lang-option').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    // Update lang btn label
+    const langBtn = document.getElementById('lang-btn-label');
+    if (langBtn && typeof LANG_META !== 'undefined' && LANG_META[lang]) {
+      langBtn.textContent = LANG_META[lang].flag + ' ' + lang.toUpperCase();
+    }
+    // Re-run status after lang change
+    initOpeningStatus();
+    // Translate the menu arrays (Poulet, Agneau, etc.)
+    translateMenu(lang);
   }
-  // Re-run status after lang change
-  initOpeningStatus();
-  // Translate the menu arrays (Poulet, Agneau, etc.)
-  translateMenu(lang);
 }
 
 function initI18n() {
@@ -303,7 +309,7 @@ function initOpeningStatus() {
     if (!isOpen) {
       if (time < lunchStart) nextOpen = '12h00';
       else if (time >= lunchEnd && time < dinnerStart) nextOpen = '19h00';
-      else nextOpen = '12h00 ' + (translations[currentLang]?.nav_menu ? '' : '');
+      else nextOpen = '12h00 ' + (typeof translations !== 'undefined' && translations[currentLang]?.nav_menu ? '' : '');
     }
   }
 
@@ -344,7 +350,7 @@ function initParticles() {
 
 /* ==========================================================
    VIDEO OBSERVER
-   ========================================================== */
+   ========================================================= */
 function initVideoObserver() {
   const videos = document.querySelectorAll('video[data-autoplay]');
   if (!videos.length) return;
@@ -417,4 +423,15 @@ function showToast(msg) {
   toast.textContent = msg;
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 4000);
+}
+
+/* ==========================================================
+   EXPORT FOR TESTING
+   ========================================================== */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    t,
+    get currentLang() { return currentLang; },
+    set currentLang(v) { currentLang = v; }
+  };
 }
