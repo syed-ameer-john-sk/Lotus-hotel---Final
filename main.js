@@ -125,9 +125,30 @@ function applyTranslations(lang) {
   document.querySelectorAll('[data-i18n-ph]').forEach(el => {
     el.placeholder = t(el.getAttribute('data-i18n-ph'));
   });
-  // HTML content (allow em tags)
+  // HTML content (allow em tags securely)
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    el.innerHTML = t(el.getAttribute('data-i18n-html'));
+    const rawText = t(el.getAttribute('data-i18n-html'));
+    el.replaceChildren();
+
+    const parts = rawText.split(/(<\/?em>)/i);
+    let inEm = false;
+
+    parts.forEach(part => {
+      if (!part) return;
+      if (part.toLowerCase() === '<em>') {
+        inEm = true;
+      } else if (part.toLowerCase() === '</em>') {
+        inEm = false;
+      } else {
+        if (inEm) {
+          const emEl = document.createElement('em');
+          emEl.textContent = part;
+          el.appendChild(emEl);
+        } else {
+          el.appendChild(document.createTextNode(part));
+        }
+      }
+    });
   });
   // Update active lang button
   document.querySelectorAll('.lang-option').forEach(btn => {
@@ -312,10 +333,18 @@ function initOpeningStatus() {
   if (dot && text) {
     if (isOpen) {
       dot.className = 'status-dot open';
-      text.innerHTML = `<span class="status-open">${t('status_open')}</span>`;
+      text.replaceChildren();
+      const span = document.createElement('span');
+      span.className = 'status-open';
+      span.textContent = t('status_open');
+      text.appendChild(span);
     } else {
       dot.className = 'status-dot closed';
-      text.innerHTML = `<span class="status-closed">${t('status_closed')} ${nextOpen}</span>`;
+      text.replaceChildren();
+      const span = document.createElement('span');
+      span.className = 'status-closed';
+      span.textContent = `${t('status_closed')} ${nextOpen}`;
+      text.appendChild(span);
     }
   }
 }
