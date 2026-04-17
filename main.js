@@ -55,43 +55,7 @@ function initHeroSlider() {
 /* ==========================================================
    MENU TRANSLATION SYSTEM
    ========================================================== */
-const menuWords = {
-  fr: { Poulet:'Poulet', Agneau:'Agneau', Boeuf:'Boeuf', Crevettes:'Crevettes', Crevette:'Crevette', 'Légumes':'Légumes', Calamar:'Calamar', Saumon:'Saumon', Gambas:'Gambas', Poisson:'Poisson', Viande:'Viande', 'Fromage':'Fromage', Nature:'Nature', Mangue:'Mangue', Rose:'Rose', Ananas:'Ananas', Banane:'Banane' },
-  en: { Poulet:'Chicken', Agneau:'Lamb', Boeuf:'Beef', Crevettes:'Prawns', Crevette:'Prawn', 'Légumes':'Vegetables', Calamar:'Squid', Saumon:'Salmon', Gambas:'King Prawns', Poisson:'Fish', Viande:'Meat', 'Fromage':'Cheese', Nature:'Plain', Mangue:'Mango', Rose:'Rose', Ananas:'Pineapple', Banane:'Banana' },
-  es: { Poulet:'Pollo', Agneau:'Cordero', Boeuf:'Ternera', Crevettes:'Gambas', Crevette:'Gamba', 'Légumes':'Verduras', Calamar:'Calamar', Saumon:'Salmón', Gambas:'Gambas', Poisson:'Pescado', Viande:'Carne', 'Fromage':'Queso', Nature:'Natural', Mangue:'Mango', Rose:'Rosa', Ananas:'Piña', Banane:'Plátano' },
-  de: { Poulet:'Hähnchen', Agneau:'Lamm', Boeuf:'Rind', Crevettes:'Garnelen', Crevette:'Garnele', 'Légumes':'Gemüse', Calamar:'Tintenfisch', Saumon:'Lachs', Gambas:'Riesengarnelen', Poisson:'Fisch', Viande:'Fleisch', 'Fromage':'Käse', Nature:'Natur', Mangue:'Mango', Rose:'Rose', Ananas:'Ananas', Banane:'Banane' },
-  it: { Poulet:'Pollo', Agneau:'Agnello', Boeuf:'Manzo', Crevettes:'Gamberi', Crevette:'Gambero', 'Légumes':'Verdure', Calamar:'Calamaro', Saumon:'Salmone', Gambas:'Gamberoni', Poisson:'Pesce', Viande:'Carne', 'Fromage':'Formaggio', Nature:'Naturale', Mangue:'Mango', Rose:'Rosa', Ananas:'Ananas', Banane:'Banana' },
-  ar: { Poulet:'دجاج', Agneau:'لحم غنم', Boeuf:'لحم بقر', Crevettes:'جمبري', Crevette:'جمبري', 'Légumes':'خضروات', Calamar:'حبار', Saumon:'سلمون', Gambas:'جمبري كبير', Poisson:'سمك', Viande:'لحم', 'Fromage':'جبن', Nature:'سادة', Mangue:'مانجو', Rose:'ورد', Ananas:'أناناس', Banane:'موز' },
-  hi: { Poulet:'चिकन', Agneau:'मेमना', Boeuf:'बीफ', Crevettes:'झींगा', Crevette:'झींगा', 'Légumes':'सब्ज़ियाँ', Calamar:'स्क्विड', Saumon:'सैल्मन', Gambas:'बड़ा झींगा', Poisson:'मछली', Viande:'मांस', 'Fromage':'पनीर', Nature:'सादा', Mangue:'आम', Rose:'गुलाब', Ananas:'अनानास', Banane:'केला' },
-};
 
-function translateMenu(lang) {
-  const dict = menuWords[lang] || menuWords.fr;
-  const frDict = menuWords.fr;
-  // Build reverse map from current displayed text back to FR key
-  // We store original FR text in a data attribute for reliable mapping
-  document.querySelectorAll('.curry-name, .menu-item-name, .drinks-item-name').forEach(el => {
-    // Store original FR text on first run
-    if (!el.dataset.origFr) {
-      el.dataset.origFr = el.textContent.trim();
-    }
-    let text = el.dataset.origFr;
-    // Replace each FR word with the translated word
-    Object.keys(frDict).forEach(frWord => {
-      const regex = new RegExp('\\b' + frWord + '\\b', 'g');
-      if (regex.test(text)) {
-        text = text.replace(regex, dict[frWord] || frWord);
-      }
-    });
-    // Preserve V tag spans
-    const vTag = el.querySelector('.menu-tag');
-    if (vTag) {
-      el.childNodes[0].textContent = text.replace(/\s*$/, ' ');
-    } else {
-      el.textContent = text;
-    }
-  });
-}
 
 /* ==========================================================
    I18N ENGINE
@@ -140,9 +104,7 @@ function applyTranslations(lang) {
   }
   // Re-run status after lang change
   initOpeningStatus();
-  // Translate the menu arrays (Poulet, Agneau, etc.)
-  translateMenu(lang);
-}
+  }
 
 function initI18n() {
   applyTranslations(currentLang);
@@ -189,9 +151,16 @@ function initNav() {
   const overlay = document.getElementById('nav-overlay');
   const closeBtn = document.getElementById('nav-close');
 
-  // Scroll effect
+  // Scroll effect (using requestAnimationFrame for performance)
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+        ticking = false;
+      });
+      ticking = true;
+    }
   }, { passive: true });
 
   // Mobile toggle
@@ -389,18 +358,26 @@ function initStickyReserve() {
   if (!sticky) return;
   const resSection = document.getElementById('reservation');
   let shown = false;
+  let stickyTicking = false;
   window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const shouldShow = scrollY > 500;
-    // Hide when reservation section is visible
-    if (resSection) {
-      const rect = resSection.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        sticky.classList.add('hidden');
-        return;
-      }
+    if (!stickyTicking) {
+      window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        const shouldShow = scrollY > 500;
+        // Hide when reservation section is visible
+        if (resSection) {
+          const rect = resSection.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            sticky.classList.add('hidden');
+            stickyTicking = false;
+            return;
+          }
+        }
+        sticky.classList.toggle('hidden', !shouldShow);
+        stickyTicking = false;
+      });
+      stickyTicking = true;
     }
-    sticky.classList.toggle('hidden', !shouldShow);
   }, { passive: true });
 }
 

@@ -1,897 +1,858 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+
+<html dir="ltr" lang="fr">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Best Indian Restaurant in Toulouse | Lotus Restaurant</title>
-  <meta name="description" content="Lotus Restaurant offers authentic Indian cuisine in Toulouse with traditional spices, modern ambiance, and premium dining experience. Reserve your table today."/>
-  <meta name="keywords" content="Indian restaurant Toulouse, restaurant indien Toulouse, Indian cuisine Toulouse, best Indian restaurant Toulouse"/>
-  <meta property="og:title" content="Lotus Restaurant – Indian Gastronomy in Toulouse"/>
-  <meta property="og:description" content="Authentic Indian cuisine crafted with traditional spices and modern elegance in the heart of Toulouse."/>
-  <meta property="og:type" content="restaurant"/>
-  <link rel="stylesheet" href="styles.css"/>
-  <!-- Structured Data -->
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Best Indian Restaurant in Toulouse | Lotus Restaurant</title>
+<meta content="Lotus Restaurant offers authentic Indian cuisine in Toulouse with traditional spices, modern ambiance, and premium dining experience. Reserve your table today." name="description"/>
+<meta content="Indian restaurant Toulouse, restaurant indien Toulouse, Indian cuisine Toulouse, best Indian restaurant Toulouse" name="keywords"/>
+<meta content="Lotus Restaurant – Indian Gastronomy in Toulouse" property="og:title"/>
+<meta content="Authentic Indian cuisine crafted with traditional spices and modern elegance in the heart of Toulouse." property="og:description"/>
+<meta content="restaurant" property="og:type"/>
+<link href="styles.css" rel="stylesheet"/>
+<!-- Structured Data -->
+<script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Restaurant","name":"Lotus Restaurant","image":"","address":{"@type":"PostalAddress","streetAddress":"12 Rue d'Alsace-Lorraine","addressLocality":"Toulouse","postalCode":"31000","addressCountry":"FR"},"telephone":"+33652515551","servesCuisine":"Indian","priceRange":"€€","openingHours":["Mo-Sa 12:00-14:30","Mo-Sa 19:00-23:00","Su 19:00-23:00"],"url":"","sameAs":["https://www.instagram.com/lotusrestoin/","https://www.tiktok.com/@Lotusrestaurentindientoulouse"]}
   </script>
 </head>
 <body>
-
-
 <!-- ============================================================
      ENTRY SCREEN
      ============================================================ -->
-
-
 <!-- ============================================================
      STICKY RESERVE
      ============================================================ -->
-<div id="sticky-reserve" class="hidden">
-  <a class="sticky-btn phone" href="tel:+33652515551">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-    <span data-i18n="res_call">Appeler</span>
-  </a>
-  <a class="sticky-btn green" href="https://wa.me/33652515551" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.12 1.531 5.845L0 24l6.337-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.724.886.936-3.614-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
-    <span data-i18n="res_whatsapp">WhatsApp</span>
-  </a>
-  <a class="sticky-btn gold" href="#reservation">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
-    <span data-i18n="nav_reserve">Réserver</span>
-  </a>
+<div class="hidden" id="sticky-reserve">
+<a class="sticky-btn phone" href="tel:+33652515551">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+<span data-i18n="res_call">Appeler</span>
+</a>
+<a class="sticky-btn green" href="https://wa.me/33652515551" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.12 1.531 5.845L0 24l6.337-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.724.886.936-3.614-.234-.372A9.818 9.818 0 1112 21.818z"></path></svg>
+<span data-i18n="res_whatsapp">WhatsApp</span>
+</a>
+<a class="sticky-btn gold" href="#reservation">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"></path></svg>
+<span data-i18n="nav_reserve">Réserver</span>
+</a>
 </div>
-
 <!-- ============================================================
      MOBILE NAV OVERLAY
      ============================================================ -->
-<div id="nav-overlay" class="nav-overlay"></div>
-<nav id="nav-mobile" class="nav-mobile">
-  <button id="nav-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--warm-white);font-size:1.5rem;cursor:pointer;">✕</button>
-  <a href="#experience" data-i18n="nav_experience">Expérience</a>
-  <a href="#menu" data-i18n="nav_menu">Menu</a>
-  <a href="#gallery" data-i18n="nav_gallery">Galerie</a>
-  <a href="#testimonials" data-i18n="test_eyebrow">Avis</a>
-  <a href="#reservation" data-i18n="nav_reservation">Réservation</a>
-  <a href="#location" data-i18n="nav_contact">Contact</a>
-  <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap;">
-    <button class="lang-option" data-lang="fr" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇫🇷 FR</button>
-    <button class="lang-option" data-lang="en" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇬🇧 EN</button>
-    <button class="lang-option" data-lang="es" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇪🇸 ES</button>
-    <button class="lang-option" data-lang="de" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇩🇪 DE</button>
-    <button class="lang-option" data-lang="it" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇮🇹 IT</button>
-    <button class="lang-option" data-lang="ar" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇸🇦 AR</button>
-    <button class="lang-option" data-lang="hi" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇮🇳 HI</button>
-  </div>
+<div class="nav-overlay" id="nav-overlay"></div>
+<nav class="nav-mobile" id="nav-mobile">
+<button id="nav-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--warm-white);font-size:1.5rem;cursor:pointer;">✕</button>
+<a data-i18n="nav_experience" href="#experience">Expérience</a>
+<a data-i18n="nav_menu" href="#menu">Menu</a>
+<a data-i18n="nav_gallery" href="#gallery">Galerie</a>
+<a data-i18n="test_eyebrow" href="#testimonials">Avis</a>
+<a data-i18n="nav_reservation" href="#reservation">Réservation</a>
+<a data-i18n="nav_contact" href="#location">Contact</a>
+<div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap;">
+<button class="lang-option" data-lang="fr" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇫🇷 FR</button>
+<button class="lang-option" data-lang="en" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇬🇧 EN</button>
+<button class="lang-option" data-lang="es" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇪🇸 ES</button>
+<button class="lang-option" data-lang="de" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇩🇪 DE</button>
+<button class="lang-option" data-lang="it" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇮🇹 IT</button>
+<button class="lang-option" data-lang="ar" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇸🇦 AR</button>
+<button class="lang-option" data-lang="hi" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇮🇳 HI</button>
+</div>
 </nav>
-
 <!-- ============================================================
      NAVBAR
      ============================================================ -->
 <header id="navbar">
-  <a href="#hero" class="nav-logo">
-    <!-- SVG Lotus Logo -->
-    <img src="lotus-3d-icon.png" alt="Lotus Logo" class="nav-logo-img">
-    <div>
-      <div class="nav-logo-text">Lotus</div>
-      <div class="nav-logo-sub">Restaurant • Toulouse</div>
-    </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#experience" data-i18n="nav_experience">Expérience</a></li>
-    <li><a href="#menu" data-i18n="nav_menu">Menu</a></li>
-    <li><a href="#gallery" data-i18n="nav_gallery">Galerie</a></li>
-    <li><a href="#testimonials" data-i18n="test_eyebrow">Avis</a></li>
-    <li><a href="#reservation" data-i18n="nav_reservation">Réservation</a></li>
-    <li><a href="#location" data-i18n="nav_contact">Contact</a></li>
-  </ul>
-  <div class="nav-right">
-    <!-- Language Selector -->
-    <div class="lang-selector">
-      <button class="lang-btn" id="lang-btn-label">🇫🇷 FR
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="lang-dropdown">
-        <button class="lang-option active" data-lang="fr"><span class="lang-flag">🇫🇷</span> Français</button>
-        <button class="lang-option" data-lang="en"><span class="lang-flag">🇬🇧</span> English</button>
-        <button class="lang-option" data-lang="es"><span class="lang-flag">🇪🇸</span> Español</button>
-        <button class="lang-option" data-lang="de"><span class="lang-flag">🇩🇪</span> Deutsch</button>
-        <button class="lang-option" data-lang="it"><span class="lang-flag">🇮🇹</span> Italiano</button>
-        <button class="lang-option" data-lang="ar"><span class="lang-flag">🇸🇦</span> العربية</button>
-        <button class="lang-option" data-lang="hi"><span class="lang-flag">🇮🇳</span> हिन्दी</button>
-      </div>
-    </div>
-    <a href="#reservation" class="btn-reserve-nav" data-i18n="nav_reserve">Réserver</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<a class="nav-logo" href="#hero">
+<!-- SVG Lotus Logo -->
+<img alt="Lotus Logo" class="nav-logo-img" src="lotus-3d-icon.png"/>
+<div>
+<div class="nav-logo-text">Lotus</div>
+<div class="nav-logo-sub">Restaurant • Toulouse</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_experience" href="#experience">Expérience</a></li>
+<li><a data-i18n="nav_menu" href="#menu">Menu</a></li>
+<li><a data-i18n="nav_gallery" href="#gallery">Galerie</a></li>
+<li><a data-i18n="test_eyebrow" href="#testimonials">Avis</a></li>
+<li><a data-i18n="nav_reservation" href="#reservation">Réservation</a></li>
+<li><a data-i18n="nav_contact" href="#location">Contact</a></li>
+</ul>
+<div class="nav-right">
+<!-- Language Selector -->
+<div class="lang-selector">
+<button class="lang-btn" id="lang-btn-label">🇫🇷 FR
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div class="lang-dropdown">
+<button class="lang-option active" data-lang="fr"><span class="lang-flag">🇫🇷</span> Français</button>
+<button class="lang-option" data-lang="en"><span class="lang-flag">🇬🇧</span> English</button>
+<button class="lang-option" data-lang="es"><span class="lang-flag">🇪🇸</span> Español</button>
+<button class="lang-option" data-lang="de"><span class="lang-flag">🇩🇪</span> Deutsch</button>
+<button class="lang-option" data-lang="it"><span class="lang-flag">🇮🇹</span> Italiano</button>
+<button class="lang-option" data-lang="ar"><span class="lang-flag">🇸🇦</span> العربية</button>
+<button class="lang-option" data-lang="hi"><span class="lang-flag">🇮🇳</span> हिन्दी</button>
+</div>
+</div>
+<a class="btn-reserve-nav" data-i18n="nav_reserve" href="#reservation">Réserver</a>
+<button aria-label="Menu" class="nav-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
 </header>
-
 <!-- ============================================================
      HERO
      ============================================================ -->
 <section id="hero">
-  <div class="hero-slider">
-    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=1920&q=85&fit=crop')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1920&q=85&fit=crop')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1596797038530-2c107229654b?w=1920&q=85&fit=crop')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1920&q=85&fit=crop')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=85&fit=crop')"></div>
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="eyebrow hero-eyebrow" data-i18n="hero_eyebrow">Gastronomie Indienne • Toulouse</p>
-    <h1 class="hero-title">
-      <span data-i18n="hero_title1">Lotus</span> <em data-i18n="hero_title2">Restaurant</em>
-    </h1>
-    <p class="hero-subtitle" data-i18n="hero_subtitle">Authentic Indian Experience in Toulouse</p>
-    <p class="hero-desc" data-i18n="hero_desc">Experience traditional Indian cuisine with a warm and elegant atmosphere.</p>
-    <div class="hero-btns">
-      <a href="#reservation" class="btn-primary" data-i18n="hero_btn1">Réserver une Table</a>
-      <a href="#menu" class="btn-outline" data-i18n="hero_btn2">Explorer le Menu</a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-    <span>Scroll</span>
-  </div>
-  <div class="hero-hours reveal">
-    <p class="hero-hours-title" data-i18n="loc_hours_label">Horaires d'Ouverture</p>
-    <div class="hero-hours-row">
-      <span data-i18n="loc_lun_sam">Lun – Sam</span>
-      <span data-i18n="loc_lun_sam_h">12h–14h30 / 19h–23h</span>
-    </div>
-    <div class="hero-hours-row">
-      <span data-i18n="loc_dim">Dimanche</span>
-      <span data-i18n="loc_dim_h">19h–23h</span>
-    </div>
-  </div>
+<div class="hero-slider">
+<div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=1920&amp;q=85&amp;fit=crop')"></div>
+<div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1920&amp;q=85&amp;fit=crop')"></div>
+<div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1596797038530-2c107229654b?w=1920&amp;q=85&amp;fit=crop')"></div>
+<div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1920&amp;q=85&amp;fit=crop')"></div>
+<div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&amp;q=85&amp;fit=crop')"></div>
+</div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<p class="eyebrow hero-eyebrow" data-i18n="hero_eyebrow">Gastronomie Indienne • Toulouse</p>
+<h1 class="hero-title">
+<span data-i18n="hero_title1">Lotus</span> <em data-i18n="hero_title2">Restaurant</em>
+</h1>
+<p class="hero-subtitle" data-i18n="hero_subtitle">Authentic Indian Experience in Toulouse</p>
+<p class="hero-desc" data-i18n="hero_desc">Experience traditional Indian cuisine with a warm and elegant atmosphere.</p>
+<div class="hero-btns">
+<a class="btn-primary" data-i18n="hero_btn1" href="#reservation">Réserver une Table</a>
+<a class="btn-outline" data-i18n="hero_btn2" href="#menu">Explorer le Menu</a>
+</div>
+</div>
+<div class="hero-scroll">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"></path></svg>
+<span>Scroll</span>
+</div>
+<div class="hero-hours reveal">
+<p class="hero-hours-title" data-i18n="loc_hours_label">Horaires d'Ouverture</p>
+<div class="hero-hours-row">
+<span data-i18n="loc_lun_sam">Lun – Sam</span>
+<span data-i18n="loc_lun_sam_h">12h–14h30 / 19h–23h</span>
+</div>
+<div class="hero-hours-row">
+<span data-i18n="loc_dim">Dimanche</span>
+<span data-i18n="loc_dim_h">19h–23h</span>
+</div>
+</div>
 </section>
-
 <!-- STATUS BAR -->
 <div class="status-bar">
-  <div id="opening-status">
-    <span class="status-dot"></span>
-    <span class="status-text"></span>
-  </div>
+<div id="opening-status">
+<span class="status-dot"></span>
+<span class="status-text"></span>
 </div>
-
-
+</div>
 <!-- ============================================================
      EXPERIENCE
      ============================================================ -->
-<section id="experience" class="section bg-surface">
-  <div class="container">
-    <div class="experience-grid">
-      <div class="experience-images reveal">
-        <div class="exp-img-main">
-          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=900&q=80&fit=crop" alt="Indian Spices" loading="lazy"/>
-        </div>
-        <div class="exp-img-sm">
-          <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80&fit=crop" alt="Tandoor cooking" loading="lazy"/>
-        </div>
-        <div class="exp-img-sm">
-          <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80&fit=crop" alt="Indian food" loading="lazy"/>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <p class="eyebrow" data-i18n="exp_eyebrow">Notre Philosophie</p>
-        <span class="gold-line"></span>
-        <h2 class="section-title">
-          <span data-i18n="exp_title1">Plus qu'un Repas —</span><br/>
-          <em data-i18n="exp_title2">Une Expérience</em>
-        </h2>
-        <p style="font-size:.9rem;color:var(--text-muted);line-height:1.9;margin-bottom:2rem;" data-i18n="exp_desc">Découvrez la richesse de la culture indienne.</p>
-        <div style="display:grid;gap:1.5rem;">
-          <div style="display:flex;gap:1rem;align-items:flex-start;">
-            <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,162,74,0.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;">🌶️</div>
-            <div>
-              <h4 style="font-family:var(--font-head);font-style:italic;color:var(--warm-white);margin-bottom:.25rem;" data-i18n="exp_feature1_title">Épices Authentiques</h4>
-              <p style="font-size:.8rem;color:var(--text-muted);" data-i18n="exp_feature1_text">Importées directement des producteurs de la Route de la Soie.</p>
-            </div>
-          </div>
-          <div style="display:flex;gap:1rem;align-items:flex-start;">
-            <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,162,74,0.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;">🔥</div>
-            <div>
-              <h4 style="font-family:var(--font-head);font-style:italic;color:var(--warm-white);margin-bottom:.25rem;" data-i18n="exp_feature2_title">Four Tandoor</h4>
-              <p style="font-size:.8rem;color:var(--text-muted);" data-i18n="exp_feature2_text">L'art ancestral de la cuisson au four d'argile.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="section bg-surface" id="experience">
+<div class="container">
+<div class="experience-grid">
+<div class="experience-images reveal">
+<div class="exp-img-main">
+<img alt="Indian Spices" loading="lazy" src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=900&amp;q=80&amp;fit=crop">
+</img></div>
+<div class="exp-img-sm">
+<img alt="Tandoor cooking" loading="lazy" src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&amp;q=80&amp;fit=crop"/>
+</div>
+<div class="exp-img-sm">
+<img alt="Indian food" loading="lazy" src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&amp;q=80&amp;fit=crop"/>
+</div>
+</div>
+<div class="reveal reveal-delay-1">
+<p class="eyebrow" data-i18n="exp_eyebrow">Notre Philosophie</p>
+<span class="gold-line"></span>
+<h2 class="section-title">
+<span data-i18n="exp_title1">Plus qu'un Repas —</span><br/>
+<em data-i18n="exp_title2">Une Expérience</em>
+</h2>
+<p data-i18n="exp_desc" style="font-size:.9rem;color:var(--text-muted);line-height:1.9;margin-bottom:2rem;">Découvrez la richesse de la culture indienne.</p>
+<div style="display:grid;gap:1.5rem;">
+<div style="display:flex;gap:1rem;align-items:flex-start;">
+<div style="width:44px;height:44px;border-radius:50%;background:rgba(201,162,74,0.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;">🌶️</div>
+<div>
+<h4 data-i18n="exp_feature1_title" style="font-family:var(--font-head);font-style:italic;color:var(--warm-white);margin-bottom:.25rem;">Épices Authentiques</h4>
+<p data-i18n="exp_feature1_text" style="font-size:.8rem;color:var(--text-muted);">Importées directement des producteurs de la Route de la Soie.</p>
+</div>
+</div>
+<div style="display:flex;gap:1rem;align-items:flex-start;">
+<div style="width:44px;height:44px;border-radius:50%;background:rgba(201,162,74,0.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;">🔥</div>
+<div>
+<h4 data-i18n="exp_feature2_title" style="font-family:var(--font-head);font-style:italic;color:var(--warm-white);margin-bottom:.25rem;">Four Tandoor</h4>
+<p data-i18n="exp_feature2_text" style="font-size:.8rem;color:var(--text-muted);">L'art ancestral de la cuisson au four d'argile.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ============================================================
      SIGNATURE DISHES
      ============================================================ -->
-<section id="dishes" class="section">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow" data-i18n="dishes_eyebrow">Nos Plats Vedettes</p>
-      <span class="gold-line center"></span>
-      <h2 class="section-title"><em data-i18n="dishes_title">Plats d'Or</em></h2>
-    </div>
-    <div class="dishes-grid" style="margin-top:3rem;">
-      <!-- Dish 1 -->
-      <article class="dish-card reveal">
-        <div class="dish-badge" data-i18n="dish1_badge">Best-seller</div>
-        <div class="dish-img"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&q=80&fit=crop" alt="Butter Chicken" loading="lazy"/></div>
-        <div class="dish-body">
-          <h3 class="dish-name" data-i18n="dish1_name">Butter Chicken Signature</h3>
-          <p class="dish-desc" data-i18n="dish1_desc">Poulet fermier grillé au tandoor, mijoté 12h dans une sauce tomate crémeuse.</p>
-          <p class="dish-price">18.50€</p>
-        </div>
-      </article>
-      <!-- Dish 2 -->
-      <article class="dish-card reveal reveal-delay-1">
-        <div class="dish-badge" data-i18n="dish2_badge">Chef's Choice</div>
-        <div class="dish-img"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=600&q=80&fit=crop" alt="Biryani" loading="lazy"/></div>
-        <div class="dish-body">
-          <h3 class="dish-name" data-i18n="dish2_name">Biryani Royal à l'Agneau</h3>
-          <p class="dish-desc" data-i18n="dish2_desc">Riz basmati au safran du Cachemire, agneau fondant et fruits secs caramélisés.</p>
-          <p class="dish-price">22.00€</p>
-        </div>
-      </article>
-      <!-- Dish 3 -->
-      <article class="dish-card reveal reveal-delay-2">
-        <div class="dish-badge" data-i18n="dish3_badge">Populaire</div>
-        <div class="dish-img"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80&fit=crop" alt="Tandoori" loading="lazy"/></div>
-        <div class="dish-body">
-          <h3 class="dish-name" data-i18n="dish3_name">Tandoori Mixed Grill</h3>
-          <p class="dish-desc" data-i18n="dish3_desc">Assortiment de viandes et légumes marinés aux épices.</p>
-          <p class="dish-price">24.00€</p>
-        </div>
-      </article>
-      <!-- Dish 4 -->
-      <article class="dish-card reveal">
-        <div class="dish-badge" data-i18n="dish4_badge">Végétarien</div>
-        <div class="dish-img"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80&fit=crop" alt="Dal Makhani" loading="lazy"/></div>
-        <div class="dish-body">
-          <h3 class="dish-name" data-i18n="dish4_name">Dal Makhani Royale</h3>
-          <p class="dish-desc" data-i18n="dish4_desc">Lentilles noires mijotées toute une nuit avec crème et beurre clarifié.</p>
-          <p class="dish-price">14.50€</p>
-        </div>
-      </article>
-    </div>
-  </div>
+<section class="section" id="dishes">
+<div class="container">
+<div class="section-header centered reveal">
+<p class="eyebrow" data-i18n="dishes_eyebrow">Nos Plats Vedettes</p>
+<span class="gold-line center"></span>
+<h2 class="section-title"><em data-i18n="dishes_title">Plats d'Or</em></h2>
+</div>
+<div class="dishes-grid" style="margin-top:3rem;">
+<!-- Dish 1 -->
+<article class="dish-card reveal">
+<div class="dish-badge" data-i18n="dish1_badge">Best-seller</div>
+<div class="dish-img"><img alt="Butter Chicken" loading="lazy" src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&amp;q=80&amp;fit=crop"/></div>
+<div class="dish-body">
+<h3 class="dish-name" data-i18n="dish1_name">Butter Chicken Signature</h3>
+<p class="dish-desc" data-i18n="dish1_desc">Poulet fermier grillé au tandoor, mijoté 12h dans une sauce tomate crémeuse.</p>
+<p class="dish-price">18.50€</p>
+</div>
+</article>
+<!-- Dish 2 -->
+<article class="dish-card reveal reveal-delay-1">
+<div class="dish-badge" data-i18n="dish2_badge">Chef's Choice</div>
+<div class="dish-img"><img alt="Biryani" loading="lazy" src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=600&amp;q=80&amp;fit=crop"/></div>
+<div class="dish-body">
+<h3 class="dish-name" data-i18n="dish2_name">Biryani Royal à l'Agneau</h3>
+<p class="dish-desc" data-i18n="dish2_desc">Riz basmati au safran du Cachemire, agneau fondant et fruits secs caramélisés.</p>
+<p class="dish-price">22.00€</p>
+</div>
+</article>
+<!-- Dish 3 -->
+<article class="dish-card reveal reveal-delay-2">
+<div class="dish-badge" data-i18n="dish3_badge">Populaire</div>
+<div class="dish-img"><img alt="Tandoori" loading="lazy" src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&amp;q=80&amp;fit=crop"/></div>
+<div class="dish-body">
+<h3 class="dish-name" data-i18n="dish3_name">Tandoori Mixed Grill</h3>
+<p class="dish-desc" data-i18n="dish3_desc">Assortiment de viandes et légumes marinés aux épices.</p>
+<p class="dish-price">24.00€</p>
+</div>
+</article>
+<!-- Dish 4 -->
+<article class="dish-card reveal">
+<div class="dish-badge" data-i18n="dish4_badge">Végétarien</div>
+<div class="dish-img"><img alt="Dal Makhani" loading="lazy" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&amp;q=80&amp;fit=crop"/></div>
+<div class="dish-body">
+<h3 class="dish-name" data-i18n="dish4_name">Dal Makhani Royale</h3>
+<p class="dish-desc" data-i18n="dish4_desc">Lentilles noires mijotées toute une nuit avec crème et beurre clarifié.</p>
+<p class="dish-price">14.50€</p>
+</div>
+</article>
+</div>
+</div>
 </section>
-
-
 <!-- ============================================================
      INTERACTIVE MENU – REAL FULL MENU
      ============================================================ -->
-<section id="menu" class="section bg-surface">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow" data-i18n="menu_eyebrow">La Carte</p>
-      <span class="gold-line center"></span>
-      <h2 class="section-title"><em data-i18n="menu_title">Notre Menu</em></h2>
-    </div>
-    <!-- Tab bar -->
-    <div class="menu-tabs-wrap reveal" style="margin-top:2.5rem;">
-      <div class="menu-tabs" role="tablist">
-        <button class="menu-tab active" data-tab="entrees" role="tab" data-i18n="tab_entrees">Entrées</button>
-        <button class="menu-tab" data-tab="plats" role="tab" data-i18n="tab_plats">Nos Plats</button>
-        <button class="menu-tab" data-tab="chef" role="tab" data-i18n="tab_chef">Spécialités du Chef</button>
-        <button class="menu-tab" data-tab="biryani" role="tab" data-i18n="tab_biryani">Biryani</button>
-        <button class="menu-tab" data-tab="vegetarian" role="tab" data-i18n="tab_veg">Végétarien</button>
-        <button class="menu-tab" data-tab="pains" role="tab" data-i18n="tab_pains">Pains & Accompagnements</button>
-        <button class="menu-tab" data-tab="desserts" role="tab" data-i18n="tab_desserts">Desserts & Boissons</button>
-      </div>
-    </div>
-
-    <!-- ── TAB 1: ENTRÉES ── -->
-    <div class="menu-panel active" id="panel-entrees">
-      <div class="menu-subsection">
-        <div class="menu-subsection-title" data-i18n="sub_veg_snacks">Entrées Végétariennes & Snacks</div>
-      </div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Samosa Légumes <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Samosa Viande</div></div><div class="menu-dots"></div><div class="menu-price">4.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Roll au Poulet</div></div><div class="menu-dots"></div><div class="menu-price">4.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Roll au Légumes <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Oignons Bajji ou Vadai <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Aloo Bajji <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Aubergine Bajji <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Mixed Pakoras <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Calamar Pakora</div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crevette Pakora</div></div><div class="menu-dots"></div><div class="menu-price">5.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken 65</div></div><div class="menu-dots"></div><div class="menu-price">6.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Mixed Assortiment</div></div><div class="menu-dots"></div><div class="menu-price">8.50€</div></div>
-      </div>
-      <div class="menu-subsection">
-        <div class="menu-subsection-title" data-i18n="sub_tandoori">Grillades Tandoories</div>
-      </div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet Tikka</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agneau Tikka</div></div><div class="menu-dots"></div><div class="menu-price">7.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet Tandoori</div></div><div class="menu-dots"></div><div class="menu-price">5.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Machli Tikka</div></div><div class="menu-dots"></div><div class="menu-price">7.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gambas Tikka</div></div><div class="menu-dots"></div><div class="menu-price">10.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Seek Kebab</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Assortiment Grill</div></div><div class="menu-dots"></div><div class="menu-price">14.90€</div></div>
-      </div>
-      <div class="menu-subsection">
-        <div class="menu-subsection-title" data-i18n="sub_salads">Salades</div>
-      </div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Raita <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crevette Raita</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Salade de Maison</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Salade de Crevette</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Vegan D'inde <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
-      </div>
-    </div>
-
-    <!-- ── TAB 2: NOS PLATS ── -->
-    <div class="menu-panel" id="panel-plats">
-      <p style="font-size:.78rem;color:var(--text-muted);text-align:center;margin-bottom:1.5rem;font-style:italic;" data-i18n="menu_plats_note">Tous les plats sont servis avec riz nature</p>
-      <div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_curry">Plats Curry</div></div>
-      <div class="curry-grid">
-        <div class="curry-row"><span class="curry-name">Poulet</span><span class="curry-price">9.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Agneau</span><span class="curry-price">10.99€</span></div>
-        <div class="curry-row"><span class="curry-name">Boeuf</span><span class="curry-price">10.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Crevettes</span><span class="curry-price">10.99€</span></div>
-        <div class="curry-row"><span class="curry-name">Légumes <span class="menu-tag">V</span></span><span class="curry-price">9.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Calamar</span><span class="curry-price">9.90€</span></div>
-        <div class="curry-row"><span class="curry-name">Saumon</span><span class="curry-price">11.50€</span></div>
-      </div>
-      <div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_korma">Plats Korma</div></div>
-      <div class="curry-grid">
-        <div class="curry-row"><span class="curry-name">Poulet</span><span class="curry-price">11.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Agneau</span><span class="curry-price">12.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Boeuf</span><span class="curry-price">11.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Crevettes</span><span class="curry-price">12.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Légumes <span class="menu-tag">V</span></span><span class="curry-price">9.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Saumon</span><span class="curry-price">12.50€</span></div>
-      </div>
-      <div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_vindaloo">Plats Vindaloo</div></div>
-      <div class="curry-grid">
-        <div class="curry-row"><span class="curry-name">Poulet</span><span class="curry-price">10.99€</span></div>
-        <div class="curry-row"><span class="curry-name">Agneau</span><span class="curry-price">11.90€</span></div>
-        <div class="curry-row"><span class="curry-name">Boeuf</span><span class="curry-price">11.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Crevettes</span><span class="curry-price">11.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Calamar</span><span class="curry-price">11.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Saumon</span><span class="curry-price">12.50€</span></div>
-      </div>
-      <div class="menu-subsection"><div class="menu-subsection-title">Masala</div></div>
-      <div class="curry-grid">
-        <div class="curry-row"><span class="curry-name">Poulet</span><span class="curry-price">11.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Agneau</span><span class="curry-price">12.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Boeuf</span><span class="curry-price">11.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Crevettes</span><span class="curry-price">11.90€</span></div>
-        <div class="curry-row"><span class="curry-name">Légumes <span class="menu-tag">V</span></span><span class="curry-price">10.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Calamar</span><span class="curry-price">12.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Saumon</span><span class="curry-price">13.50€</span></div>
-      </div>
-      <div class="menu-subsection"><div class="menu-subsection-title">Ginger</div></div>
-      <div class="curry-grid">
-        <div class="curry-row"><span class="curry-name">Poulet</span><span class="curry-price">12.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Agneau</span><span class="curry-price">13.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Boeuf</span><span class="curry-price">13.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Crevettes</span><span class="curry-price">13.20€</span></div>
-        <div class="curry-row"><span class="curry-name">Calamar</span><span class="curry-price">12.90€</span></div>
-        <div class="curry-row"><span class="curry-name">Saumon</span><span class="curry-price">13.90€</span></div>
-      </div>
-    </div>
-
-    <!-- ── TAB 3: SPÉCIALITÉS DU CHEF ── -->
-    <div class="menu-panel" id="panel-chef">
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet Tikka Masala</div></div><div class="menu-dots"></div><div class="menu-price">13.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agneau Tikka Masala</div></div><div class="menu-dots"></div><div class="menu-price">14.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poisson Tikka Masala</div></div><div class="menu-dots"></div><div class="menu-price">14.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gambas Tikka Masala</div></div><div class="menu-dots"></div><div class="menu-price">15.20€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Butter Chicken</div><div class="menu-item-desc">Sauce tomate crémeuse au beurre clarifié</div></div><div class="menu-dots"></div><div class="menu-price">13.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken 65 Maison</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pâtes Indienne au Poulet</div></div><div class="menu-dots"></div><div class="menu-price">12.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pâtes Indienne Vegan <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">11.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pâtes Indienne Crevette</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chilli Chicken</div></div><div class="menu-dots"></div><div class="menu-price">12.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chilli au Boeuf</div></div><div class="menu-dots"></div><div class="menu-price">12.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chilli Mix</div></div><div class="menu-dots"></div><div class="menu-price">13.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Spécial Crevette</div></div><div class="menu-dots"></div><div class="menu-price">13.00€</div></div>
-      </div>
-    </div>
-
-    <!-- ── TAB 4: BIRYANI ── -->
-    <div class="menu-panel" id="panel-biryani">
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Poulet</div></div><div class="menu-dots"></div><div class="menu-price">11.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Agneau</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Crevette</div></div><div class="menu-dots"></div><div class="menu-price">13.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Boeuf</div></div><div class="menu-dots"></div><div class="menu-price">11.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Légumes <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">10.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Spécial Mix Biryani</div><div class="menu-item-desc">Mélange de viandes et épices du chef</div></div><div class="menu-dots"></div><div class="menu-price">13.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Briyani Fruit de Mer</div><div class="menu-item-desc">Fruits de mer frais et riz basmati parfumé</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
-      </div>
-    </div>
-
-    <!-- ── TAB 5: VÉGÉTARIEN ── -->
-    <div class="menu-panel" id="panel-vegetarian">
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Baingan Bharta <span class="menu-tag">V</span></div><div class="menu-item-desc">Aubergine fumée aux épices</div></div><div class="menu-dots"></div><div class="menu-price">9.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Dal Curry <span class="menu-tag">V</span></div><div class="menu-item-desc">Lentilles épicées</div></div><div class="menu-dots"></div><div class="menu-price">7.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Palak Paneer <span class="menu-tag">V</span></div><div class="menu-item-desc">Épinards et fromage indien</div></div><div class="menu-dots"></div><div class="menu-price">8.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Palak Aloo <span class="menu-tag">V</span></div><div class="menu-item-desc">Pommes de terre aux épinards</div></div><div class="menu-dots"></div><div class="menu-price">7.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Channa Baingan Masala <span class="menu-tag">V</span></div><div class="menu-item-desc">Pois chiches et aubergine épicés</div></div><div class="menu-dots"></div><div class="menu-price">8.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Paneer Masala <span class="menu-tag">V</span></div><div class="menu-item-desc">Fromage indien en sauce masala</div></div><div class="menu-dots"></div><div class="menu-price">12.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pâtes Indienne Vegan <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">11.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Légumes Curry / Korma / Masala / Vindaloo <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">dès 9.50€</div></div>
-      </div>
-    </div>
-
-    <!-- ── TAB 6: PAINS & ACCOMPAGNEMENTS ── -->
-    <div class="menu-panel" id="panel-pains">
-      <div class="menu-subsection"><div class="menu-subsection-title">Naans</div></div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Nature <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">1.99€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Fromage <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan l'ail <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Chilli ou Ognion <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">2.20€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Ail Fromage <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Keema</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Sabzi Naan <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.20€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Poulet</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Peshawari</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-      </div>
-      <div class="menu-subsection"><div class="menu-subsection-title">Tawa Spéciale</div></div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Malabar Paratha <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">2.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Aloo Paratha <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Egg Paratha</div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chapathi <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Puri <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-      </div>
-      <div class="menu-subsection"><div class="menu-subsection-title">Accompagnements</div></div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Riz Nature <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">2.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Riz Pulao <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Riz Kasmiri <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Riz à la Tomate <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.20€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Egg Rice</div></div><div class="menu-dots"></div><div class="menu-price">3.80€</div></div>
-      </div>
-    </div>
-
-    <!-- ── TAB 7: DESSERTS & BOISSONS ── -->
-    <div class="menu-panel" id="panel-desserts">
-      <div class="menu-subsection"><div class="menu-subsection-title">Desserts</div></div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Halwa <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gulab Jamun <span class="menu-tag">V</span></div><div class="menu-item-desc">Boulettes de lait en sirop de rose</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Salade de Fruit Frais <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Boondhi Ladoo <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kulfi Mangue ou Pistache <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Mysore Pak <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Falooda <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">6.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Milkshake <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
-      </div>
-      <div class="menu-subsection"><div class="menu-subsection-title">Lassi</div></div>
-      <div class="drinks-group">
-        <div class="drinks-row">
-          <div class="drinks-item"><span class="drinks-item-name">Nature</span><span class="drinks-item-price">3.50€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">Mangue</span><span class="drinks-item-price">3.90€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">Rose</span><span class="drinks-item-price">3.90€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">Ananas</span><span class="drinks-item-price">3.90€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">Banane</span><span class="drinks-item-price">3.90€</span></div>
-        </div>
-      </div>
-      <div class="menu-subsection"><div class="menu-subsection-title">Bières Indiennes</div></div>
-      <div class="drinks-group">
-        <div class="drinks-row">
-          <div class="drinks-item"><span class="drinks-item-name">King Fisher</span><span class="drinks-item-price">4.00€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">Tajmahal</span><span class="drinks-item-price">4.00€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">Heineken</span><span class="drinks-item-price">3.00€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">1664</span><span class="drinks-item-price">3.00€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">Corona</span><span class="drinks-item-price">3.40€</span></div>
-        </div>
-      </div>
-      <div class="menu-subsection"><div class="menu-subsection-title">Vins Indienne</div></div>
-      <div class="drinks-group">
-        <div class="drinks-row">
-          <div class="drinks-item"><span class="drinks-item-name">Vin Rouge / Rosé 37.5cl</span><span class="drinks-item-price">11.50€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">75cl</span><span class="drinks-item-price">14.50€</span></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+<section class="section bg-surface" id="menu">
+<div class="container">
+<div class="section-header centered reveal">
+<p class="eyebrow" data-i18n="menu_eyebrow">La Carte</p>
+<span class="gold-line center"></span>
+<h2 class="section-title"><em data-i18n="menu_title">Notre Menu</em></h2>
+</div>
+<!-- Tab bar -->
+<div class="menu-tabs-wrap reveal" style="margin-top:2.5rem;">
+<div class="menu-tabs" role="tablist">
+<button class="menu-tab active" data-i18n="tab_entrees" data-tab="entrees" role="tab">Entrées</button>
+<button class="menu-tab" data-i18n="tab_plats" data-tab="plats" role="tab">Nos Plats</button>
+<button class="menu-tab" data-i18n="tab_chef" data-tab="chef" role="tab">Spécialités du Chef</button>
+<button class="menu-tab" data-i18n="tab_biryani" data-tab="biryani" role="tab">Biryani</button>
+<button class="menu-tab" data-i18n="tab_veg" data-tab="vegetarian" role="tab">Végétarien</button>
+<button class="menu-tab" data-i18n="tab_pains" data-tab="pains" role="tab">Pains &amp; Accompagnements</button>
+<button class="menu-tab" data-i18n="tab_desserts" data-tab="desserts" role="tab">Desserts &amp; Boissons</button>
+</div>
+</div>
+<!-- ── TAB 1: ENTRÉES ── -->
+<div class="menu-panel active" id="panel-entrees">
+<div class="menu-subsection">
+<div class="menu-subsection-title" data-i18n="sub_veg_snacks">Entrées Végétariennes &amp; Snacks</div>
+</div>
+<div class="menu-list">
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_1">Samosa Légumes <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_2">Samosa Viande</div></div><div class="menu-dots"></div><div class="menu-price">4.90€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_3">Roll au Poulet</div></div><div class="menu-dots"></div><div class="menu-price">4.90€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_4">Roll au Légumes <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_5">Oignons Bajji ou Vadai <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_6">Aloo Bajji <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_7">Aubergine Bajji <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_8">Mixed Pakoras <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_9">Calamar Pakora</div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_10">Crevette Pakora</div></div><div class="menu-dots"></div><div class="menu-price">5.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_11">Chicken 65</div></div><div class="menu-dots"></div><div class="menu-price">6.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_12">Mixed Assortiment</div></div><div class="menu-dots"></div><div class="menu-price">8.50€</div></div>
+</div>
+<div class="menu-subsection">
+<div class="menu-subsection-title" data-i18n="sub_tandoori">Grillades Tandoories</div>
+</div>
+<div class="menu-list">
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_13">Poulet Tikka</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_14">Agneau Tikka</div></div><div class="menu-dots"></div><div class="menu-price">7.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_15">Poulet Tandoori</div></div><div class="menu-dots"></div><div class="menu-price">5.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_16">Machli Tikka</div></div><div class="menu-dots"></div><div class="menu-price">7.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_17">Gambas Tikka</div></div><div class="menu-dots"></div><div class="menu-price">10.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_18">Seek Kebab</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_19">Assortiment Grill</div></div><div class="menu-dots"></div><div class="menu-price">14.90€</div></div>
+</div>
+<div class="menu-subsection">
+<div class="menu-subsection-title" data-i18n="sub_salads">Salades</div>
+</div>
+<div class="menu-list">
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_20">Raita <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_21">Crevette Raita</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_22">Salade de Maison</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_23">Salade de Crevette</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_24">Vegan D'inde <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
+</div>
+</div>
+<!-- ── TAB 2: NOS PLATS ── -->
+<div class="menu-panel" id="panel-plats">
+<p data-i18n="menu_plats_note" style="font-size:.78rem;color:var(--text-muted);text-align:center;margin-bottom:1.5rem;font-style:italic;">Tous les plats sont servis avec riz nature</p>
+<div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_curry">Plats Curry</div></div>
+<div class="curry-grid">
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_90">Poulet</span><span class="curry-price">9.50€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_91">Agneau</span><span class="curry-price">10.99€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_92">Boeuf</span><span class="curry-price">10.50€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_93">Crevettes</span><span class="curry-price">10.99€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n-html="auto_key_94">Légumes <span class="menu-tag">V</span></span><span class="curry-price">9.50€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_95">Calamar</span><span class="curry-price">9.90€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_96">Saumon</span><span class="curry-price">11.50€</span></div>
+</div>
+<div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_korma">Plats Korma</div></div>
+<div class="curry-grid">
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_97">Poulet</span><span class="curry-price">11.50€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_98">Agneau</span><span class="curry-price">12.50€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_99">Boeuf</span><span class="curry-price">11.50€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_100">Crevettes</span><span class="curry-price">12.00€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n-html="auto_key_101">Légumes <span class="menu-tag">V</span></span><span class="curry-price">9.50€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_102">Saumon</span><span class="curry-price">12.50€</span></div>
+</div>
+<div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_vindaloo">Plats Vindaloo</div></div>
+<div class="curry-grid">
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_103">Poulet</span><span class="curry-price">10.99€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_104">Agneau</span><span class="curry-price">11.90€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_105">Boeuf</span><span class="curry-price">11.50€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_106">Crevettes</span><span class="curry-price">11.50€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_107">Calamar</span><span class="curry-price">11.00€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_108">Saumon</span><span class="curry-price">12.50€</span></div>
+</div>
+<div class="menu-subsection"><div class="menu-subsection-title">Masala</div></div>
+<div class="curry-grid">
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_109">Poulet</span><span class="curry-price">11.00€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_110">Agneau</span><span class="curry-price">12.00€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_111">Boeuf</span><span class="curry-price">11.50€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_112">Crevettes</span><span class="curry-price">11.90€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n-html="auto_key_113">Légumes <span class="menu-tag">V</span></span><span class="curry-price">10.50€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_114">Calamar</span><span class="curry-price">12.00€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_115">Saumon</span><span class="curry-price">13.50€</span></div>
+</div>
+<div class="menu-subsection"><div class="menu-subsection-title">Ginger</div></div>
+<div class="curry-grid">
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_116">Poulet</span><span class="curry-price">12.00€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_117">Agneau</span><span class="curry-price">13.50€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_118">Boeuf</span><span class="curry-price">13.00€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_119">Crevettes</span><span class="curry-price">13.20€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_120">Calamar</span><span class="curry-price">12.90€</span></div>
+<div class="curry-row"><span class="curry-name" data-i18n="auto_key_121">Saumon</span><span class="curry-price">13.90€</span></div>
+</div>
+</div>
+<!-- ── TAB 3: SPÉCIALITÉS DU CHEF ── -->
+<div class="menu-panel" id="panel-chef">
+<div class="menu-list">
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_25">Poulet Tikka Masala</div></div><div class="menu-dots"></div><div class="menu-price">13.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_26">Agneau Tikka Masala</div></div><div class="menu-dots"></div><div class="menu-price">14.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_27">Poisson Tikka Masala</div></div><div class="menu-dots"></div><div class="menu-price">14.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_28">Gambas Tikka Masala</div></div><div class="menu-dots"></div><div class="menu-price">15.20€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_29">Butter Chicken</div><div class="menu-item-desc" data-i18n="auto_key_80">Sauce tomate crémeuse au beurre clarifié</div></div><div class="menu-dots"></div><div class="menu-price">13.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_30">Chicken 65 Maison</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_31">Pâtes Indienne au Poulet</div></div><div class="menu-dots"></div><div class="menu-price">12.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_32">Pâtes Indienne Vegan <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">11.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_33">Pâtes Indienne Crevette</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_34">Chilli Chicken</div></div><div class="menu-dots"></div><div class="menu-price">12.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_35">Chilli au Boeuf</div></div><div class="menu-dots"></div><div class="menu-price">12.90€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_36">Chilli Mix</div></div><div class="menu-dots"></div><div class="menu-price">13.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_37">Spécial Crevette</div></div><div class="menu-dots"></div><div class="menu-price">13.00€</div></div>
+</div>
+</div>
+<!-- ── TAB 4: BIRYANI ── -->
+<div class="menu-panel" id="panel-biryani">
+<div class="menu-list">
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_38">Biryani Poulet</div></div><div class="menu-dots"></div><div class="menu-price">11.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_39">Biryani Agneau</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_40">Biryani Crevette</div></div><div class="menu-dots"></div><div class="menu-price">13.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_41">Biryani Boeuf</div></div><div class="menu-dots"></div><div class="menu-price">11.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_42">Biryani Légumes <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">10.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_43">Spécial Mix Biryani</div><div class="menu-item-desc" data-i18n="auto_key_81">Mélange de viandes et épices du chef</div></div><div class="menu-dots"></div><div class="menu-price">13.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_44">Briyani Fruit de Mer</div><div class="menu-item-desc" data-i18n="auto_key_82">Fruits de mer frais et riz basmati parfumé</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
+</div>
+</div>
+<!-- ── TAB 5: VÉGÉTARIEN ── -->
+<div class="menu-panel" id="panel-vegetarian">
+<div class="menu-list">
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_45">Baingan Bharta <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="auto_key_83">Aubergine fumée aux épices</div></div><div class="menu-dots"></div><div class="menu-price">9.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_46">Dal Curry <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="auto_key_84">Lentilles épicées</div></div><div class="menu-dots"></div><div class="menu-price">7.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_47">Palak Paneer <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="auto_key_85">Épinards et fromage indien</div></div><div class="menu-dots"></div><div class="menu-price">8.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_48">Palak Aloo <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="auto_key_86">Pommes de terre aux épinards</div></div><div class="menu-dots"></div><div class="menu-price">7.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_49">Channa Baingan Masala <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="auto_key_87">Pois chiches et aubergine épicés</div></div><div class="menu-dots"></div><div class="menu-price">8.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_50">Paneer Masala <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="auto_key_88">Fromage indien en sauce masala</div></div><div class="menu-dots"></div><div class="menu-price">12.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_51">Pâtes Indienne Vegan <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">11.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_52">Légumes Curry / Korma / Masala / Vindaloo <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">dès 9.50€</div></div>
+</div>
+</div>
+<!-- ── TAB 6: PAINS & ACCOMPAGNEMENTS ── -->
+<div class="menu-panel" id="panel-pains">
+<div class="menu-subsection"><div class="menu-subsection-title">Naans</div></div>
+<div class="menu-list">
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_53">Naan Nature <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">1.99€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_54">Naan Fromage <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_55">Naan l'ail <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_56">Naan Chilli ou Ognion <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">2.20€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_57">Naan Ail Fromage <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_58">Naan Keema</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_59">Sabzi Naan <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.20€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_60">Naan Poulet</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_61">Naan Peshawari</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+</div>
+<div class="menu-subsection"><div class="menu-subsection-title">Tawa Spéciale</div></div>
+<div class="menu-list">
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_62">Malabar Paratha <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">2.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_63">Aloo Paratha <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_64">Egg Paratha</div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_65">Chapathi <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_66">Puri <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+</div>
+<div class="menu-subsection"><div class="menu-subsection-title">Accompagnements</div></div>
+<div class="menu-list">
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_67">Riz Nature <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">2.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_68">Riz Pulao <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_69">Riz Kasmiri <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_70">Riz à la Tomate <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.20€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n="auto_key_71">Egg Rice</div></div><div class="menu-dots"></div><div class="menu-price">3.80€</div></div>
+</div>
+</div>
+<!-- ── TAB 7: DESSERTS & BOISSONS ── -->
+<div class="menu-panel" id="panel-desserts">
+<div class="menu-subsection"><div class="menu-subsection-title">Desserts</div></div>
+<div class="menu-list">
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_72">Halwa <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_73">Gulab Jamun <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="auto_key_89">Boulettes de lait en sirop de rose</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_74">Salade de Fruit Frais <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_75">Boondhi Ladoo <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_76">Kulfi Mangue ou Pistache <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_77">Mysore Pak <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_78">Falooda <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">6.50€</div></div>
+<div class="menu-item"><div class="menu-item-info"><div class="menu-item-name" data-i18n-html="auto_key_79">Milkshake <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
+</div>
+<div class="menu-subsection"><div class="menu-subsection-title">Lassi</div></div>
+<div class="drinks-group">
+<div class="drinks-row">
+<div class="drinks-item"><span class="drinks-item-name" data-i18n="auto_key_122">Nature</span><span class="drinks-item-price">3.50€</span></div>
+<div class="drinks-item"><span class="drinks-item-name" data-i18n="auto_key_123">Mangue</span><span class="drinks-item-price">3.90€</span></div>
+<div class="drinks-item"><span class="drinks-item-name" data-i18n="auto_key_124">Rose</span><span class="drinks-item-price">3.90€</span></div>
+<div class="drinks-item"><span class="drinks-item-name" data-i18n="auto_key_125">Ananas</span><span class="drinks-item-price">3.90€</span></div>
+<div class="drinks-item"><span class="drinks-item-name" data-i18n="auto_key_126">Banane</span><span class="drinks-item-price">3.90€</span></div>
+</div>
+</div>
+<div class="menu-subsection"><div class="menu-subsection-title">Bières Indiennes</div></div>
+<div class="drinks-group">
+<div class="drinks-row">
+<div class="drinks-item"><span class="drinks-item-name" data-i18n="auto_key_127">King Fisher</span><span class="drinks-item-price">4.00€</span></div>
+<div class="drinks-item"><span class="drinks-item-name" data-i18n="auto_key_128">Tajmahal</span><span class="drinks-item-price">4.00€</span></div>
+<div class="drinks-item"><span class="drinks-item-name" data-i18n="auto_key_129">Heineken</span><span class="drinks-item-price">3.00€</span></div>
+<div class="drinks-item"><span class="drinks-item-name" data-i18n="auto_key_130">1664</span><span class="drinks-item-price">3.00€</span></div>
+<div class="drinks-item"><span class="drinks-item-name" data-i18n="auto_key_131">Corona</span><span class="drinks-item-price">3.40€</span></div>
+</div>
+</div>
+<div class="menu-subsection"><div class="menu-subsection-title">Vins Indienne</div></div>
+<div class="drinks-group">
+<div class="drinks-row">
+<div class="drinks-item"><span class="drinks-item-name" data-i18n="auto_key_132">Vin Rouge / Rosé 37.5cl</span><span class="drinks-item-price">11.50€</span></div>
+<div class="drinks-item"><span class="drinks-item-name" data-i18n="auto_key_133">75cl</span><span class="drinks-item-price">14.50€</span></div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-
-
 <!-- ============================================================
      GALLERY
      ============================================================ -->
-<section id="gallery" class="section">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow" data-i18n="gal_eyebrow">Galerie</p>
-      <span class="gold-line center"></span>
-      <h2 class="section-title"><em data-i18n="gal_title">Une Atmosphère Chaleureuse & Élégante</em></h2>
-    </div>
-    <div class="gallery-masonry reveal" style="margin-top:3rem;">
-      <div class="gal-item large">
-        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=900&q=80&fit=crop" alt="Restaurant interior" loading="lazy"/>
-        <div class="gal-overlay"><span class="gal-label">Ambiance</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80&fit=crop" alt="Chef at work" loading="lazy"/>
-        <div class="gal-overlay"><span class="gal-label">Notre Chef</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?w=600&q=80&fit=crop" alt="Spices" loading="lazy"/>
-        <div class="gal-overlay"><span class="gal-label">Épices</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80&fit=crop" alt="Indian bread" loading="lazy"/>
-        <div class="gal-overlay"><span class="gal-label">Naan Maison</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80&fit=crop" alt="Indian curry dish" loading="lazy"/>
-        <div class="gal-overlay"><span class="gal-label">Dressage</span></div>
-      </div>
-
-    </div>
-  </div>
+<section class="section" id="gallery">
+<div class="container">
+<div class="section-header centered reveal">
+<p class="eyebrow" data-i18n="gal_eyebrow">Galerie</p>
+<span class="gold-line center"></span>
+<h2 class="section-title"><em data-i18n="gal_title">Une Atmosphère Chaleureuse &amp; Élégante</em></h2>
+</div>
+<div class="gallery-masonry reveal" style="margin-top:3rem;">
+<div class="gal-item large">
+<img alt="Restaurant interior" loading="lazy" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=900&amp;q=80&amp;fit=crop"/>
+<div class="gal-overlay"><span class="gal-label">Ambiance</span></div>
+</div>
+<div class="gal-item">
+<img alt="Chef at work" loading="lazy" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&amp;q=80&amp;fit=crop"/>
+<div class="gal-overlay"><span class="gal-label">Notre Chef</span></div>
+</div>
+<div class="gal-item">
+<img alt="Spices" loading="lazy" src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?w=600&amp;q=80&amp;fit=crop"/>
+<div class="gal-overlay"><span class="gal-label">Épices</span></div>
+</div>
+<div class="gal-item">
+<img alt="Indian bread" loading="lazy" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&amp;q=80&amp;fit=crop"/>
+<div class="gal-overlay"><span class="gal-label">Naan Maison</span></div>
+</div>
+<div class="gal-item">
+<img alt="Indian curry dish" loading="lazy" src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&amp;q=80&amp;fit=crop"/>
+<div class="gal-overlay"><span class="gal-label">Dressage</span></div>
+</div>
+</div>
+</div>
 </section>
-
-
 <!-- ============================================================
      PILLARS
      ============================================================ -->
 <section class="section bg-surface">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow" data-i18n="pillars_eyebrow">Notre Promesse</p>
-      <span class="gold-line center"></span>
-      <h2 class="section-title"><em data-i18n="pillars_title">L'Excellence en Trois Piliers</em></h2>
-    </div>
-    <div class="pillars-grid" style="margin-top:3rem;">
-      <div class="pillar reveal">
-        <div class="pillar-icon">🍛</div>
-        <h3 class="pillar-title" data-i18n="pillar1_title">Recettes Authentiques</h3>
-        <p class="pillar-text" data-i18n="pillar1_text">Des recettes transmises de génération en génération, fidèles aux traditions culinaires indiennes.</p>
-      </div>
-      <div class="pillar reveal reveal-delay-1">
-        <div class="pillar-icon">✨</div>
-        <h3 class="pillar-title" data-i18n="pillar2_title">Présentation Moderne</h3>
-        <p class="pillar-text" data-i18n="pillar2_text">L'art culinaire indien revisité avec une touche d'élégance française contemporaine.</p>
-      </div>
-      <div class="pillar reveal reveal-delay-2">
-        <div class="pillar-icon">🙏</div>
-        <h3 class="pillar-title" data-i18n="pillar3_title">Hospitalité Sincère</h3>
-        <p class="pillar-text" data-i18n="pillar3_text">Un accueil chaleureux inspiré de l'Atithi Devo Bhava — l'hôte est dieu.</p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-header centered reveal">
+<p class="eyebrow" data-i18n="pillars_eyebrow">Notre Promesse</p>
+<span class="gold-line center"></span>
+<h2 class="section-title"><em data-i18n="pillars_title">L'Excellence en Trois Piliers</em></h2>
+</div>
+<div class="pillars-grid" style="margin-top:3rem;">
+<div class="pillar reveal">
+<div class="pillar-icon">🍛</div>
+<h3 class="pillar-title" data-i18n="pillar1_title">Recettes Authentiques</h3>
+<p class="pillar-text" data-i18n="pillar1_text">Des recettes transmises de génération en génération, fidèles aux traditions culinaires indiennes.</p>
+</div>
+<div class="pillar reveal reveal-delay-1">
+<div class="pillar-icon">✨</div>
+<h3 class="pillar-title" data-i18n="pillar2_title">Présentation Moderne</h3>
+<p class="pillar-text" data-i18n="pillar2_text">L'art culinaire indien revisité avec une touche d'élégance française contemporaine.</p>
+</div>
+<div class="pillar reveal reveal-delay-2">
+<div class="pillar-icon">🙏</div>
+<h3 class="pillar-title" data-i18n="pillar3_title">Hospitalité Sincère</h3>
+<p class="pillar-text" data-i18n="pillar3_text">Un accueil chaleureux inspiré de l'Atithi Devo Bhava — l'hôte est dieu.</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ============================================================
      TESTIMONIALS
      ============================================================ -->
-<section id="testimonials" class="section">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow" data-i18n="test_eyebrow">Avis Clients</p>
-      <span class="gold-line center"></span>
-      <h2 class="section-title"><em data-i18n="test_title">Ce que Disent Nos Hôtes</em></h2>
-      <div class="google-badge" style="justify-content:center;margin-top:1rem;">
-        <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        <span style="color:var(--gold);font-size:.75rem;font-weight:600;">4.8 / 5</span>
-        <span style="color:var(--text-muted);font-size:.72rem;">• 120+ Google Reviews</span>
-      </div>
-    </div>
-    <div class="testimonials-track" style="margin-top:3rem;">
-      <div class="testimonial-card reveal">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Une expérience culinaire exceptionnelle ! Les saveurs sont authentiques et le service irréprochable. Le Butter Chicken est tout simplement divin."</p>
-        <div class="testimonial-author">
-          <div class="t-avatar">M</div>
-          <div><div class="t-name">Marie-Claire D.</div><div class="t-source">Google Review</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-1">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Le meilleur restaurant indien de Toulouse sans hésitation. L'ambiance est magnifique, le biryani à l'agneau est incroyable. On reviendra !"</p>
-        <div class="testimonial-author">
-          <div class="t-avatar">A</div>
-          <div><div class="t-name">Antoine R.</div><div class="t-source">Google Review</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-2">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Cadre élégant, accueil chaleureux et cuisine raffinée. Le Dal Makhani est une merveille. Un incontournable pour les amateurs de gastronomie indienne."</p>
-        <div class="testimonial-author">
-          <div class="t-avatar">S</div>
-          <div><div class="t-name">Sophie L.</div><div class="t-source">Google Review</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="section" id="testimonials">
+<div class="container">
+<div class="section-header centered reveal">
+<p class="eyebrow" data-i18n="test_eyebrow">Avis Clients</p>
+<span class="gold-line center"></span>
+<h2 class="section-title"><em data-i18n="test_title">Ce que Disent Nos Hôtes</em></h2>
+<div class="google-badge" style="justify-content:center;margin-top:1rem;">
+<svg viewbox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
+<span style="color:var(--gold);font-size:.75rem;font-weight:600;">4.8 / 5</span>
+<span style="color:var(--text-muted);font-size:.72rem;">• 120+ Google Reviews</span>
+</div>
+</div>
+<div class="testimonials-track" style="margin-top:3rem;">
+<div class="testimonial-card reveal">
+<div class="stars">★★★★★</div>
+<p class="testimonial-text" data-i18n="auto_key_134">"Une expérience culinaire exceptionnelle ! Les saveurs sont authentiques et le service irréprochable. Le Butter Chicken est tout simplement divin."</p>
+<div class="testimonial-author">
+<div class="t-avatar">M</div>
+<div><div class="t-name" data-i18n="auto_key_137">Marie-Claire D.</div><div class="t-source" data-i18n="auto_key_140">Google Review</div></div>
+</div>
+</div>
+<div class="testimonial-card reveal reveal-delay-1">
+<div class="stars">★★★★★</div>
+<p class="testimonial-text" data-i18n="auto_key_135">"Le meilleur restaurant indien de Toulouse sans hésitation. L'ambiance est magnifique, le biryani à l'agneau est incroyable. On reviendra !"</p>
+<div class="testimonial-author">
+<div class="t-avatar">A</div>
+<div><div class="t-name" data-i18n="auto_key_138">Antoine R.</div><div class="t-source" data-i18n="auto_key_141">Google Review</div></div>
+</div>
+</div>
+<div class="testimonial-card reveal reveal-delay-2">
+<div class="stars">★★★★★</div>
+<p class="testimonial-text" data-i18n="auto_key_136">"Cadre élégant, accueil chaleureux et cuisine raffinée. Le Dal Makhani est une merveille. Un incontournable pour les amateurs de gastronomie indienne."</p>
+<div class="testimonial-author">
+<div class="t-avatar">S</div>
+<div><div class="t-name" data-i18n="auto_key_139">Sophie L.</div><div class="t-source" data-i18n="auto_key_142">Google Review</div></div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ============================================================
      RESERVATION
      ============================================================ -->
-<section id="reservation" class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="container">
-    <div class="res-inner">
-      <!-- Info col -->
-      <div class="reveal">
-        <p class="eyebrow" data-i18n="res_eyebrow">Réservation</p>
-        <span class="gold-line"></span>
-        <h2 class="section-title"><em data-i18n="res_title">Réservez Votre Expérience</em></h2>
-        <p style="font-size:.88rem;color:var(--text-muted);line-height:1.9;margin:1.5rem 0 2.5rem;">📍 12 Rue d'Alsace-Lorraine, 31000 Toulouse<br/>📞 06 52 51 55 51<br/>✉️ lotusrestoin@gmail.com<br/>🕐 Lun–Sam: 12h–14h30 / 19h–23h | Dim: 19h–23h</p>
-        <div class="res-actions">
-          <a class="btn-whatsapp" href="https://wa.me/33652515551?text=Bonjour%2C%20je%20voudrais%20réserver%20une%20table." target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.12 1.531 5.845L0 24l6.337-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.724.886.936-3.614-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
-            <span data-i18n="res_whatsapp">WhatsApp</span>
-          </a>
-          <a class="btn-call" href="tel:+33652515551">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <span data-i18n="res_call">Appeler</span>
-          </a>
-        </div>
-      </div>
-      <!-- Form col -->
-      <div class="reveal reveal-delay-1">
-        <form id="reservation-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label data-i18n="res_name">Nom Complet</label>
-              <input type="text" data-i18n-ph="res_name_ph" placeholder="Votre nom…" required/>
-            </div>
-            <div class="form-group">
-              <label data-i18n="res_phone">Téléphone</label>
-              <input type="tel" data-i18n-ph="res_phone_ph" placeholder="+33…" required/>
-            </div>
-          </div>
-          <div class="form-row" style="margin-top:1.5rem;">
-            <div class="form-group">
-              <label data-i18n="res_date">Date</label>
-              <input type="date" required/>
-            </div>
-            <div class="form-group">
-              <label data-i18n="res_time">Heure</label>
-              <input type="time" required/>
-            </div>
-          </div>
-          <div class="form-group" style="margin-top:1.5rem;">
-            <label data-i18n="res_guests">Convives</label>
-            <select>
-              <option data-i18n="res_guest_opt1">1 Personne</option>
-              <option selected data-i18n="res_guest_opt2">2 Personnes</option>
-              <option data-i18n="res_guest_opt3">3–4 Personnes</option>
-              <option data-i18n="res_guest_opt4">5–6 Personnes</option>
-              <option data-i18n="res_guest_opt5">7+ Personnes</option>
-            </select>
-          </div>
-          <div class="form-group" style="margin-top:1.5rem;">
-            <label data-i18n="res_note">Notes Spéciales</label>
-            <textarea data-i18n-ph="res_note_ph" placeholder="Allergies, anniversaire, preferences…"></textarea>
-          </div>
-          <div style="margin-top:2rem;">
-            <button type="submit" class="btn-primary" style="width:100%;padding:1.1rem;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;border-radius:4px;" data-i18n="res_btn">Confirmer la Réservation</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+<section class="section" id="reservation" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+<div class="container">
+<div class="res-inner">
+<!-- Info col -->
+<div class="reveal">
+<p class="eyebrow" data-i18n="res_eyebrow">Réservation</p>
+<span class="gold-line"></span>
+<h2 class="section-title"><em data-i18n="res_title">Réservez Votre Expérience</em></h2>
+<p style="font-size:.88rem;color:var(--text-muted);line-height:1.9;margin:1.5rem 0 2.5rem;">📍 12 Rue d'Alsace-Lorraine, 31000 Toulouse<br/>📞 06 52 51 55 51<br/>✉️ lotusrestoin@gmail.com<br/>🕐 Lun–Sam: 12h–14h30 / 19h–23h | Dim: 19h–23h</p>
+<div class="res-actions">
+<a class="btn-whatsapp" href="https://wa.me/33652515551?text=Bonjour%2C%20je%20voudrais%20réserver%20une%20table." rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.12 1.531 5.845L0 24l6.337-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.724.886.936-3.614-.234-.372A9.818 9.818 0 1112 21.818z"></path></svg>
+<span data-i18n="res_whatsapp">WhatsApp</span>
+</a>
+<a class="btn-call" href="tel:+33652515551">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+<span data-i18n="res_call">Appeler</span>
+</a>
+</div>
+</div>
+<!-- Form col -->
+<div class="reveal reveal-delay-1">
+<form id="reservation-form">
+<div class="form-row">
+<div class="form-group">
+<label data-i18n="res_name">Nom Complet</label>
+<input data-i18n-ph="res_name_ph" placeholder="Votre nom…" required="" type="text"/>
+</div>
+<div class="form-group">
+<label data-i18n="res_phone">Téléphone</label>
+<input data-i18n-ph="res_phone_ph" placeholder="+33…" required="" type="tel"/>
+</div>
+</div>
+<div class="form-row" style="margin-top:1.5rem;">
+<div class="form-group">
+<label data-i18n="res_date">Date</label>
+<input required="" type="date"/>
+</div>
+<div class="form-group">
+<label data-i18n="res_time">Heure</label>
+<input required="" type="time"/>
+</div>
+</div>
+<div class="form-group" style="margin-top:1.5rem;">
+<label data-i18n="res_guests">Convives</label>
+<select>
+<option data-i18n="res_guest_opt1">1 Personne</option>
+<option data-i18n="res_guest_opt2" selected="">2 Personnes</option>
+<option data-i18n="res_guest_opt3">3–4 Personnes</option>
+<option data-i18n="res_guest_opt4">5–6 Personnes</option>
+<option data-i18n="res_guest_opt5">7+ Personnes</option>
+</select>
+</div>
+<div class="form-group" style="margin-top:1.5rem;">
+<label data-i18n="res_note">Notes Spéciales</label>
+<textarea data-i18n-ph="res_note_ph" placeholder="Allergies, anniversaire, preferences…"></textarea>
+</div>
+<div style="margin-top:2rem;">
+<button class="btn-primary" data-i18n="res_btn" style="width:100%;padding:1.1rem;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;border-radius:4px;" type="submit">Confirmer la Réservation</button>
+</div>
+</form>
+</div>
+</div>
+</div>
 </section>
-
-
 <!-- ============================================================
      LOCATION
      ============================================================ -->
-<section id="location" class="section">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow" data-i18n="loc_eyebrow">Nous Trouver</p>
-      <span class="gold-line center"></span>
-      <h2 class="section-title"><em data-i18n="loc_title">Notre Adresse</em></h2>
-    </div>
-    <div class="location-grid reveal" style="margin-top:3rem;">
-      <div class="map-wrapper">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.0488249762825!2d1.4523838000000002!3d43.605525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebd90b354cfed%3A0x5886a86a0f7f73ac!2sLotus!5e0!3m2!1sen!2sin!4v1774465141082!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lotus Restaurant on Google Maps"></iframe>
-      </div>
-      <div class="location-info reveal reveal-delay-1">
-        <div class="loc-block">
-          <p class="loc-block-title" data-i18n="loc_address_label">Adresse</p>
-          <p class="loc-block-text">12 Rue d'Alsace-Lorraine<br/>31000 Toulouse, France</p>
-          <a class="loc-link" href="https://maps.google.com/?q=Lotus+Restaurant+Toulouse" target="_blank" rel="noopener" style="font-size:.8rem;margin-top:.5rem;display:inline-block;">Ouvrir sur Google Maps →</a>
-          <a class="btn-directions" href="https://maps.google.com/maps/dir//Lotus+Restaurant+Toulouse" target="_blank" rel="noopener" data-i18n="loc_directions">📍 Get Directions</a>
-        </div>
-        <div class="loc-block">
-          <p class="loc-block-title" data-i18n="loc_phone_label">Téléphone</p>
-          <a href="tel:+33652515551" class="loc-block-text" style="color:var(--gold);font-family:var(--font-head);font-style:italic;font-size:1.3rem;">06 52 51 55 51</a>
-          <a href="mailto:lotusrestoin@gmail.com" style="font-size:.82rem;color:var(--text-muted);margin-top:.25rem;display:block;">lotusrestoin@gmail.com</a>
-        </div>
-        <div class="loc-block">
-          <p class="loc-block-title" data-i18n="loc_hours_label">Horaires d'Ouverture</p>
-          <div class="hours-grid">
-            <div class="hours-row">
-              <span class="hours-day" data-i18n="loc_lun_sam">Lun – Sam</span>
-              <span data-i18n="loc_lun_sam_h">12h–14h30 / 19h–23h</span>
-            </div>
-            <div class="hours-row">
-              <span class="hours-day" data-i18n="loc_dim">Dimanche</span>
-              <span data-i18n="loc_dim_h">19h–23h</span>
-            </div>
-          </div>
-        </div>
-        <div class="loc-block">
-          <p class="loc-block-title" data-i18n="loc_social">Réseaux Sociaux</p>
-          <div style="display:flex;gap:.75rem;margin-top:.5rem;">
-            <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" style="color:var(--gold);font-size:.8rem;text-decoration:underline;text-underline-offset:3px;">Instagram</a>
-            <a href="https://www.tiktok.com/@Lotusrestaurentindientoulouse" target="_blank" rel="noopener" style="color:var(--gold);font-size:.8rem;text-decoration:underline;text-underline-offset:3px;">TikTok</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="section" id="location">
+<div class="container">
+<div class="section-header centered reveal">
+<p class="eyebrow" data-i18n="loc_eyebrow">Nous Trouver</p>
+<span class="gold-line center"></span>
+<h2 class="section-title"><em data-i18n="loc_title">Notre Adresse</em></h2>
+</div>
+<div class="location-grid reveal" style="margin-top:3rem;">
+<div class="map-wrapper">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.0488249762825!2d1.4523838000000002!3d43.605525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebd90b354cfed%3A0x5886a86a0f7f73ac!2sLotus!5e0!3m2!1sen!2sin!4v1774465141082!5m2!1sen!2sin" title="Lotus Restaurant on Google Maps"></iframe>
+</div>
+<div class="location-info reveal reveal-delay-1">
+<div class="loc-block">
+<p class="loc-block-title" data-i18n="loc_address_label">Adresse</p>
+<p class="loc-block-text">12 Rue d'Alsace-Lorraine<br/>31000 Toulouse, France</p>
+<a class="loc-link" href="https://maps.google.com/?q=Lotus+Restaurant+Toulouse" rel="noopener" style="font-size:.8rem;margin-top:.5rem;display:inline-block;" target="_blank">Ouvrir sur Google Maps →</a>
+<a class="btn-directions" data-i18n="loc_directions" href="https://maps.google.com/maps/dir//Lotus+Restaurant+Toulouse" rel="noopener" target="_blank">📍 Get Directions</a>
+</div>
+<div class="loc-block">
+<p class="loc-block-title" data-i18n="loc_phone_label">Téléphone</p>
+<a class="loc-block-text" href="tel:+33652515551" style="color:var(--gold);font-family:var(--font-head);font-style:italic;font-size:1.3rem;">06 52 51 55 51</a>
+<a href="mailto:lotusrestoin@gmail.com" style="font-size:.82rem;color:var(--text-muted);margin-top:.25rem;display:block;">lotusrestoin@gmail.com</a>
+</div>
+<div class="loc-block">
+<p class="loc-block-title" data-i18n="loc_hours_label">Horaires d'Ouverture</p>
+<div class="hours-grid">
+<div class="hours-row">
+<span class="hours-day" data-i18n="loc_lun_sam">Lun – Sam</span>
+<span data-i18n="loc_lun_sam_h">12h–14h30 / 19h–23h</span>
+</div>
+<div class="hours-row">
+<span class="hours-day" data-i18n="loc_dim">Dimanche</span>
+<span data-i18n="loc_dim_h">19h–23h</span>
+</div>
+</div>
+</div>
+<div class="loc-block">
+<p class="loc-block-title" data-i18n="loc_social">Réseaux Sociaux</p>
+<div style="display:flex;gap:.75rem;margin-top:.5rem;">
+<a href="https://www.instagram.com/lotusrestoin/" rel="noopener" style="color:var(--gold);font-size:.8rem;text-decoration:underline;text-underline-offset:3px;" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@Lotusrestaurentindientoulouse" rel="noopener" style="color:var(--gold);font-size:.8rem;text-decoration:underline;text-underline-offset:3px;" target="_blank">TikTok</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ============================================================
      FAQ (SEO / AI Visibility)
      ============================================================ -->
 <section class="section bg-surface">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow" data-i18n="faq_eyebrow">FAQ</p>
-      <span class="gold-line center"></span>
-      <h2 class="section-title"><em data-i18n="faq_title">Questions Fréquentes</em></h2>
-    </div>
-    <div class="faq-list reveal" style="margin-top:3rem;">
-      <div class="faq-item">
-        <button class="faq-question"><span data-i18n="faq_q1">Proposez-vous des options végétariennes ?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-answer"><p data-i18n="faq_a1">Oui, nous proposons une large gamme de plats végétariens.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question"><span data-i18n="faq_q2">Acceptez-vous les réservations en ligne ?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-answer"><p data-i18n="faq_a2">Oui, vous pouvez réserver en ligne via ce site, par téléphone ou via WhatsApp.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question"><span data-i18n="faq_q3">Proposez-vous des menus sans gluten ?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-answer"><p data-i18n="faq_a3">Plusieurs de nos plats sont naturellement sans gluten. Merci de nous informer de vos allergies.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question"><span data-i18n="faq_q4">Où êtes-vous situé à Toulouse ?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-answer"><p data-i18n="faq_a4">Nous sommes au 12 Rue d'Alsace-Lorraine, 31000 Toulouse, en plein centre-ville.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question"><span data-i18n="faq_q5">Proposez-vous des services de traiteur ?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-answer"><p data-i18n="faq_a5">Oui, nous organisons des événements privés, mariages, et services traiteur.</p></div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-header centered reveal">
+<p class="eyebrow" data-i18n="faq_eyebrow">FAQ</p>
+<span class="gold-line center"></span>
+<h2 class="section-title"><em data-i18n="faq_title">Questions Fréquentes</em></h2>
+</div>
+<div class="faq-list reveal" style="margin-top:3rem;">
+<div class="faq-item">
+<button class="faq-question"><span data-i18n="faq_q1">Proposez-vous des options végétariennes ?</span><svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></button>
+<div class="faq-answer"><p data-i18n="faq_a1">Oui, nous proposons une large gamme de plats végétariens.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-question"><span data-i18n="faq_q2">Acceptez-vous les réservations en ligne ?</span><svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></button>
+<div class="faq-answer"><p data-i18n="faq_a2">Oui, vous pouvez réserver en ligne via ce site, par téléphone ou via WhatsApp.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-question"><span data-i18n="faq_q3">Proposez-vous des menus sans gluten ?</span><svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></button>
+<div class="faq-answer"><p data-i18n="faq_a3">Plusieurs de nos plats sont naturellement sans gluten. Merci de nous informer de vos allergies.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-question"><span data-i18n="faq_q4">Où êtes-vous situé à Toulouse ?</span><svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></button>
+<div class="faq-answer"><p data-i18n="faq_a4">Nous sommes au 12 Rue d'Alsace-Lorraine, 31000 Toulouse, en plein centre-ville.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-question"><span data-i18n="faq_q5">Proposez-vous des services de traiteur ?</span><svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></button>
+<div class="faq-answer"><p data-i18n="faq_a5">Oui, nous organisons des événements privés, mariages, et services traiteur.</p></div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ============================================================
      INSTAGRAM FEED
      ============================================================ -->
-<section id="instagram" class="section">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow">@lotusrestoin</p>
-      <span class="gold-line center"></span>
-      <h2 class="section-title"><em data-i18n="insta_title">Suivez-nous sur Instagram</em></h2>
-      <p style="font-size:.88rem;color:var(--text-muted);margin-top:.5rem;" data-i18n="insta_desc">Découvrez nos derniers plats, notre ambiance et les coulisses</p>
-    </div>
-    <div class="instagram-grid reveal" style="margin-top:3rem;">
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="insta-item">
-        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&q=80&fit=crop" alt="Butter Chicken" loading="lazy"/>
-        <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
-      </a>
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="insta-item">
-        <img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=400&q=80&fit=crop" alt="Biryani" loading="lazy"/>
-        <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
-      </a>
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="insta-item">
-        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80&fit=crop" alt="Indian Spices" loading="lazy"/>
-        <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
-      </a>
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="insta-item">
-        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=80&fit=crop" alt="Tandoori" loading="lazy"/>
-        <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
-      </a>
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="insta-item">
-        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80&fit=crop" alt="Naan Bread" loading="lazy"/>
-        <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
-      </a>
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="insta-item">
-        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=80&fit=crop" alt="Dal" loading="lazy"/>
-        <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
-      </a>
-    </div>
-    <div style="text-align:center;margin-top:2rem;" class="reveal">
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="btn-outline" style="display:inline-flex;align-items:center;gap:.5rem;" data-i18n="insta_btn">Suivez @lotusrestoin sur Instagram</a>
-    </div>
-  </div>
+<section class="section" id="instagram">
+<div class="container">
+<div class="section-header centered reveal">
+<p class="eyebrow">@lotusrestoin</p>
+<span class="gold-line center"></span>
+<h2 class="section-title"><em data-i18n="insta_title">Suivez-nous sur Instagram</em></h2>
+<p data-i18n="insta_desc" style="font-size:.88rem;color:var(--text-muted);margin-top:.5rem;">Découvrez nos derniers plats, notre ambiance et les coulisses</p>
+</div>
+<div class="instagram-grid reveal" style="margin-top:3rem;">
+<a class="insta-item" href="https://www.instagram.com/lotusrestoin/" rel="noopener" target="_blank">
+<img alt="Butter Chicken" loading="lazy" src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&amp;q=80&amp;fit=crop"/>
+<div class="insta-overlay"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="1"></circle></svg></div>
+</a>
+<a class="insta-item" href="https://www.instagram.com/lotusrestoin/" rel="noopener" target="_blank">
+<img alt="Biryani" loading="lazy" src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=400&amp;q=80&amp;fit=crop"/>
+<div class="insta-overlay"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="1"></circle></svg></div>
+</a>
+<a class="insta-item" href="https://www.instagram.com/lotusrestoin/" rel="noopener" target="_blank">
+<img alt="Indian Spices" loading="lazy" src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&amp;q=80&amp;fit=crop"/>
+<div class="insta-overlay"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="1"></circle></svg></div>
+</a>
+<a class="insta-item" href="https://www.instagram.com/lotusrestoin/" rel="noopener" target="_blank">
+<img alt="Tandoori" loading="lazy" src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&amp;q=80&amp;fit=crop"/>
+<div class="insta-overlay"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="1"></circle></svg></div>
+</a>
+<a class="insta-item" href="https://www.instagram.com/lotusrestoin/" rel="noopener" target="_blank">
+<img alt="Naan Bread" loading="lazy" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&amp;q=80&amp;fit=crop"/>
+<div class="insta-overlay"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="1"></circle></svg></div>
+</a>
+<a class="insta-item" href="https://www.instagram.com/lotusrestoin/" rel="noopener" target="_blank">
+<img alt="Dal" loading="lazy" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&amp;q=80&amp;fit=crop"/>
+<div class="insta-overlay"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="1"></circle></svg></div>
+</a>
+</div>
+<div class="reveal" style="text-align:center;margin-top:2rem;">
+<a class="btn-outline" data-i18n="insta_btn" href="https://www.instagram.com/lotusrestoin/" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;" target="_blank">Suivez @lotusrestoin sur Instagram</a>
+</div>
+</div>
 </section>
-
 <!-- ============================================================
      FOOTER
      ============================================================ -->
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <!-- Brand -->
-      <div>
-        <div class="footer-logo">Lotus</div>
-        <p class="footer-tagline" data-i18n="footer_desc">L'excellence de la haute gastronomie indienne au cœur de la Ville Rose depuis 2018.</p>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/lotusrestoin/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@Lotusrestaurentindientoulouse" class="social-btn" aria-label="TikTok" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.88-2.89 2.89 2.89 0 012.88-2.89c.28 0 .56.04.82.12v-3.5a6.37 6.37 0 00-.82-.05A6.34 6.34 0 003.15 15.3 6.34 6.34 0 009.49 21.64a6.34 6.34 0 006.34-6.34V9.06a8.16 8.16 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.49z"/></svg>
-          </a>
-          <a href="https://wa.me/33652515551" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.12 1.531 5.845L0 24l6.337-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.724.886.936-3.614-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
-          </a>
-        </div>
-      </div>
-      <!-- Quick Links -->
-      <div>
-        <p class="footer-col-title" data-i18n="footer_links">Liens Rapides</p>
-        <div class="footer-links">
-          <a href="#experience" data-i18n="nav_experience">Expérience</a>
-          <a href="#menu" data-i18n="nav_menu">Menu</a>
-          <a href="#gallery" data-i18n="nav_gallery">Galerie</a>
-          <a href="#testimonials" data-i18n="test_eyebrow">Avis</a>
-          <a href="#reservation" data-i18n="nav_reservation">Réservation</a>
-        </div>
-      </div>
-      <!-- Contact -->
-      <div>
-        <p class="footer-col-title" data-i18n="footer_contact">Contact</p>
-        <div class="footer-contact-item">
-          <span>12 Rue d'Alsace-Lorraine</span>
-          <span>31000 Toulouse, France</span>
-        </div>
-        <div class="footer-contact-item">
-          <a href="tel:+33652515551">06 52 51 55 51</a>
-        </div>
-        <div class="footer-contact-item" style="font-size:.8rem;color:var(--text-muted);">
+<div class="container">
+<div class="footer-grid">
+<!-- Brand -->
+<div>
+<div class="footer-logo">Lotus</div>
+<p class="footer-tagline" data-i18n="footer_desc">L'excellence de la haute gastronomie indienne au cœur de la Ville Rose depuis 2018.</p>
+<div class="footer-social">
+<a aria-label="Instagram" class="social-btn" href="https://www.instagram.com/lotusrestoin/" rel="noopener" target="_blank">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="1"></circle></svg>
+</a>
+<a aria-label="TikTok" class="social-btn" href="https://www.tiktok.com/@Lotusrestaurentindientoulouse" rel="noopener" target="_blank">
+<svg fill="currentColor" style="width:16px" viewbox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.88-2.89 2.89 2.89 0 012.88-2.89c.28 0 .56.04.82.12v-3.5a6.37 6.37 0 00-.82-.05A6.34 6.34 0 003.15 15.3 6.34 6.34 0 009.49 21.64a6.34 6.34 0 006.34-6.34V9.06a8.16 8.16 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.49z"></path></svg>
+</a>
+<a aria-label="WhatsApp" class="social-btn" href="https://wa.me/33652515551" rel="noopener" target="_blank">
+<svg fill="currentColor" style="width:16px" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.12 1.531 5.845L0 24l6.337-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.724.886.936-3.614-.234-.372A9.818 9.818 0 1112 21.818z"></path></svg>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<p class="footer-col-title" data-i18n="footer_links">Liens Rapides</p>
+<div class="footer-links">
+<a data-i18n="nav_experience" href="#experience">Expérience</a>
+<a data-i18n="nav_menu" href="#menu">Menu</a>
+<a data-i18n="nav_gallery" href="#gallery">Galerie</a>
+<a data-i18n="test_eyebrow" href="#testimonials">Avis</a>
+<a data-i18n="nav_reservation" href="#reservation">Réservation</a>
+</div>
+</div>
+<!-- Contact -->
+<div>
+<p class="footer-col-title" data-i18n="footer_contact">Contact</p>
+<div class="footer-contact-item">
+<span>12 Rue d'Alsace-Lorraine</span>
+<span>31000 Toulouse, France</span>
+</div>
+<div class="footer-contact-item">
+<a href="tel:+33652515551">06 52 51 55 51</a>
+</div>
+<div class="footer-contact-item" style="font-size:.8rem;color:var(--text-muted);">
           Lun–Sam: 12h–14h30 / 19h–23h<br/>Dim: 19h–23h
         </div>
-      </div>
-      <!-- Reserve CTA -->
-      <div style="display:flex;flex-direction:column;gap:1rem;">
-        <p class="footer-col-title" data-i18n="nav_reserve">Réserver</p>
-        <a href="#reservation" class="btn-primary" style="text-align:center;" data-i18n="hero_btn1">Réserver une Table</a>
-        <a class="btn-whatsapp" href="https://wa.me/33652515551" target="_blank" rel="noopener" style="justify-content:center;">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.12 1.531 5.845L0 24l6.337-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.724.886.936-3.614-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
+</div>
+<!-- Reserve CTA -->
+<div style="display:flex;flex-direction:column;gap:1rem;">
+<p class="footer-col-title" data-i18n="nav_reserve">Réserver</p>
+<a class="btn-primary" data-i18n="hero_btn1" href="#reservation" style="text-align:center;">Réserver une Table</a>
+<a class="btn-whatsapp" href="https://wa.me/33652515551" rel="noopener" style="justify-content:center;" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.12 1.531 5.845L0 24l6.337-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.724.886.936-3.614-.234-.372A9.818 9.818 0 1112 21.818z"></path></svg>
           WhatsApp
         </a>
-      </div>
-    </div>
-    <!-- Bottom bar -->
-    <div class="footer-designer">
-      <span data-i18n="footer_designer">Designed by Rohith Thinakaran</span>
-    </div>
-    <div class="footer-bottom">
-      <span data-i18n="footer_copyright">© 2026 Lotus Restaurant – Toulouse. Tous droits réservés.</span>
-      <div style="display:flex;gap:1.5rem;">
-        <a href="#">Mentions Légales</a>
-        <a href="#">Politique de Confidentialité</a>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+<!-- Bottom bar -->
+<div class="footer-designer">
+<span data-i18n="footer_designer">Designed by Rohith Thinakaran</span>
+</div>
+<div class="footer-bottom">
+<span data-i18n="footer_copyright">© 2026 Lotus Restaurant – Toulouse. Tous droits réservés.</span>
+<div style="display:flex;gap:1.5rem;">
+<a href="#">Mentions Légales</a>
+<a href="#">Politique de Confidentialité</a>
+</div>
+</div>
+</div>
 </footer>
-
 <!-- Toast -->
 <div id="toast"></div>
-
 <!-- Scripts -->
 <script src="translations.js"></script>
 <script src="main.js"></script>
-
 </body>
 </html>
-
-
-
