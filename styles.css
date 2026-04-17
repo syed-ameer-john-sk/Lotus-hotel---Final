@@ -835,7 +835,7 @@ input, select, textarea { font-family: var(--font-body); }
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   text-decoration: none;
 }
-.sticky-btn.gold { background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: #1a0f00; }
+.sticky-btn.gold { background: var(--gold); color: var(--bg-page); }
 .sticky-btn.green { background: #25D366; color: #fff; }
 .sticky-btn:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.5); }
 .sticky-btn svg { width: 18px; }
@@ -956,9 +956,6 @@ footer {
    ============================================================ */
 .bg-surface { background: var(--bg-card); }
 .bg-surface2 { background: var(--bg-card-hover); }
-
-/* Sticky buttons fix */
-.sticky-btn.gold { background: var(--gold); color: var(--bg-page); }
 
 /* Sub-section header */
 .menu-subsection-title {
