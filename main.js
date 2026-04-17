@@ -326,6 +326,7 @@ function initOpeningStatus() {
 function initParticles() {
   const container = document.querySelector('.entry-particles');
   if (!container) return;
+  const fragment = document.createDocumentFragment();
   for (let i = 0; i < 30; i++) {
     const p = document.createElement('div');
     p.className = 'particle';
@@ -338,8 +339,9 @@ function initParticles() {
       width: ${1 + Math.random() * 3}px;
       height: ${1 + Math.random() * 3}px;
     `;
-    container.appendChild(p);
+    fragment.appendChild(p);
   }
+  container.appendChild(fragment);
 }
 
 /* ==========================================================
