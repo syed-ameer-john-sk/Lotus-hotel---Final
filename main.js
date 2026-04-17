@@ -310,13 +310,17 @@ function initOpeningStatus() {
   const dot = statusEl.querySelector('.status-dot');
   const text = statusEl.querySelector('.status-text');
   if (dot && text) {
+    const span = document.createElement('span');
     if (isOpen) {
       dot.className = 'status-dot open';
-      text.innerHTML = `<span class="status-open">${t('status_open')}</span>`;
+      span.className = 'status-open';
+      span.textContent = t('status_open');
     } else {
       dot.className = 'status-dot closed';
-      text.innerHTML = `<span class="status-closed">${t('status_closed')} ${nextOpen}</span>`;
+      span.className = 'status-closed';
+      span.textContent = `${t('status_closed')} ${nextOpen}`;
     }
+    text.replaceChildren(span);
   }
 }
 
