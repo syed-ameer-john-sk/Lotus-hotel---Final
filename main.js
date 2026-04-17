@@ -388,18 +388,27 @@ function initStickyReserve() {
   const sticky = document.getElementById('sticky-reserve');
   if (!sticky) return;
   const resSection = document.getElementById('reservation');
-  let shown = false;
+
+  let isResVisible = false;
+  if (resSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        isResVisible = entry.isIntersecting;
+      });
+    }, { threshold: 0 });
+    observer.observe(resSection);
+  }
+
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const shouldShow = scrollY > 500;
+
     // Hide when reservation section is visible
-    if (resSection) {
-      const rect = resSection.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        sticky.classList.add('hidden');
-        return;
-      }
+    if (isResVisible) {
+      sticky.classList.add('hidden');
+      return;
     }
+
     sticky.classList.toggle('hidden', !shouldShow);
   }, { passive: true });
 }
