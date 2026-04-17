@@ -73,7 +73,14 @@ function translateMenu(lang) {
   document.querySelectorAll('.curry-name, .menu-item-name, .drinks-item-name').forEach(el => {
     // Store original FR text on first run
     if (!el.dataset.origFr) {
-      el.dataset.origFr = el.textContent.trim();
+      const vTag = el.querySelector('.menu-tag');
+      if (vTag) {
+        // If there's a V tag, only extract text from the text node (usually childNodes[0])
+        const textNode = Array.from(el.childNodes).find(n => n.nodeType === Node.TEXT_NODE);
+        el.dataset.origFr = textNode ? textNode.textContent.trim() : el.textContent.trim();
+      } else {
+        el.dataset.origFr = el.textContent.trim();
+      }
     }
     let text = el.dataset.origFr;
     // Replace each FR word with the translated word
