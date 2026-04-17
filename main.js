@@ -7,18 +7,20 @@
 /* ==========================================================
    GLOBAL STATE
    ========================================================== */
-let currentLang = localStorage.getItem('lotus_lang') || 'fr';
+let currentLang = typeof localStorage !== 'undefined' ? (localStorage.getItem('lotus_lang') || 'fr') : 'fr';
 
 /* ==========================================================
    LOADING SCREEN
    ========================================================== */
-window.addEventListener('load', () => {
-  const loader = document.getElementById('loader');
-  if (loader) {
-    setTimeout(() => loader.classList.add('hide'), 800);
-  }
-  initAll();
-});
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    if (loader) {
+      setTimeout(() => loader.classList.add('hide'), 800);
+    }
+    initAll();
+  });
+}
 
 function initAll() {
   initI18n();
@@ -417,4 +419,17 @@ function showToast(msg) {
   toast.textContent = msg;
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 4000);
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    initHeroSlider,
+    t,
+    initI18n,
+    applyTranslations
+  };
+  Object.defineProperty(module.exports, 'currentLang', {
+    get: function() { return currentLang; },
+    set: function(v) { currentLang = v; }
+  });
 }
