@@ -1,7 +1,7 @@
 // ============================================================
 // LOTUS RESTAURANT – MAIN.JS
 // i18n engine, scroll animations, menu tabs, opening hours,
-// video observer, sticky reserve, nav, FAQ, particles
+// video observer, sticky reserve, nav, FAQ
 // ============================================================
 
 /* ==========================================================
@@ -22,13 +22,11 @@ window.addEventListener('load', () => {
 
 function initAll() {
   initI18n();
-  initEntry();
   initNav();
   initScrollReveal();
   initMenuTabs();
   initFAQ();
   initOpeningStatus();
-  initParticles();
   initVideoObserver();
   initReservationForm();
   initStickyReserve();
@@ -170,16 +168,6 @@ function initLangSelector() {
 }
 
 /* ==========================================================
-   ENTRY SCREEN
-   ========================================================== */
-function initEntry() {
-  const screen = document.getElementById('entry-screen');
-  if (!screen) return;
-  screen.style.display = 'none';
-  document.body.style.overflow = '';
-}
-
-/* ==========================================================
    NAV
    ========================================================== */
 function initNav() {
@@ -317,28 +305,6 @@ function initOpeningStatus() {
       dot.className = 'status-dot closed';
       text.innerHTML = `<span class="status-closed">${t('status_closed')} ${nextOpen}</span>`;
     }
-  }
-}
-
-/* ==========================================================
-   PARTICLES
-   ========================================================== */
-function initParticles() {
-  const container = document.querySelector('.entry-particles');
-  if (!container) return;
-  for (let i = 0; i < 30; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    p.style.cssText = `
-      left: ${Math.random() * 100}%;
-      top: ${Math.random() * 100}%;
-      animation-delay: ${Math.random() * 4}s;
-      animation-duration: ${3 + Math.random() * 4}s;
-      opacity: ${0.2 + Math.random() * 0.6};
-      width: ${1 + Math.random() * 3}px;
-      height: ${1 + Math.random() * 3}px;
-    `;
-    container.appendChild(p);
   }
 }
 
