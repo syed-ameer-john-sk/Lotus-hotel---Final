@@ -942,7 +942,6 @@ footer {
   .dishes-grid { grid-template-columns: 1fr; }
   .gallery-masonry { grid-template-columns: 1fr; }
   .hero-title { font-size: 2.2rem; }
-  .entry-lotus { font-size: 3rem; }
   .instagram-grid { grid-template-columns: repeat(3, 1fr); }
   #sticky-reserve {
     position: fixed; bottom: 0; left: 0; right: 0;

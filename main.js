@@ -1,7 +1,7 @@
 // ============================================================
 // LOTUS RESTAURANT – MAIN.JS
 // i18n engine, scroll animations, menu tabs, opening hours,
-// video observer, sticky reserve, nav, FAQ, particles
+// video observer, sticky reserve, nav, FAQ
 // ============================================================
 
 /* ==========================================================
