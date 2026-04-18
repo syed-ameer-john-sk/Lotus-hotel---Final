@@ -201,8 +201,15 @@ function initNav() {
   const closeBtn = document.getElementById('nav-close');
 
   // Scroll effect
+  let navTicking = false;
   window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
+    if (!navTicking) {
+      window.requestAnimationFrame(() => {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+        navTicking = false;
+      });
+      navTicking = true;
+    }
   }, { passive: true });
 
   // Mobile toggle
@@ -385,19 +392,26 @@ function initStickyReserve() {
   const sticky = document.getElementById('sticky-reserve');
   if (!sticky) return;
   const resSection = document.getElementById('reservation');
-  let shown = false;
+  let stickyTicking = false;
   window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const shouldShow = scrollY > 500;
-    // Hide when reservation section is visible
-    if (resSection) {
-      const rect = resSection.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        sticky.classList.add('hidden');
-        return;
-      }
+    if (!stickyTicking) {
+      window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        const shouldShow = scrollY > 500;
+        // Hide when reservation section is visible
+        if (resSection) {
+          const rect = resSection.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            sticky.classList.add('hidden');
+            stickyTicking = false;
+            return;
+          }
+        }
+        sticky.classList.toggle('hidden', !shouldShow);
+        stickyTicking = false;
+      });
+      stickyTicking = true;
     }
-    sticky.classList.toggle('hidden', !shouldShow);
   }, { passive: true });
 }
 
