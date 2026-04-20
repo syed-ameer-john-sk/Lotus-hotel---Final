@@ -8,14 +8,56 @@
   <meta name="keywords" content="Indian restaurant Toulouse, restaurant indien Toulouse, Indian cuisine Toulouse, best Indian restaurant Toulouse"/>
   <meta property="og:title" content="Lotus Restaurant – Indian Gastronomy in Toulouse"/>
   <meta property="og:description" content="Authentic Indian cuisine crafted with traditional spices and modern elegance in the heart of Toulouse."/>
+  <meta property="og:image" content="lotus_logo_3d_transparent_v1_1774705729375.png"/>
   <meta property="og:type" content="restaurant"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Lotus Restaurant – Indian Gastronomy in Toulouse"/>
+  <meta name="twitter:description" content="Authentic Indian cuisine in the heart of Toulouse."/>
+  <meta name="twitter:image" content="lotus_logo_3d_transparent_v1_1774705729375.png"/>
+  <link rel="icon" type="image/png" href="lotus-3d-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css"/>
   <!-- Structured Data -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Restaurant","name":"Lotus Restaurant","image":"","address":{"@type":"PostalAddress","streetAddress":"12 Rue d'Alsace-Lorraine","addressLocality":"Toulouse","postalCode":"31000","addressCountry":"FR"},"telephone":"+33652515551","servesCuisine":"Indian","priceRange":"€€","openingHours":["Mo-Sa 12:00-14:30","Mo-Sa 19:00-23:00","Su 19:00-23:00"],"url":"","sameAs":["https://www.instagram.com/lotusrestoin/","https://www.tiktok.com/@Lotusrestaurentindientoulouse"]}
+  {
+    "@context":"https://schema.org",
+    "@type":"Restaurant",
+    "name":"Lotus Restaurant",
+    "image":"lotus_logo_3d_transparent_v1_1774705729375.png",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"12 Rue d'Alsace-Lorraine",
+      "addressLocality":"Toulouse",
+      "postalCode":"31000",
+      "addressCountry":"FR"
+    },
+    "telephone":"+33561211212",
+    "servesCuisine":"Indian",
+    "priceRange":"€€",
+    "openingHours":["Mo-Sa 12:00-14:30","Mo-Sa 19:00-23:00","Su 19:00-23:00"],
+    "url":"https://lotus-restaurant.vercel.app/",
+    "sameAs":["https://www.instagram.com/lotusrestoin/","https://www.tiktok.com/@Lotusrestaurentindientoulouse"]
+  }
   </script>
 </head>
 <body>
+  <!-- Top Bar with Dynamic Status -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div id="opening-status" class="opening-status">
+        <!-- Will be populated by JS -->
+        <span class="status-dot"></span>
+        <span class="status-text">...</span>
+      </div>
+      <div class="top-bar-info desktop-only">
+        <span><i class="fas fa-phone"></i> +33 5 61 21 12 12</span>
+        <span><i class="fas fa-map-marker-alt"></i> 12 Rue d'Alsace-Lorraine</span>
+      </div>
+    </div>
+  </div>
+
 
 
 <!-- ============================================================
@@ -26,7 +68,7 @@
 <!-- ============================================================
      STICKY RESERVE
      ============================================================ -->
-<div id="sticky-reserve" class="hidden">
+<div id="sticky-reserve">
   <a class="sticky-btn phone" href="tel:+33652515551">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
     <span data-i18n="res_call">Appeler</span>
@@ -112,20 +154,20 @@
      ============================================================ -->
 <section id="hero">
   <div class="hero-slider">
-    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=1920&q=85&fit=crop')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1920&q=85&fit=crop')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1596797038530-2c107229654b?w=1920&q=85&fit=crop')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1920&q=85&fit=crop')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=85&fit=crop')"></div>
+    <div class="hero-slide active" style="background-image:url('gallary/20211203_193342.webp')" fetchpriority="high"></div>
+    <div class="hero-slide" style="background-image:url('gallary/unnamed (1).webp')"></div>
+    <div class="hero-slide" style="background-image:url('gallary/unnamed.webp')"></div>
+    <div class="hero-slide" style="background-image:url('gallary/20211211_193206.webp')"></div>
+    <div class="hero-slide" style="background-image:url('gallary/Lotus Food and Beverage_Chicken 65_1242x704.webp')"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="eyebrow hero-eyebrow" data-i18n="hero_eyebrow">Gastronomie Indienne • Toulouse</p>
+    <p class="eyebrow hero-eyebrow" data-i18n="hero_eyebrow">Best Indian Restaurant in Toulouse</p>
     <h1 class="hero-title">
       <span data-i18n="hero_title1">Lotus</span> <em data-i18n="hero_title2">Restaurant</em>
     </h1>
-    <p class="hero-subtitle" data-i18n="hero_subtitle">Authentic Indian Experience in Toulouse</p>
-    <p class="hero-desc" data-i18n="hero_desc">Experience traditional Indian cuisine with a warm and elegant atmosphere.</p>
+    <p class="hero-subtitle" data-i18n="hero_subtitle">Best Indian Restaurant in Toulouse</p>
+    <p class="hero-desc" data-i18n="hero_desc">Experience authentic Indian cuisine crafted with tradition and modern elegance.</p>
     <div class="hero-btns">
       <a href="#reservation" class="btn-primary" data-i18n="hero_btn1">Réserver une Table</a>
       <a href="#menu" class="btn-outline" data-i18n="hero_btn2">Explorer le Menu</a>
@@ -148,13 +190,7 @@
   </div>
 </section>
 
-<!-- STATUS BAR -->
-<div class="status-bar">
-  <div id="opening-status">
-    <span class="status-dot"></span>
-    <span class="status-text"></span>
-  </div>
-</div>
+<!-- Removed old status bar in favor of top-bar -->
 
 
 <!-- ============================================================
@@ -165,13 +201,13 @@
     <div class="experience-grid">
       <div class="experience-images reveal">
         <div class="exp-img-main">
-          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=900&q=80&fit=crop" alt="Indian Spices" loading="lazy"/>
+          <img src="gallary/Lotus Food and Beverage_Chicken 65_1242x704.webp" alt="Indian Spices" loading="lazy"/>
         </div>
         <div class="exp-img-sm">
-          <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80&fit=crop" alt="Tandoor cooking" loading="lazy"/>
+          <img src="gallary/unnamed (6).webp" alt="Tandoor cooking" loading="lazy"/>
         </div>
         <div class="exp-img-sm">
-          <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80&fit=crop" alt="Indian food" loading="lazy"/>
+          <img src="gallary/Lotus Food and Beverage_Dosa_1242x704.webp" alt="Indian food" loading="lazy"/>
         </div>
       </div>
       <div class="reveal reveal-delay-1">
@@ -217,46 +253,49 @@
       <!-- Dish 1 -->
       <article class="dish-card reveal">
         <div class="dish-badge" data-i18n="dish1_badge">Best-seller</div>
-        <div class="dish-img"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&q=80&fit=crop" alt="Butter Chicken" loading="lazy"/></div>
+        <div class="dish-img"><img src="gallary/unnamed (1).webp" alt="Butter Chicken Signature" loading="lazy"/></div>
         <div class="dish-body">
           <h3 class="dish-name" data-i18n="dish1_name">Butter Chicken Signature</h3>
           <p class="dish-desc" data-i18n="dish1_desc">Poulet fermier grillé au tandoor, mijoté 12h dans une sauce tomate crémeuse.</p>
-          <p class="dish-price">18.50€</p>
+          <p class="dish-price">13.90€</p>
         </div>
       </article>
       <!-- Dish 2 -->
       <article class="dish-card reveal reveal-delay-1">
         <div class="dish-badge" data-i18n="dish2_badge">Chef's Choice</div>
-        <div class="dish-img"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=600&q=80&fit=crop" alt="Biryani" loading="lazy"/></div>
+        <div class="dish-img"><img src="gallary/unnamed (5).webp" alt="Biryani Royal" loading="lazy"/></div>
         <div class="dish-body">
           <h3 class="dish-name" data-i18n="dish2_name">Biryani Royal à l'Agneau</h3>
           <p class="dish-desc" data-i18n="dish2_desc">Riz basmati au safran du Cachemire, agneau fondant et fruits secs caramélisés.</p>
-          <p class="dish-price">22.00€</p>
+          <p class="dish-price">4.50€</p>
         </div>
       </article>
       <!-- Dish 3 -->
       <article class="dish-card reveal reveal-delay-2">
         <div class="dish-badge" data-i18n="dish3_badge">Populaire</div>
-        <div class="dish-img"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80&fit=crop" alt="Tandoori" loading="lazy"/></div>
+        <div class="dish-img"><img src="gallary/unnamed (4).webp" alt="Tandoori Mixed Grill" loading="lazy"/></div>
         <div class="dish-body">
           <h3 class="dish-name" data-i18n="dish3_name">Tandoori Mixed Grill</h3>
           <p class="dish-desc" data-i18n="dish3_desc">Assortiment de viandes et légumes marinés aux épices.</p>
-          <p class="dish-price">24.00€</p>
+          <p class="dish-price">14.90€</p>
         </div>
       </article>
       <!-- Dish 4 -->
       <article class="dish-card reveal">
         <div class="dish-badge" data-i18n="dish4_badge">Végétarien</div>
-        <div class="dish-img"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80&fit=crop" alt="Dal Makhani" loading="lazy"/></div>
+        <div class="dish-img"><img src="gallary/Lotus Food and Beverage_Chicken 65_1242x704.webp" alt="Dal Makhani Royale" loading="lazy"/></div>
         <div class="dish-body">
           <h3 class="dish-name" data-i18n="dish4_name">Dal Makhani Royale</h3>
           <p class="dish-desc" data-i18n="dish4_desc">Lentilles noires mijotées toute une nuit avec crème et beurre clarifié.</p>
-          <p class="dish-price">14.50€</p>
+          <p class="dish-price">12.90€</p>
         </div>
       </article>
     </div>
   </div>
 </section>
+
+
+
 
 
 <!-- ============================================================
@@ -276,9 +315,12 @@
         <button class="menu-tab" data-tab="plats" role="tab" data-i18n="tab_plats">Nos Plats</button>
         <button class="menu-tab" data-tab="chef" role="tab" data-i18n="tab_chef">Spécialités du Chef</button>
         <button class="menu-tab" data-tab="biryani" role="tab" data-i18n="tab_biryani">Biryani</button>
-        <button class="menu-tab" data-tab="vegetarian" role="tab" data-i18n="tab_veg">Végétarien</button>
+        <button class="menu-tab" data-tab="vegetarian" role="tab" data-i18n="tab_vegetarian">Végétarien</button>
+        <button class="menu-tab" data-tab="kothu" role="tab" data-i18n="tab_kothu">Kothu Paratha</button>
+        <button class="menu-tab" data-tab="dosa" role="tab" data-i18n="tab_dosa">Dosa & Pâtes</button>
         <button class="menu-tab" data-tab="pains" role="tab" data-i18n="tab_pains">Pains & Accompagnements</button>
         <button class="menu-tab" data-tab="desserts" role="tab" data-i18n="tab_desserts">Desserts & Boissons</button>
+        <button class="menu-tab" data-tab="formules" role="tab" data-i18n="tab_formules">Formules & Menus</button>
       </div>
     </div>
 
@@ -288,40 +330,40 @@
         <div class="menu-subsection-title" data-i18n="sub_veg_snacks">Entrées Végétariennes & Snacks</div>
       </div>
       <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Samosa Légumes <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Samosa Viande</div></div><div class="menu-dots"></div><div class="menu-price">4.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Roll au Poulet</div></div><div class="menu-dots"></div><div class="menu-price">4.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Roll au Légumes <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Oignons Bajji ou Vadai <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Aloo Bajji <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Aubergine Bajji <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Mixed Pakoras <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Calamar Pakora</div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crevette Pakora</div></div><div class="menu-dots"></div><div class="menu-price">5.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken 65</div></div><div class="menu-dots"></div><div class="menu-price">6.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Mixed Assortiment</div></div><div class="menu-dots"></div><div class="menu-price">8.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Samosa Légumes <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_snack_0">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Samosa Viande</div><div class="menu-item-desc" data-i18n="desc_auto_snack_1">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">4.90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Roll au Poulet</div><div class="menu-item-desc" data-i18n="desc_auto_snack_2">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">4.90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Roll au Légumes <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_snack_3">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Oignons Bajji ou Vadai <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_snack_4">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Aloo Bajji <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_snack_5">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Aubergine Bajji <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_snack_6">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Mixed Pakoras <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_snack_7">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Calamar Pakora</div><div class="menu-item-desc" data-i18n="desc_auto_snack_8">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">3.90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crevette Pakora</div><div class="menu-item-desc" data-i18n="desc_auto_snack_9">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">5.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken 65</div><div class="menu-item-desc" data-i18n="desc_auto_snack_10">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">6.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Mixed Assortiment</div><div class="menu-item-desc" data-i18n="desc_auto_snack_11">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">8.50€</div></div>
       </div>
       <div class="menu-subsection">
         <div class="menu-subsection-title" data-i18n="sub_tandoori">Grillades Tandoories</div>
       </div>
       <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet Tikka</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agneau Tikka</div></div><div class="menu-dots"></div><div class="menu-price">7.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet Tandoori</div></div><div class="menu-dots"></div><div class="menu-price">5.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Machli Tikka</div></div><div class="menu-dots"></div><div class="menu-price">7.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gambas Tikka</div></div><div class="menu-dots"></div><div class="menu-price">10.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Seek Kebab</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Assortiment Grill</div></div><div class="menu-dots"></div><div class="menu-price">14.90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet Tikka</div><div class="menu-item-desc">Morceaux de poulet mariné, yaourt, ail, gingembre</div></div><div class="menu-dots"></div><div class="menu-price">6,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agneau Tikka</div><div class="menu-item-desc">Morceaux d'agneau mariné, yaourt, ail, gingembre</div></div><div class="menu-dots"></div><div class="menu-price">7,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet Tandoori</div><div class="menu-item-desc">Cuisse de poulet mariné aux épices de tandoori et grillé</div></div><div class="menu-dots"></div><div class="menu-price">6,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Machli Tikka</div><div class="menu-item-desc">Saumon grillé au tandoor avec des épices</div></div><div class="menu-dots"></div><div class="menu-price">8,00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gambas Tikka</div><div class="menu-item-desc">Gambas grillé au tandoor</div></div><div class="menu-dots"></div><div class="menu-price">11,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Seek Kebab</div><div class="menu-item-desc">Viande de poulet et agneau haché, préparé avec épices, herbes fraîches</div></div><div class="menu-dots"></div><div class="menu-price">6,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Assortiment Grill</div><div class="menu-item-desc">Poulet, agneau, gambas, seek kebab, saumon</div></div><div class="menu-dots"></div><div class="menu-price">14,90€</div></div>
       </div>
       <div class="menu-subsection">
         <div class="menu-subsection-title" data-i18n="sub_salads">Salades</div>
       </div>
       <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Raita <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crevette Raita</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Salade de Maison</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Salade de Crevette</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Vegan D'inde <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Raita <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_snack_12">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crevette Raita</div><div class="menu-item-desc" data-i18n="desc_auto_snack_13">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Salade de Maison</div><div class="menu-item-desc" data-i18n="desc_auto_snack_14">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Salade de Crevette</div><div class="menu-item-desc" data-i18n="desc_auto_snack_15">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Vegan D'inde <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_snack_16">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">6.00€</div></div>
       </div>
     </div>
 
@@ -329,129 +371,176 @@
     <div class="menu-panel" id="panel-plats">
       <p style="font-size:.78rem;color:var(--text-muted);text-align:center;margin-bottom:1.5rem;font-style:italic;" data-i18n="menu_plats_note">Tous les plats sont servis avec riz nature</p>
       <div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_curry">Plats Curry</div></div>
-      <div class="curry-grid">
-        <div class="curry-row"><span class="curry-name">Poulet</span><span class="curry-price">9.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Agneau</span><span class="curry-price">10.99€</span></div>
-        <div class="curry-row"><span class="curry-name">Boeuf</span><span class="curry-price">10.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Crevettes</span><span class="curry-price">10.99€</span></div>
-        <div class="curry-row"><span class="curry-name">Légumes <span class="menu-tag">V</span></span><span class="curry-price">9.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Calamar</span><span class="curry-price">9.90€</span></div>
-        <div class="curry-row"><span class="curry-name">Saumon</span><span class="curry-price">11.50€</span></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet</div><div class="menu-item-desc" data-i18n="desc_auto_curry_17">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">9.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agneau</div><div class="menu-item-desc" data-i18n="desc_auto_curry_18">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">10.99€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Boeuf</div><div class="menu-item-desc" data-i18n="desc_auto_curry_19">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">10.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crevettes</div><div class="menu-item-desc" data-i18n="desc_auto_curry_20">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">10.99€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Légumes <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_curry_21">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">9.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Calamar</div><div class="menu-item-desc" data-i18n="desc_auto_curry_22">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">9.90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Saumon</div><div class="menu-item-desc" data-i18n="desc_auto_curry_23">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">11.50€</div></div>
       </div>
       <div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_korma">Plats Korma</div></div>
-      <div class="curry-grid">
-        <div class="curry-row"><span class="curry-name">Poulet</span><span class="curry-price">11.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Agneau</span><span class="curry-price">12.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Boeuf</span><span class="curry-price">11.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Crevettes</span><span class="curry-price">12.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Légumes <span class="menu-tag">V</span></span><span class="curry-price">9.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Saumon</span><span class="curry-price">12.50€</span></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet</div><div class="menu-item-desc" data-i18n="desc_auto_korma_24">Mijoté dans une sauce douce à la crème, noix de cajou et amandes.</div></div><div class="menu-dots"></div><div class="menu-price">11.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agneau</div><div class="menu-item-desc" data-i18n="desc_auto_korma_25">Mijoté dans une sauce douce à la crème, noix de cajou et amandes.</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Boeuf</div><div class="menu-item-desc" data-i18n="desc_auto_korma_26">Mijoté dans une sauce douce à la crème, noix de cajou et amandes.</div></div><div class="menu-dots"></div><div class="menu-price">11.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crevettes</div><div class="menu-item-desc" data-i18n="desc_auto_korma_27">Mijoté dans une sauce douce à la crème, noix de cajou et amandes.</div></div><div class="menu-dots"></div><div class="menu-price">12.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Légumes <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_korma_28">Mijoté dans une sauce douce à la crème, noix de cajou et amandes.</div></div><div class="menu-dots"></div><div class="menu-price">9.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Saumon</div><div class="menu-item-desc" data-i18n="desc_auto_korma_29">Mijoté dans une sauce douce à la crème, noix de cajou et amandes.</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
       </div>
       <div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_vindaloo">Plats Vindaloo</div></div>
-      <div class="curry-grid">
-        <div class="curry-row"><span class="curry-name">Poulet</span><span class="curry-price">10.99€</span></div>
-        <div class="curry-row"><span class="curry-name">Agneau</span><span class="curry-price">11.90€</span></div>
-        <div class="curry-row"><span class="curry-name">Boeuf</span><span class="curry-price">11.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Crevettes</span><span class="curry-price">11.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Calamar</span><span class="curry-price">11.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Saumon</span><span class="curry-price">12.50€</span></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet</div><div class="menu-item-desc" data-i18n="desc_auto_vindaloo_30">Spécialité relevée avec épices fortes et pommes de terre.</div></div><div class="menu-dots"></div><div class="menu-price">10.99€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agneau</div><div class="menu-item-desc" data-i18n="desc_auto_vindaloo_31">Spécialité relevée avec épices fortes et pommes de terre.</div></div><div class="menu-dots"></div><div class="menu-price">11.90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Boeuf</div><div class="menu-item-desc" data-i18n="desc_auto_vindaloo_32">Spécialité relevée avec épices fortes et pommes de terre.</div></div><div class="menu-dots"></div><div class="menu-price">11.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crevettes</div><div class="menu-item-desc" data-i18n="desc_auto_vindaloo_33">Spécialité relevée avec épices fortes et pommes de terre.</div></div><div class="menu-dots"></div><div class="menu-price">11.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Calamar</div><div class="menu-item-desc" data-i18n="desc_auto_vindaloo_34">Spécialité relevée avec épices fortes et pommes de terre.</div></div><div class="menu-dots"></div><div class="menu-price">11.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Saumon</div><div class="menu-item-desc" data-i18n="desc_auto_vindaloo_35">Spécialité relevée avec épices fortes et pommes de terre.</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
       </div>
       <div class="menu-subsection"><div class="menu-subsection-title">Masala</div></div>
-      <div class="curry-grid">
-        <div class="curry-row"><span class="curry-name">Poulet</span><span class="curry-price">11.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Agneau</span><span class="curry-price">12.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Boeuf</span><span class="curry-price">11.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Crevettes</span><span class="curry-price">11.90€</span></div>
-        <div class="curry-row"><span class="curry-name">Légumes <span class="menu-tag">V</span></span><span class="curry-price">10.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Calamar</span><span class="curry-price">12.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Saumon</span><span class="curry-price">13.50€</span></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet</div><div class="menu-item-desc" data-i18n="desc_auto_curry_36">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">11.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agneau</div><div class="menu-item-desc" data-i18n="desc_auto_curry_37">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">12.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Boeuf</div><div class="menu-item-desc" data-i18n="desc_auto_curry_38">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">11.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crevettes</div><div class="menu-item-desc" data-i18n="desc_auto_curry_39">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">11.90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Légumes <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_curry_40">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">10.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Calamar</div><div class="menu-item-desc" data-i18n="desc_auto_curry_41">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">12.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Saumon</div><div class="menu-item-desc" data-i18n="desc_auto_curry_42">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">13.50€</div></div>
       </div>
-      <div class="menu-subsection"><div class="menu-subsection-title">Ginger</div></div>
-      <div class="curry-grid">
-        <div class="curry-row"><span class="curry-name">Poulet</span><span class="curry-price">12.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Agneau</span><span class="curry-price">13.50€</span></div>
-        <div class="curry-row"><span class="curry-name">Boeuf</span><span class="curry-price">13.00€</span></div>
-        <div class="curry-row"><span class="curry-name">Crevettes</span><span class="curry-price">13.20€</span></div>
-        <div class="curry-row"><span class="curry-name">Calamar</span><span class="curry-price">12.90€</span></div>
-        <div class="curry-row"><span class="curry-name">Saumon</span><span class="curry-price">13.90€</span></div>
+      <div class="menu-subsection"><div class="menu-subsection-title">Ginger</div><div class="menu-subsection-desc">Viande cuite dans une sauce curry, jus de gingembre, et morceaux de gingembre frais</div></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet</div><div class="menu-item-desc" data-i18n="desc_auto_curry_43">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">12,00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agneau</div><div class="menu-item-desc" data-i18n="desc_auto_curry_44">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">13,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Boeuf</div><div class="menu-item-desc" data-i18n="desc_auto_curry_45">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">13,00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crevette</div><div class="menu-item-desc" data-i18n="desc_auto_curry_46">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">13,20€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Calamar</div><div class="menu-item-desc" data-i18n="desc_auto_curry_47">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">12,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poisson</div><div class="menu-item-desc" data-i18n="desc_auto_curry_48">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">13,90€</div></div>
+      </div>
+      <div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_madras">Plats Madras</div><div class="menu-subsection-desc">Le curry Madras est le grand classique de la cuisine indienne. Sauce curry légèrement piquante, cuite à l'oignon, tomate, feuille de curry, jus de tamarin, et piment sec</div></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet</div><div class="menu-item-desc" data-i18n="desc_auto_madras_49">Curry épicé du sud de l'Inde, parfumé à la moutarde et feuilles de curry.</div></div><div class="menu-dots"></div><div class="menu-price">11,00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agneau</div><div class="menu-item-desc" data-i18n="desc_auto_madras_50">Curry épicé du sud de l'Inde, parfumé à la moutarde et feuilles de curry.</div></div><div class="menu-dots"></div><div class="menu-price">12,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Boeuf</div><div class="menu-item-desc" data-i18n="desc_auto_madras_51">Curry épicé du sud de l'Inde, parfumé à la moutarde et feuilles de curry.</div></div><div class="menu-dots"></div><div class="menu-price">11,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crevette</div><div class="menu-item-desc" data-i18n="desc_auto_madras_52">Curry épicé du sud de l'Inde, parfumé à la moutarde et feuilles de curry.</div></div><div class="menu-dots"></div><div class="menu-price">12,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poisson</div><div class="menu-item-desc" data-i18n="desc_auto_madras_53">Curry épicé du sud de l'Inde, parfumé à la moutarde et feuilles de curry.</div></div><div class="menu-dots"></div><div class="menu-price">13,00€</div></div>
       </div>
     </div>
 
     <!-- ── TAB 3: SPÉCIALITÉS DU CHEF ── -->
     <div class="menu-panel" id="panel-chef">
+      <div class="menu-subsection"><div class="menu-subsection-title">Tikka Masala</div><div class="menu-subsection-desc">Viande ou poisson ou gambas mariné et grillé mijoté dans une sauce oignon, poivron, tomate, ail, gingembre et coriandre fraîche. Servi avec riz nature ou riz Pulao</div></div>
       <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet Tikka Masala</div></div><div class="menu-dots"></div><div class="menu-price">13.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agneau Tikka Masala</div></div><div class="menu-dots"></div><div class="menu-price">14.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poisson Tikka Masala</div></div><div class="menu-dots"></div><div class="menu-price">14.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gambas Tikka Masala</div></div><div class="menu-dots"></div><div class="menu-price">15.20€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Butter Chicken</div><div class="menu-item-desc">Sauce tomate crémeuse au beurre clarifié</div></div><div class="menu-dots"></div><div class="menu-price">13.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken 65 Maison</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pâtes Indienne au Poulet</div></div><div class="menu-dots"></div><div class="menu-price">12.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pâtes Indienne Vegan <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">11.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pâtes Indienne Crevette</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chilli Chicken</div></div><div class="menu-dots"></div><div class="menu-price">12.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chilli au Boeuf</div></div><div class="menu-dots"></div><div class="menu-price">12.90€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chilli Mix</div></div><div class="menu-dots"></div><div class="menu-price">13.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Spécial Crevette</div></div><div class="menu-dots"></div><div class="menu-price">13.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poulet Tikka Masala</div><div class="menu-item-desc" data-i18n="desc_auto_tikka_54">Grillé au tandoor puis mijoté dans une sauce onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">13,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agneau Tikka Masala</div><div class="menu-item-desc" data-i18n="desc_auto_tikka_55">Grillé au tandoor puis mijoté dans une sauce onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">14,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Poisson Tikka Masala</div><div class="menu-item-desc" data-i18n="desc_auto_tikka_56">Grillé au tandoor puis mijoté dans une sauce onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">14,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gambas Tikka Masala</div><div class="menu-item-desc" data-i18n="desc_auto_tikka_57">Grillé au tandoor puis mijoté dans une sauce onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">16,00€</div></div>
+      </div>
+      <div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_chef_special">Spécial du Chef</div><div class="menu-subsection-desc">Servi avec riz nature ou riz pulao</div></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Butter Chicken</div><div class="menu-item-desc">Suprême de poulet mariné et grillé, préparé avec une sauce douce parfumée au beurre</div></div><div class="menu-dots"></div><div class="menu-price">13,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken 65 Maison</div><div class="menu-item-desc">Poulet mariné et frit, sauté avec poivron, oignon, ail, sauce pimentée, coriandre fraîche</div></div><div class="menu-dots"></div><div class="menu-price">12,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Thalli Végétarien <span class="menu-tag">V</span></div><div class="menu-item-desc">Plateau servi avec plusieurs curry végétariens et raita, riz, Nan nature, papad</div></div><div class="menu-dots"></div><div class="menu-price">13,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Thalli Non-Veg</div><div class="menu-item-desc">Plateau servi avec plusieurs plats non végétarien, viande, fruit de mer, riz, raita</div></div><div class="menu-dots"></div><div class="menu-price">14,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Spécial Crevette</div><div class="menu-item-desc">Crevette cuite au caviar d'aubergine, épices de curry et lait de coco</div></div><div class="menu-dots"></div><div class="menu-price">13,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Rajasthani Kofta Curry</div><div class="menu-item-desc">Boulettes de viande (agneau, poulet) cuites dans une sauce à base de tomate et ses épices, pistache, yaourt</div></div><div class="menu-dots"></div><div class="menu-price">12,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Paneer Butter Masala <span class="menu-tag">V</span></div><div class="menu-item-desc">Fromage indien cuit dans une base de tomate, sauce parfumée, avec beurre et miel</div></div><div class="menu-dots"></div><div class="menu-price">13,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chilli Chicken</div><div class="menu-item-desc">Viande sautée avec oignon, poivre, poivron, sauce soja, gingembre, ail, légèrement épicé — servis sans riz</div></div><div class="menu-dots"></div><div class="menu-price">12,00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chilli au Bœuf</div><div class="menu-item-desc">Viande sautée avec oignon, poivre, poivron, sauce soja, gingembre, ail, légèrement épicé — servis sans riz</div></div><div class="menu-dots"></div><div class="menu-price">12,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chilli MIX</div><div class="menu-item-desc">Poulet, bœuf, crevette sauté avec oignon, poivron, sauce soja, gingembre, ail — servis sans riz</div></div><div class="menu-dots"></div><div class="menu-price">13,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chilli Vegan <span class="menu-tag">V</span></div><div class="menu-item-desc">Oignon, poivron, ail, champignon, pois chiche, sauce soja, sauce piment légèrement épicée — servis sans riz</div></div><div class="menu-dots"></div><div class="menu-price">10,50€</div></div>
       </div>
     </div>
 
     <!-- ── TAB 4: BIRYANI ── -->
     <div class="menu-panel" id="panel-biryani">
+      <div class="menu-subsection"><div class="menu-subsection-title">Plats Biryani</div><div class="menu-subsection-desc">Plat plus connu en Inde à base de riz aromatisé, préparé avec de la viande ou crevette ou légumes et ses épices, avec de la coriandre fraîche. Le plat contient plus de 20 épices</div></div>
       <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Poulet</div></div><div class="menu-dots"></div><div class="menu-price">11.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Agneau</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Crevette</div></div><div class="menu-dots"></div><div class="menu-price">13.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Boeuf</div></div><div class="menu-dots"></div><div class="menu-price">11.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Légumes <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">10.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Spécial Mix Biryani</div><div class="menu-item-desc">Mélange de viandes et épices du chef</div></div><div class="menu-dots"></div><div class="menu-price">13.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Briyani Fruit de Mer</div><div class="menu-item-desc">Fruits de mer frais et riz basmati parfumé</div></div><div class="menu-dots"></div><div class="menu-price">12.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Poulet</div><div class="menu-item-desc" data-i18n="desc_auto_biryani_58">Riz basmati parfumé mijoté avec des épices douces et safran.</div></div><div class="menu-dots"></div><div class="menu-price">11,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Agneau</div><div class="menu-item-desc" data-i18n="desc_auto_biryani_59">Riz basmati parfumé mijoté avec des épices douces et safran.</div></div><div class="menu-dots"></div><div class="menu-price">13,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Crevette</div><div class="menu-item-desc" data-i18n="desc_auto_biryani_60">Riz basmati parfumé mijoté avec des épices douces et safran.</div></div><div class="menu-dots"></div><div class="menu-price">13,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Boeuf</div><div class="menu-item-desc" data-i18n="desc_auto_biryani_61">Riz basmati parfumé mijoté avec des épices douces et safran.</div></div><div class="menu-dots"></div><div class="menu-price">12,00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Légumes <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_biryani_62">Riz basmati parfumé mijoté avec des épices douces et safran.</div></div><div class="menu-dots"></div><div class="menu-price">10,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Spécial Mix Biryani</div><div class="menu-item-desc">Mélange de viandes et épices du chef</div></div><div class="menu-dots"></div><div class="menu-price">14,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Biryani Fruit de Mer</div><div class="menu-item-desc">Fruits de mer frais et riz basmati parfumé</div></div><div class="menu-dots"></div><div class="menu-price">13,50€</div></div>
       </div>
     </div>
 
     <!-- ── TAB 5: VÉGÉTARIEN ── -->
     <div class="menu-panel" id="panel-vegetarian">
+      <div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_veg_plats">Plats Végétariens</div></div>
       <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Baingan Bharta <span class="menu-tag">V</span></div><div class="menu-item-desc">Aubergine fumée aux épices</div></div><div class="menu-dots"></div><div class="menu-price">9.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Dal Curry <span class="menu-tag">V</span></div><div class="menu-item-desc">Lentilles épicées</div></div><div class="menu-dots"></div><div class="menu-price">7.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Palak Paneer <span class="menu-tag">V</span></div><div class="menu-item-desc">Épinards et fromage indien</div></div><div class="menu-dots"></div><div class="menu-price">8.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Palak Aloo <span class="menu-tag">V</span></div><div class="menu-item-desc">Pommes de terre aux épinards</div></div><div class="menu-dots"></div><div class="menu-price">7.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Channa Baingan Masala <span class="menu-tag">V</span></div><div class="menu-item-desc">Pois chiches et aubergine épicés</div></div><div class="menu-dots"></div><div class="menu-price">8.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Paneer Masala <span class="menu-tag">V</span></div><div class="menu-item-desc">Fromage indien en sauce masala</div></div><div class="menu-dots"></div><div class="menu-price">12.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pâtes Indienne Vegan <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">11.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Légumes Curry / Korma / Masala / Vindaloo <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">dès 9.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Baignan Bharta <span class="menu-tag">V</span></div><div class="menu-item-desc">Caviar d'aubergine préparé avec l'ail, crème fraîche</div></div><div class="menu-dots"></div><div class="menu-price">9,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Dal Curry <span class="menu-tag">V</span></div><div class="menu-item-desc">Lentilles préparées avec une sauce curry</div></div><div class="menu-dots"></div><div class="menu-price">7,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Palak Paneer <span class="menu-tag">V</span></div><div class="menu-item-desc">Plat à base d'une sauce aux épinards et fromage, fromage indien</div></div><div class="menu-dots"></div><div class="menu-price">8,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Sambar <span class="menu-tag">V</span></div><div class="menu-item-desc">Spécialité du sud, curry mélange de légumes, lentilles, feuille de curry, lait de coco</div></div><div class="menu-dots"></div><div class="menu-price">7,00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Palak Aloo <span class="menu-tag">V</span></div><div class="menu-item-desc">Sauce à base d'épinards hachés et cuite avec pommes de terre</div></div><div class="menu-dots"></div><div class="menu-price">7,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Channa Baignan Masala <span class="menu-tag">V</span></div><div class="menu-item-desc">Sauce curry à base d'aubergine et pois chiche</div></div><div class="menu-dots"></div><div class="menu-price">8,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Paneer Masala <span class="menu-tag">V</span></div><div class="menu-item-desc">Fromage indien cuit dans une sauce curry avec oignon, poivron, coriandre fraîche</div></div><div class="menu-dots"></div><div class="menu-price">12,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chole Bhature <span class="menu-tag">V</span></div><div class="menu-item-desc">Plat plus célèbre dans le nord. Curry de pois chiche servi avec des pains frits boori</div></div><div class="menu-dots"></div><div class="menu-price">9,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Upma <span class="menu-tag">V</span></div><div class="menu-item-desc">Plat à base de semoule, oignon, légumes, feuille de curry, graines de moutarde</div></div><div class="menu-dots"></div><div class="menu-price">9,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Légumes Curry / Korma / Masala / Vindaloo <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_curry_63">Préparé dans une sauce curry traditionnelle et onctueuse.</div></div><div class="menu-dots"></div><div class="menu-price">dès 9,50€</div></div>
       </div>
     </div>
 
-    <!-- ── TAB 6: PAINS & ACCOMPAGNEMENTS ── -->
+    <!-- ── TAB 6: KOTHU PARATHA ── -->
+    <div class="menu-panel" id="panel-kothu">
+      <div class="menu-subsection"><div class="menu-subsection-title">Kothu Paratha</div><div class="menu-subsection-desc">Plat plus connu en Inde et Sri Lanka, préparé avec des morceaux de galette indienne (paratha ou roti) sauté avec poireaux, oignon, œuf, piments, grain de moutard avec sauce piquante. Omelette 1,50€</div></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kothu Paratha Egg (œuf)</div><div class="menu-item-desc" data-i18n="desc_auto_kothu_64">Émincé de pain paratha sauté sur plaque avec épices et herbes.</div></div><div class="menu-dots"></div><div class="menu-price">9,99€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kothu Paratha Veg <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_kothu_65">Émincé de pain paratha sauté sur plaque avec épices et herbes.</div></div><div class="menu-dots"></div><div class="menu-price">10,00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kothu Paratha Chicken (poulet)</div><div class="menu-item-desc" data-i18n="desc_auto_kothu_66">Émincé de pain paratha sauté sur plaque avec épices et herbes.</div></div><div class="menu-dots"></div><div class="menu-price">10,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kothu Paratha Bœuf (beef)</div><div class="menu-item-desc" data-i18n="desc_auto_kothu_67">Émincé de pain paratha sauté sur plaque avec épices et herbes.</div></div><div class="menu-dots"></div><div class="menu-price">11,00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kothu Paratha Agneau (mutton)</div><div class="menu-item-desc" data-i18n="desc_auto_kothu_68">Émincé de pain paratha sauté sur plaque avec épices et herbes.</div></div><div class="menu-dots"></div><div class="menu-price">11,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kothu Paratha Fruit de Mer</div><div class="menu-item-desc" data-i18n="desc_auto_kothu_69">Émincé de pain paratha sauté sur plaque avec épices et herbes.</div></div><div class="menu-dots"></div><div class="menu-price">12,90€</div></div>
+      </div>
+    </div>
+
+    <!-- ── TAB 7: DOSA & PÂTES ── -->
+    <div class="menu-panel" id="panel-dosa">
+      <div class="menu-subsection"><div class="menu-subsection-title">Menu Dosa</div><div class="menu-subsection-desc">Le dosa est une crêpe à base de farine de lentille blanche et de riz, fenugrec typique du sud de l'Inde, servi avec sauce aux légumes</div></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Dosa Nature ou avec Beurre <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_dosa_70">Crêpe fermentée du sud de l'Inde, croustillante et légère.</div></div><div class="menu-dots"></div><div class="menu-price">8,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Egg Dosa (œuf)</div><div class="menu-item-desc" data-i18n="desc_auto_dosa_71">Crêpe fermentée du sud de l'Inde, croustillante et légère.</div></div><div class="menu-dots"></div><div class="menu-price">8,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Masala Dosa <span class="menu-tag">V</span></div><div class="menu-item-desc">Dosa est roulé et garni d'un mélange de pommes de terre cuisinées avec des oignons et assaisonnées avec des feuilles de curry</div></div><div class="menu-dots"></div><div class="menu-price">9,90€</div></div>
+      </div>
+      <div class="menu-subsection"><div class="menu-subsection-title">Pâtes Indiennes</div><div class="menu-subsection-desc">Pâtes préparées façon indien avec ses épices</div></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pâtes Indiennes Végétarien <span class="menu-tag">V</span></div><div class="menu-item-desc">Nouilles sautées avec oignon, poireau, légumes</div></div><div class="menu-dots"></div><div class="menu-price">11,00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pâtes Indiennes au Poulet</div><div class="menu-item-desc">Nouilles sautées avec oignon, œuf, poireau, morceaux de poulet</div></div><div class="menu-dots"></div><div class="menu-price">11,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pâtes Indiennes aux Crevettes</div><div class="menu-item-desc">Nouilles sautées avec oignon, œuf, poireau, légumes, crevettes décortiquées</div></div><div class="menu-dots"></div><div class="menu-price">12,50€</div></div>
+      </div>
+    </div>
+
+    <!-- ── TAB 8: PAINS & ACCOMPAGNEMENTS ── -->
     <div class="menu-panel" id="panel-pains">
       <div class="menu-subsection"><div class="menu-subsection-title">Naans</div></div>
       <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Nature <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">1.99€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Fromage <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan l'ail <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Chilli ou Ognion <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">2.20€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Ail Fromage <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Keema</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Sabzi Naan <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.20€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Poulet</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Peshawari</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Nature <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_naan_72">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">1.99€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Fromage <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_naan_73">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan l'ail <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_naan_74">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Chilli ou Ognion <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_naan_75">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">2.20€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Ail Fromage <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_naan_76">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Keema</div><div class="menu-item-desc" data-i18n="desc_auto_naan_77">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Sabzi Naan <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_naan_78">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">3.20€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Poulet</div><div class="menu-item-desc" data-i18n="desc_auto_naan_79">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Naan Peshawari</div><div class="menu-item-desc" data-i18n="desc_auto_naan_80">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
       </div>
       <div class="menu-subsection"><div class="menu-subsection-title">Tawa Spéciale</div></div>
       <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Malabar Paratha <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">2.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Aloo Paratha <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Egg Paratha</div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chapathi <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Puri <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Malabar Paratha <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_naan_81">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">2.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Aloo Paratha <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_naan_82">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Egg Paratha</div><div class="menu-item-desc" data-i18n="desc_auto_naan_83">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chapathi <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_naan_84">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Puri <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_naan_85">Pain indien traditionnel cuit au four tandoor.</div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
       </div>
       <div class="menu-subsection"><div class="menu-subsection-title">Accompagnements</div></div>
       <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Riz Nature <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">2.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Riz Pulao <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Riz Kasmiri <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Riz à la Tomate <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.20€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Egg Rice</div></div><div class="menu-dots"></div><div class="menu-price">3.80€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Riz Nature <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_rice_86">Riz basmati de première qualité, parfumé et léger.</div></div><div class="menu-dots"></div><div class="menu-price">2.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Riz Pulao <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_rice_87">Riz basmati de première qualité, parfumé et léger.</div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Riz Kasmiri <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_rice_88">Riz basmati de première qualité, parfumé et léger.</div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Riz à la Tomate <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_rice_89">Riz basmati de première qualité, parfumé et léger.</div></div><div class="menu-dots"></div><div class="menu-price">4.20€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Egg Rice</div><div class="menu-item-desc" data-i18n="desc_auto_rice_90">Riz basmati de première qualité, parfumé et léger.</div></div><div class="menu-dots"></div><div class="menu-price">3.80€</div></div>
       </div>
     </div>
 
@@ -459,14 +548,14 @@
     <div class="menu-panel" id="panel-desserts">
       <div class="menu-subsection"><div class="menu-subsection-title">Desserts</div></div>
       <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Halwa <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Halwa <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_dessert_91">Douceur indienne traditionnelle pour terminer votre repas.</div></div><div class="menu-dots"></div><div class="menu-price">3.00€</div></div>
         <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gulab Jamun <span class="menu-tag">V</span></div><div class="menu-item-desc">Boulettes de lait en sirop de rose</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Salade de Fruit Frais <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Boondhi Ladoo <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kulfi Mangue ou Pistache <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Mysore Pak <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Falooda <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">6.50€</div></div>
-        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Milkshake <span class="menu-tag">V</span></div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Salade de Fruit Frais <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_snack_92">Snack indien traditionnel croustillant et savoureux.</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Boondhi Ladoo <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_dessert_93">Douceur indienne traditionnelle pour terminer votre repas.</div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kulfi Mangue ou Pistache <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_dessert_94">Douceur indienne traditionnelle pour terminer votre repas.</div></div><div class="menu-dots"></div><div class="menu-price">4.00€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Mysore Pak <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_dessert_95">Douceur indienne traditionnelle pour terminer votre repas.</div></div><div class="menu-dots"></div><div class="menu-price">3.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Falooda <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_dessert_96">Douceur indienne traditionnelle pour terminer votre repas.</div></div><div class="menu-dots"></div><div class="menu-price">6.50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Milkshake <span class="menu-tag">V</span></div><div class="menu-item-desc" data-i18n="desc_auto_dessert_97">Douceur indienne traditionnelle pour terminer votre repas.</div></div><div class="menu-dots"></div><div class="menu-price">4.50€</div></div>
       </div>
       <div class="menu-subsection"><div class="menu-subsection-title">Lassi</div></div>
       <div class="drinks-group">
@@ -481,11 +570,11 @@
       <div class="menu-subsection"><div class="menu-subsection-title">Bières Indiennes</div></div>
       <div class="drinks-group">
         <div class="drinks-row">
-          <div class="drinks-item"><span class="drinks-item-name">King Fisher</span><span class="drinks-item-price">4.00€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">Tajmahal</span><span class="drinks-item-price">4.00€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">Heineken</span><span class="drinks-item-price">3.00€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">1664</span><span class="drinks-item-price">3.00€</span></div>
-          <div class="drinks-item"><span class="drinks-item-name">Corona</span><span class="drinks-item-price">3.40€</span></div>
+          <div class="drinks-item"><span class="drinks-item-name">King Fisher</span><span class="drinks-item-price">4,00€</span></div>
+          <div class="drinks-item"><span class="drinks-item-name">Tajmahal</span><span class="drinks-item-price">4,00€</span></div>
+          <div class="drinks-item"><span class="drinks-item-name">Heineken</span><span class="drinks-item-price">3,00€</span></div>
+          <div class="drinks-item"><span class="drinks-item-name">1664</span><span class="drinks-item-price">3,00€</span></div>
+          <div class="drinks-item"><span class="drinks-item-name">Corona</span><span class="drinks-item-price">3,40€</span></div>
         </div>
       </div>
       <div class="menu-subsection"><div class="menu-subsection-title">Vins Indienne</div></div>
@@ -494,6 +583,18 @@
           <div class="drinks-item"><span class="drinks-item-name">Vin Rouge / Rosé 37.5cl</span><span class="drinks-item-price">11.50€</span></div>
           <div class="drinks-item"><span class="drinks-item-name">75cl</span><span class="drinks-item-price">14.50€</span></div>
         </div>
+      </div>
+    </div>
+
+    <!-- ── TAB 10: FORMULES & MENUS ── -->
+    <div class="menu-panel" id="panel-formules">
+      <div class="menu-subsection"><div class="menu-subsection-title" data-i18n="sub_formules">Nos Formules</div><div class="menu-subsection-desc">Des formules complètes pour découvrir notre cuisine</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Formule de Midi</div><div class="menu-item-desc">Entrée + Plat + Riz nature + Nan nature + Boisson</div></div><div class="menu-dots"></div><div class="menu-price">12,90€</div></div>
+        <div class="menu-item formule-highlight"><div class="menu-item-info"><div class="menu-item-name">Formule de Soir</div><div class="menu-item-desc">Entrée + Plat + Riz nature + Nan nature + Boisson + Dessert</div></div><div class="menu-dots"></div><div class="menu-price">15,90€</div></div>
+        <div class="menu-item formule-highlight"><div class="menu-item-info"><div class="menu-item-name">Menu Lotus ⭐</div><div class="menu-item-desc">Entrée + 2 Plats au choix + Riz + Nan + Boisson + Dessert</div></div><div class="menu-dots"></div><div class="menu-price">20,90€</div></div>
+        <div class="menu-item formule-highlight"><div class="menu-item-info"><div class="menu-item-name">Menu Royal 👑</div><div class="menu-item-desc">Assortiment d'entrées + 2 Plats spéciaux + Biryani + Nan spécial + Boisson + Dessert</div></div><div class="menu-dots"></div><div class="menu-price">25,90€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Menu Rapide</div><div class="menu-item-desc">Plat + Riz + Nan nature</div></div><div class="menu-dots"></div><div class="menu-price">10,50€</div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Menu Enfant</div><div class="menu-item-desc">Plat adapté pour enfant + Riz + Boisson</div></div><div class="menu-dots"></div><div class="menu-price">9,50€</div></div>
       </div>
     </div>
 
@@ -514,26 +615,26 @@
     </div>
     <div class="gallery-masonry reveal" style="margin-top:3rem;">
       <div class="gal-item large">
-        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=900&q=80&fit=crop" alt="Restaurant interior" loading="lazy"/>
+        <img src="gallary/20211203_193342.webp" alt="Intérieur élégant du restaurant Lotus" loading="lazy">
         <div class="gal-overlay"><span class="gal-label">Ambiance</span></div>
       </div>
       <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80&fit=crop" alt="Chef at work" loading="lazy"/>
-        <div class="gal-overlay"><span class="gal-label">Notre Chef</span></div>
+        <img src="gallary/unnamed (1).webp" alt="Plat signature indien" loading="lazy">
+        <div class="gal-overlay"><span class="gal-label">Nos Plats</span></div>
       </div>
       <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?w=600&q=80&fit=crop" alt="Spices" loading="lazy"/>
-        <div class="gal-overlay"><span class="gal-label">Épices</span></div>
+        <img src="gallary/unnamed (2).webp" alt="Assortiment de saveurs indiennes" loading="lazy">
+        <div class="gal-overlay"><span class="gal-label">Saveurs</span></div>
       </div>
       <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80&fit=crop" alt="Indian bread" loading="lazy"/>
-        <div class="gal-overlay"><span class="gal-label">Naan Maison</span></div>
+        <img src="gallary/20211211_193206.webp" alt="Décoration intérieure" loading="lazy"/>
+        <div class="gal-overlay"><span class="gal-label">Décoration</span></div>
       </div>
       <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80&fit=crop" alt="Indian curry dish" loading="lazy"/>
-        <div class="gal-overlay"><span class="gal-label">Dressage</span></div>
+        <img src="gallary/Lotus Food and Beverage_Chicken 65_1242x704.webp" alt="Chicken 65" loading="lazy"/>
+        <div class="gal-overlay"><span class="gal-label">Chicken 65</span></div>
       </div>
-
+    
     </div>
   </div>
 </section>
@@ -852,8 +953,9 @@
           <span>12 Rue d'Alsace-Lorraine</span>
           <span>31000 Toulouse, France</span>
         </div>
-        <div class="footer-contact-item">
-          <a href="tel:+33652515551">06 52 51 55 51</a>
+        <div class="footer-contact-item" style="display:flex;flex-direction:column;gap:0.25rem;">
+          <a href="tel:+33561211212">05 61 21 12 12</a>
+          <a href="tel:+33652515551" style="font-size:0.85rem;opacity:0.8;">06 52 51 55 51 (WhatsApp)</a>
         </div>
         <div class="footer-contact-item" style="font-size:.8rem;color:var(--text-muted);">
           Lun–Sam: 12h–14h30 / 19h–23h<br/>Dim: 19h–23h
@@ -875,13 +977,76 @@
     </div>
     <div class="footer-bottom">
       <span data-i18n="footer_copyright">© 2026 Lotus Restaurant – Toulouse. Tous droits réservés.</span>
-      <div style="display:flex;gap:1.5rem;">
-        <a href="#">Mentions Légales</a>
-        <a href="#">Politique de Confidentialité</a>
+      <div class="footer-legal-links">
+        <a href="#" data-i18n="legal_notice_title" onclick="document.getElementById('modal-legal').classList.add('active');return false;">Mentions Légales</a>
+        <a href="#" data-i18n="privacy_title" onclick="document.getElementById('modal-privacy').classList.add('active');return false;">Politique de Confidentialité</a>
+        <a href="#" data-i18n="cookie_title" onclick="document.getElementById('modal-cookies').classList.add('active');return false;">Cookies</a>
       </div>
     </div>
   </div>
 </footer>
+
+<!-- Legal Modals -->
+<div id="modal-legal" class="legal-modal">
+  <div class="legal-modal-content">
+    <button class="legal-modal-close" onclick="this.closest('.legal-modal').classList.remove('active')">&times;</button>
+    <h2 data-i18n="legal_notice_title">Mentions Légales</h2>
+    
+    <div class="legal-section">
+      <h3>Lotus Restaurant</h3>
+      <p>12 Rue d'Alsace-Lorraine, 31000 Toulouse</p>
+    </div>
+
+    <div class="legal-section">
+      <p><strong>Website Host:</strong> Vercel Inc.</p>
+      <p><strong>Email:</strong> lotusrestoin@gmail.com</p>
+      <p><strong>Phone:</strong> +33 5 61 21 12 12</p>
+    </div>
+
+    <div class="legal-section">
+      <h3 data-i18n="legal_resp_title">Responsabilité</h3>
+      <p data-i18n="legal_resp_text">Lotus Restaurant s'efforce d'assurer l'exactitude des informations sur ce site mais ne peut être tenu responsable des omissions ou inexactitudes.</p>
+    </div>
+
+    <div class="legal-section">
+      <h3 data-i18n="legal_prop_title">Intellectual Property</h3>
+      <p data-i18n="legal_prop_text">All content, including text, images, and logos, is the property of Lotus Restaurant unless otherwise stated.</p>
+    </div>
+
+    <div class="legal-section">
+      <h3 data-i18n="legal_data_title">Personal Data</h3>
+      <p data-i18n="legal_data_short">We collect only the data necessary for your reservations.</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal-privacy" class="legal-modal">
+  <div class="legal-modal-content">
+    <button class="legal-modal-close" onclick="this.closest('.legal-modal').classList.remove('active')">&times;</button>
+    <h2 data-i18n="privacy_title">Politique de Confidentialité</h2>
+    
+    <div class="legal-section">
+      <p data-i18n="privacy_collection">1. Data Collection: We collect your name, email, and phone number when you make a reservation.</p>
+      <p data-i18n="privacy_usage">2. Data Usage: To confirm your reservation and provide quality service.</p>
+      <p data-i18n="privacy_protection">3. Data Protection: Your data is securely stored and never shared with third parties for commercial purposes.</p>
+      <p data-i18n="privacy_rights">4. Your Rights: You have the right to access, rectify, or delete your personal data.</p>
+      <p><strong>Contact:</strong> lotusrestoin@gmail.com</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal-cookies" class="legal-modal">
+  <div class="legal-modal-content">
+    <button class="legal-modal-close" onclick="this.closest('.legal-modal').classList.remove('active')">&times;</button>
+    <h2 data-i18n="cookie_title">Politique relative aux Cookies</h2>
+    
+    <div class="legal-section">
+      <p data-i18n="cookie_what">1. What are cookies? Small files stored on your computer to improve your experience.</p>
+      <p data-i18n="cookie_use">2. Our Use: We use cookies for website analytics and to remember your preferences.</p>
+      <p data-i18n="cookie_choice">3. Your Choice: You can disable cookies in your browser settings, though some site features may be affected.</p>
+    </div>
+  </div>
+</div>
 
 <!-- Toast -->
 <div id="toast"></div>
@@ -892,6 +1057,5 @@
 
 </body>
 </html>
-
 
 

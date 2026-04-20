@@ -31,7 +31,6 @@ function initAll() {
   initOpeningStatus();
   initVideoObserver();
   initReservationForm();
-  initStickyReserve();
   initLangSelector();
   initHeroSlider();
 }
@@ -49,7 +48,7 @@ function initHeroSlider() {
     slides[current].classList.remove('active');
     current = (current + 1) % total;
     slides[current].classList.add('active');
-  }, 5000);
+  }, 6500);
 }
 
 /* ==========================================================
@@ -73,7 +72,10 @@ function translateMenu(lang) {
   document.querySelectorAll('.curry-name, .menu-item-name, .drinks-item-name').forEach(el => {
     // Store original FR text on first run
     if (!el.dataset.origFr) {
-      el.dataset.origFr = el.textContent.trim();
+      let tempClone = el.cloneNode(true);
+      const tempTag = tempClone.querySelector('.menu-tag');
+      if (tempTag) tempTag.remove();
+      el.dataset.origFr = tempClone.textContent.trim();
     }
     let text = el.dataset.origFr;
     // Replace each FR word with the translated word
@@ -86,7 +88,7 @@ function translateMenu(lang) {
     // Preserve V tag spans
     const vTag = el.querySelector('.menu-tag');
     if (vTag) {
-      el.childNodes[0].textContent = text.replace(/\s*$/, ' ');
+      el.childNodes[0].textContent = text + ' ';
     } else {
       el.textContent = text;
     }
@@ -297,51 +299,51 @@ function initOpeningStatus() {
   if (!statusEl) return;
 
   const now = new Date();
-  const day = now.getDay();  // 0=Sun, 1=Mon...
+  const day = now.getDay(); // 0=Sun, 1=Mon...
   const hour = now.getHours();
   const min = now.getMinutes();
   const time = hour * 60 + min;
 
-  // Schedule: Mon–Sat: 12:00–14:30 + 19:00–23:00, Sun: 19:00–23:00
   let isOpen = false;
   let nextOpen = '';
 
   const lunchStart = 12 * 60;
-  const lunchEnd   = 14 * 60 + 30;
+  const lunchEnd = 14 * 60 + 30;
   const dinnerStart = 19 * 60;
-  const dinnerEnd   = 23 * 60;
+  const dinnerEnd = 23 * 60;
 
   if (day === 0) {
-    // Sunday — dinner only
-    isOpen = (time >= dinnerStart && time < dinnerEnd);
-    if (!isOpen) nextOpen = '19h00';
-  } else if (day >= 1 && day <= 6) {
+    // Sunday — dinner 19:00 - 23:00
+    if (time >= dinnerStart && time < dinnerEnd) {
+      isOpen = true;
+    } else {
+      nextOpen = '19:00';
+    }
+  } else {
     // Mon–Sat
-    isOpen = (time >= lunchStart && time < lunchEnd) || (time >= dinnerStart && time < dinnerEnd);
-    if (!isOpen) {
-      if (time < lunchStart) nextOpen = '12h00';
-      else if (time >= lunchEnd && time < dinnerStart) nextOpen = '19h00';
-      else nextOpen = '12h00 ' + (translations[currentLang]?.nav_menu ? '' : '');
+    if ((time >= lunchStart && time < lunchEnd) || (time >= dinnerStart && time < dinnerEnd)) {
+      isOpen = true;
+    } else {
+      if (time < lunchStart) {
+        nextOpen = '12:00';
+      } else if (time < dinnerStart) {
+        nextOpen = '19:00';
+      } else {
+        nextOpen = '12:00'; // Tomorrow
+      }
     }
   }
 
   const dot = statusEl.querySelector('.status-dot');
   const text = statusEl.querySelector('.status-text');
+
   if (dot && text) {
     if (isOpen) {
       dot.className = 'status-dot open';
-      text.replaceChildren();
-      const span = document.createElement('span');
-      span.className = 'status-open';
-      span.textContent = t('status_open');
-      text.appendChild(span);
+      text.textContent = t('status_open');
     } else {
       dot.className = 'status-dot closed';
-      text.replaceChildren();
-      const span = document.createElement('span');
-      span.className = 'status-closed';
-      span.textContent = `${t('status_closed')} ${nextOpen}`;
-      text.appendChild(span);
+      text.textContent = `${t('status_closed')} ${nextOpen}`;
     }
   }
 }
@@ -383,36 +385,6 @@ function initReservationForm() {
       form.reset();
     }, 3000);
   });
-}
-
-/* ==========================================================
-   STICKY RESERVE
-   ========================================================== */
-function initStickyReserve() {
-  const sticky = document.getElementById('sticky-reserve');
-  if (!sticky) return;
-  const resSection = document.getElementById('reservation');
-  let stickyTicking = false;
-  window.addEventListener('scroll', () => {
-    if (!stickyTicking) {
-      window.requestAnimationFrame(() => {
-        const scrollY = window.scrollY;
-        const shouldShow = scrollY > 500;
-        // Hide when reservation section is visible
-        if (resSection) {
-          const rect = resSection.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            sticky.classList.add('hidden');
-            stickyTicking = false;
-            return;
-          }
-        }
-        sticky.classList.toggle('hidden', !shouldShow);
-        stickyTicking = false;
-      });
-      stickyTicking = true;
-    }
-  }, { passive: true });
 }
 
 /* ==========================================================
