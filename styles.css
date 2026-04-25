@@ -1042,12 +1042,15 @@ footer {
   }
 
   .hero-hours { 
-    left: 50%; bottom: 4rem; transform: translateX(-50%); 
-    width: calc(100% - 2rem); max-width: 400px;
-    padding: 1rem;
+    position: relative;
+    left: 0; right: 0; bottom: 2rem; transform: none;
+    width: 90%; max-width: 400px;
+    margin: 0 auto;
+    padding: 1.25rem;
     text-align: center;
+    box-sizing: border-box;
   }
-  .hero-hours-row { gap: 1rem; font-size: 0.8rem; }
+  .hero-hours-row { gap: 1rem; font-size: 0.8rem; justify-content: center; }
   .gallery-masonry { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
   .gal-item.large, .gal-item.tall { grid-column: span 1; grid-row: span 1; }
   .form-row { grid-template-columns: 1fr; gap: 1rem; }

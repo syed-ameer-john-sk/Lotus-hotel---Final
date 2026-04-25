@@ -333,36 +333,41 @@ function initOpeningStatus() {
   const statusEl = document.getElementById('opening-status');
   if (!statusEl) return;
 
-  // Auto-detect France time
-  const now = new Date();
-  const options = { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', hour12: false };
-  const franceTimeString = new Intl.DateTimeFormat('fr-FR', options).format(now);
-  const [h, m] = franceTimeString.split(':').map(Number);
-  const time = h * 60 + m;
+  const updateStatus = () => {
+    // Auto-detect France time
+    const now = new Date();
+    const options = { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', hour12: false };
+    const franceTimeString = new Intl.DateTimeFormat('fr-FR', options).format(now);
+    const [h, m] = franceTimeString.split(':').map(Number);
+    const time = h * 60 + m;
 
-  // Real Hours: Open 19:00 – 22:30
-  const openTime = 19 * 60;
-  const closeTime = 22 * 60 + 30;
+    // Real Hours: Open 19:00 – 22:30
+    const openTime = 19 * 60;
+    const closeTime = 22 * 60 + 30;
 
-  let isOpen = time >= openTime && time < closeTime;
-  
-  const dot = statusEl.querySelector('.status-dot') || document.createElement('span');
-  dot.className = 'status-dot';
-  const text = statusEl.querySelector('.status-text') || document.createElement('span');
-  text.className = 'status-text';
-  
-  if (!statusEl.contains(dot)) statusEl.appendChild(dot);
-  if (!statusEl.contains(text)) statusEl.appendChild(text);
+    let isOpen = time >= openTime && time < closeTime;
+    
+    const dot = statusEl.querySelector('.status-dot') || document.createElement('span');
+    dot.className = 'status-dot';
+    const text = statusEl.querySelector('.status-text') || document.createElement('span');
+    text.className = 'status-text';
+    
+    if (!statusEl.contains(dot)) statusEl.appendChild(dot);
+    if (!statusEl.contains(text)) statusEl.appendChild(text);
 
-  if (isOpen) {
-    dot.style.background = '#2ECC71'; // Green
-    dot.classList.add('pulse');
-    text.textContent = `Open now · Closes at 22:30`;
-  } else {
-    dot.style.background = '#E74C3C'; // Red
-    dot.classList.remove('pulse');
-    text.textContent = `Closed · Opens at 19:00`;
-  }
+    if (isOpen) {
+      dot.style.background = '#2ECC71'; // Green
+      dot.classList.add('pulse');
+      text.textContent = `Open now · Closes at 22:30`;
+    } else {
+      dot.style.background = '#E74C3C'; // Red
+      dot.classList.remove('pulse');
+      text.textContent = `Closed · Opens at 19:00`;
+    }
+  };
+
+  updateStatus();
+  setInterval(updateStatus, 60000); // Update every 60 seconds
 }
 
 /* ==========================================================
