@@ -1035,35 +1035,32 @@ footer {
   }
   #navbar.scrolled { top: 0; }
 
+  /* Bug 1 & 2: Hide links, show toggle, shrink logo */
+  .nav-links { display: none !important; }
+  .nav-toggle { display: flex !important; }
+  .nav-mobile { display: flex; }
+  .btn-reserve-nav { display: none !important; }
+
   .nav-logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    max-width: 140px;
+    gap: 0.4rem;
+    max-width: 110px;
+    overflow: hidden;
   }
-  .nav-logo-img { width: 32px !important; height: 32px !important; }
-  .nav-logo-text { font-size: 1.2rem !important; }
-  .nav-logo-sub { font-size: 8px !important; letter-spacing: 0.1em; }
+  .nav-logo-img { width: 28px !important; height: 28px !important; }
+  .nav-logo-text { font-size: 1rem !important; }
+  .nav-logo-sub { font-size: 7px !important; letter-spacing: 0.1em; white-space: nowrap; }
   
-  .nav-right { gap: 0.75rem; }
-  .lang-btn { padding: 4px 8px; font-size: 11px; }
-  .btn-reserve-nav { display: none; }
+  .nav-right { gap: 0.5rem; }
+  .lang-btn { padding: 4px 6px; font-size: 10px; }
+
+  /* Bug 3: Hide hours card on mobile */
+  .hero-hours { display: none !important; }
 
   /* Hero Adjustments */
-  .hero-title { font-size: 3.5rem; }
+  .hero-title { font-size: 3rem; }
   .hero-desc { font-size: 1rem; padding: 0 1rem; }
-  
-  .hero-hours { 
-    position: relative;
-    bottom: auto; left: auto; right: auto;
-    width: calc(100% - 2rem);
-    margin: 2rem auto 0;
-    padding: 1.25rem;
-    background: rgba(13,5,0,0.9);
-    transform: none !important;
-    display: block !important;
-  }
-  .hero-hours-row { gap: 1rem; font-size: 0.85rem; }
 
   /* Grid & Card Fixes */
   .dishes-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -1083,9 +1080,10 @@ footer {
   .footer-social { justify-content: center; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 1.5rem; }
 
-  /* PERSISTENT FLOATING STACK */
+  /* Bug 4: PERSISTENT FLOATING STACK - Higher and Safe Area */
   #sticky-reserve {
-    position: fixed; right: 16px; bottom: 30px;
+    position: fixed; right: 16px; 
+    bottom: calc(140px + env(safe-area-inset-bottom));
     z-index: 2000;
     display: flex !important;
     opacity: 1 !important;

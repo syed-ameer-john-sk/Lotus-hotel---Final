@@ -1,0 +1,13 @@
+# Development and Editor configurations
+.gemini
+.cursor
+.vscode
+.idea
+
+# Scripts and specific unneeded files
+*.py
+*.pdf
+screen.png
+
+# Build scripts (if we don't want them deployed, but Vercel needs build.js to run build! Wait, Vercel uploads first, then runs build. If we ignore build.js, Vercel can't run it.)
+# Actually, it's safer to leave build.js, it's tiny.
