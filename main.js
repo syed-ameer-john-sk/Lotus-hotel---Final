@@ -8,6 +8,8 @@
    GLOBAL STATE
    ========================================================== */
 let currentLang = typeof localStorage !== 'undefined' ? (localStorage.getItem('lotus_lang') || 'fr') : 'fr';
+let heroSliderInterval = null;
+let toastTimeout = null;
 
 /* ==========================================================
    LOADING SCREEN
@@ -33,6 +35,33 @@ function initAll() {
   initReservationForm();
   initLangSelector();
   initHeroSlider();
+  initStickyReserve();
+}
+
+/* ==========================================================
+   STICKY RESERVE OBSERVER
+   ========================================================== */
+function initStickyReserve() {
+  const sticky = document.getElementById('sticky-reserve');
+  const hero = document.getElementById('hero');
+  if (!sticky || !hero) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // Hide sticky bar when hero is fully or mostly visible
+      if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
+        sticky.style.opacity = '0';
+        sticky.style.pointerEvents = 'none';
+        sticky.style.transform = 'translateY(20px)';
+      } else {
+        sticky.style.opacity = '1';
+        sticky.style.pointerEvents = 'auto';
+        sticky.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: [0, 0.1, 0.9] });
+
+  observer.observe(hero);
 }
 
 /* ==========================================================
@@ -41,10 +70,13 @@ function initAll() {
 function initHeroSlider() {
   const slides = document.querySelectorAll('.hero-slide');
   if (slides.length < 2) return;
+  
+  if (heroSliderInterval) clearInterval(heroSliderInterval);
+  
   let current = 0;
   const total = slides.length;
 
-  setInterval(() => {
+  heroSliderInterval = setInterval(() => {
     slides[current].classList.remove('active');
     current = (current + 1) % total;
     slides[current].classList.add('active');
@@ -67,30 +99,33 @@ const menuWords = {
 function translateMenu(lang) {
   const dict = menuWords[lang] || menuWords.fr;
   const frDict = menuWords.fr;
-  // Build reverse map from current displayed text back to FR key
-  // We store original FR text in a data attribute for reliable mapping
+  
   document.querySelectorAll('.curry-name, .menu-item-name, .drinks-item-name').forEach(el => {
-    // Store original FR text on first run
     if (!el.dataset.origFr) {
-      let tempClone = el.cloneNode(true);
-      const tempTag = tempClone.querySelector('.menu-tag');
-      if (tempTag) tempTag.remove();
-      el.dataset.origFr = tempClone.textContent.trim();
+      // Use childNodes to find the text node to avoid destroying nested spans like .menu-tag
+      let frText = "";
+      for (let node of el.childNodes) {
+        if (node.nodeType === 3) { // Text node
+          frText += node.textContent;
+        }
+      }
+      el.dataset.origFr = frText.trim();
     }
+    
     let text = el.dataset.origFr;
-    // Replace each FR word with the translated word
     Object.keys(frDict).forEach(frWord => {
       const regex = new RegExp('\\b' + frWord + '\\b', 'g');
       if (regex.test(text)) {
         text = text.replace(regex, dict[frWord] || frWord);
       }
     });
-    // Preserve V tag spans
-    const vTag = el.querySelector('.menu-tag');
-    if (vTag) {
-      el.childNodes[0].textContent = text + ' ';
-    } else {
-      el.textContent = text;
+
+    // Update only the first text node child to preserve elements like <span class="menu-tag">
+    for (let node of el.childNodes) {
+      if (node.nodeType === 3) {
+        node.textContent = text + ' ';
+        break; 
+      }
     }
   });
 }
@@ -371,19 +406,45 @@ function initVideoObserver() {
    ========================================================== */
 function initReservationForm() {
   const form = document.getElementById('reservation-form');
+  const dateInput = document.getElementById('res-date');
+  const timeInput = document.getElementById('res-time');
+  
   if (!form) return;
-  form.addEventListener('submit', e => {
+
+  // UX Fix: Prevent past dates
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+  }
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('[type=submit]');
     const orig = btn.textContent;
-    btn.textContent = '✓';
-    btn.style.background = '#4CAF7D';
-    showToast('✓ Réservation envoyée avec succès !');
-    setTimeout(() => {
-      btn.textContent = orig;
-      btn.style.background = '';
-      form.reset();
-    }, 3000);
+    
+    // UI Feedback
+    btn.disabled = true;
+    btn.textContent = '...';
+    
+    try {
+      // Enterprise Integration Simulation
+      await new Promise(resolve => setTimeout(resolve, 1200));
+      
+      btn.textContent = '✓';
+      btn.style.background = '#4CAF7D';
+      showToast('✓ Réservation envoyée avec succès !');
+      
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.style.background = '';
+        btn.disabled = false;
+        form.reset();
+      }, 3000);
+    } catch (err) {
+      btn.textContent = 'Error';
+      btn.disabled = false;
+      showToast('❌ Erreur lors de la réservation.');
+    }
   });
 }
 
@@ -397,9 +458,17 @@ function showToast(msg) {
     toast.id = 'toast';
     document.body.appendChild(toast);
   }
+  
+  // Race Condition Fix: Clear previous timeout
+  if (toastTimeout) clearTimeout(toastTimeout);
+  
   toast.textContent = msg;
   toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 4000);
+  
+  toastTimeout = setTimeout(() => {
+    toast.classList.remove('show');
+    toastTimeout = null;
+  }, 4000);
 }
 
 // Export for testing

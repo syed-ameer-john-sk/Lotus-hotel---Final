@@ -38,7 +38,7 @@
     "priceRange":"€€",
     "openingHours":["Mo-Sa 12:00-14:30","Mo-Sa 19:00-23:00","Su 19:00-23:00"],
     "url":"https://lotus-restaurant.vercel.app/",
-    "sameAs":["https://www.instagram.com/lotusrestoin/","https://www.tiktok.com/@Lotusrestaurentindientoulouse"]
+    "sameAs":["https://www.instagram.com/lotus_restaurant_indien/","https://www.tiktok.com/@user823178205?_r=1&_t=ZN-95ht9UGVeh4"]
   }
   </script>
 </head>
@@ -742,27 +742,27 @@
         <form id="reservation-form">
           <div class="form-row">
             <div class="form-group">
-              <label data-i18n="res_name">Nom Complet</label>
-              <input type="text" data-i18n-ph="res_name_ph" placeholder="Votre nom…" required/>
+              <label for="res-name" data-i18n="res_name">Nom Complet</label>
+              <input type="text" id="res-name" data-i18n-ph="res_name_ph" placeholder="Votre nom…" required/>
             </div>
             <div class="form-group">
-              <label data-i18n="res_phone">Téléphone</label>
-              <input type="tel" data-i18n-ph="res_phone_ph" placeholder="+33…" required/>
+              <label for="res-phone" data-i18n="res_phone">Téléphone</label>
+              <input type="tel" id="res-phone" data-i18n-ph="res_phone_ph" placeholder="+33…" required/>
             </div>
           </div>
           <div class="form-row" style="margin-top:1.5rem;">
             <div class="form-group">
-              <label data-i18n="res_date">Date</label>
-              <input type="date" required/>
+              <label for="res-date" data-i18n="res_date">Date</label>
+              <input type="date" id="res-date" required/>
             </div>
             <div class="form-group">
-              <label data-i18n="res_time">Heure</label>
-              <input type="time" required/>
+              <label for="res-time" data-i18n="res_time">Heure</label>
+              <input type="time" id="res-time" required/>
             </div>
           </div>
           <div class="form-group" style="margin-top:1.5rem;">
-            <label data-i18n="res_guests">Convives</label>
-            <select>
+            <label for="res-guests" data-i18n="res_guests">Convives</label>
+            <select id="res-guests">
               <option data-i18n="res_guest_opt1">1 Personne</option>
               <option selected data-i18n="res_guest_opt2">2 Personnes</option>
               <option data-i18n="res_guest_opt3">3–4 Personnes</option>
@@ -771,8 +771,8 @@
             </select>
           </div>
           <div class="form-group" style="margin-top:1.5rem;">
-            <label data-i18n="res_note">Notes Spéciales</label>
-            <textarea data-i18n-ph="res_note_ph" placeholder="Allergies, anniversaire, preferences…"></textarea>
+            <label for="res-note" data-i18n="res_note">Notes Spéciales</label>
+            <textarea id="res-note" data-i18n-ph="res_note_ph" placeholder="Allergies, anniversaire, preferences…"></textarea>
           </div>
           <div style="margin-top:2rem;">
             <button type="submit" class="btn-primary" style="width:100%;padding:1.1rem;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;border-radius:4px;" data-i18n="res_btn">Confirmer la Réservation</button>
@@ -826,8 +826,8 @@
         <div class="loc-block">
           <p class="loc-block-title" data-i18n="loc_social">Réseaux Sociaux</p>
           <div style="display:flex;gap:.75rem;margin-top:.5rem;">
-            <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" style="color:var(--gold);font-size:.8rem;text-decoration:underline;text-underline-offset:3px;">Instagram</a>
-            <a href="https://www.tiktok.com/@Lotusrestaurentindientoulouse" target="_blank" rel="noopener" style="color:var(--gold);font-size:.8rem;text-decoration:underline;text-underline-offset:3px;">TikTok</a>
+            <a href="https://www.instagram.com/lotus_restaurant_indien/" target="_blank" rel="noopener" style="color:var(--gold);font-size:.8rem;text-decoration:underline;text-underline-offset:3px;">Instagram</a>
+            <a href="https://www.tiktok.com/@user823178205?_r=1&_t=ZN-95ht9UGVeh4" target="_blank" rel="noopener" style="color:var(--gold);font-size:.8rem;text-decoration:underline;text-underline-offset:3px;">TikTok</a>
           </div>
         </div>
       </div>
@@ -876,39 +876,39 @@
 <section id="instagram" class="section">
   <div class="container">
     <div class="section-header centered reveal">
-      <p class="eyebrow">@lotusrestoin</p>
+      <p class="eyebrow">@lotus_restaurant_indien</p>
       <span class="gold-line center"></span>
       <h2 class="section-title"><em data-i18n="insta_title">Suivez-nous sur Instagram</em></h2>
       <p style="font-size:.88rem;color:var(--text-muted);margin-top:.5rem;" data-i18n="insta_desc">Découvrez nos derniers plats, notre ambiance et les coulisses</p>
     </div>
     <div class="instagram-grid reveal" style="margin-top:3rem;">
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="insta-item">
+      <a href="https://www.instagram.com/lotus_restaurant_indien/" target="_blank" rel="noopener" class="insta-item">
         <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&q=80&fit=crop" alt="Butter Chicken" loading="lazy"/>
         <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
       </a>
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="insta-item">
+      <a href="https://www.instagram.com/lotus_restaurant_indien/" target="_blank" rel="noopener" class="insta-item">
         <img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=400&q=80&fit=crop" alt="Biryani" loading="lazy"/>
         <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
       </a>
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="insta-item">
+      <a href="https://www.instagram.com/lotus_restaurant_indien/" target="_blank" rel="noopener" class="insta-item">
         <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80&fit=crop" alt="Indian Spices" loading="lazy"/>
         <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
       </a>
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="insta-item">
+      <a href="https://www.instagram.com/lotus_restaurant_indien/" target="_blank" rel="noopener" class="insta-item">
         <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=80&fit=crop" alt="Tandoori" loading="lazy"/>
         <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
       </a>
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="insta-item">
+      <a href="https://www.instagram.com/lotus_restaurant_indien/" target="_blank" rel="noopener" class="insta-item">
         <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80&fit=crop" alt="Naan Bread" loading="lazy"/>
         <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
       </a>
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="insta-item">
+      <a href="https://www.instagram.com/lotus_restaurant_indien/" target="_blank" rel="noopener" class="insta-item">
         <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=80&fit=crop" alt="Dal" loading="lazy"/>
         <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
       </a>
     </div>
     <div style="text-align:center;margin-top:2rem;" class="reveal">
-      <a href="https://www.instagram.com/lotusrestoin/" target="_blank" rel="noopener" class="btn-outline" style="display:inline-flex;align-items:center;gap:.5rem;" data-i18n="insta_btn">Suivez @lotusrestoin sur Instagram</a>
+      <a href="https://www.instagram.com/lotus_restaurant_indien/" target="_blank" rel="noopener" class="btn-outline" style="display:inline-flex;align-items:center;gap:.5rem;" data-i18n="insta_btn">Suivez @lotus_restaurant_indien sur Instagram</a>
     </div>
   </div>
 </section>
@@ -924,10 +924,10 @@
         <div class="footer-logo">Lotus</div>
         <p class="footer-tagline" data-i18n="footer_desc">L'excellence de la haute gastronomie indienne au cœur de la Ville Rose depuis 2018.</p>
         <div class="footer-social">
-          <a href="https://www.instagram.com/lotusrestoin/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener">
+          <a href="https://www.instagram.com/lotus_restaurant_indien/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
           </a>
-          <a href="https://www.tiktok.com/@Lotusrestaurentindientoulouse" class="social-btn" aria-label="TikTok" target="_blank" rel="noopener">
+          <a href="https://www.tiktok.com/@user823178205?_r=1&_t=ZN-95ht9UGVeh4" class="social-btn" aria-label="TikTok" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.88-2.89 2.89 2.89 0 012.88-2.89c.28 0 .56.04.82.12v-3.5a6.37 6.37 0 00-.82-.05A6.34 6.34 0 003.15 15.3 6.34 6.34 0 009.49 21.64a6.34 6.34 0 006.34-6.34V9.06a8.16 8.16 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.49z"/></svg>
           </a>
           <a href="https://wa.me/33652515551" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener">
