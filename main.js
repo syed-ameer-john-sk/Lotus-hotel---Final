@@ -35,33 +35,6 @@ function initAll() {
   initReservationForm();
   initLangSelector();
   initHeroSlider();
-  initStickyReserve();
-}
-
-/* ==========================================================
-   STICKY RESERVE OBSERVER
-   ========================================================== */
-function initStickyReserve() {
-  const sticky = document.getElementById('sticky-reserve');
-  const hero = document.getElementById('hero');
-  if (!sticky || !hero) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      // Hide sticky bar when hero is fully or mostly visible
-      if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
-        sticky.style.opacity = '0';
-        sticky.style.pointerEvents = 'none';
-        sticky.style.transform = 'translateY(20px)';
-      } else {
-        sticky.style.opacity = '1';
-        sticky.style.pointerEvents = 'auto';
-        sticky.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: [0, 0.1, 0.9] });
-
-  observer.observe(hero);
 }
 
 /* ==========================================================
