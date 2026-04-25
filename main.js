@@ -327,59 +327,41 @@ function initFAQ() {
 }
 
 /* ==========================================================
-   OPENING STATUS
+   OPENING STATUS (FRANCE TIME)
    ========================================================== */
 function initOpeningStatus() {
   const statusEl = document.getElementById('opening-status');
   if (!statusEl) return;
 
+  // Auto-detect France time
   const now = new Date();
-  const day = now.getDay(); // 0=Sun, 1=Mon...
-  const hour = now.getHours();
-  const min = now.getMinutes();
-  const time = hour * 60 + min;
+  const options = { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', hour12: false };
+  const franceTimeString = new Intl.DateTimeFormat('fr-FR', options).format(now);
+  const [h, m] = franceTimeString.split(':').map(Number);
+  const time = h * 60 + m;
 
-  let isOpen = false;
-  let nextOpen = '';
+  // Real Hours: Open 19:00 – 22:30
+  const openTime = 19 * 60;
+  const closeTime = 22 * 60 + 30;
 
-  const lunchStart = 12 * 60;
-  const lunchEnd = 14 * 60 + 30;
-  const dinnerStart = 19 * 60;
-  const dinnerEnd = 23 * 60;
+  let isOpen = time >= openTime && time < closeTime;
+  
+  const dot = statusEl.querySelector('.status-dot') || document.createElement('span');
+  dot.className = 'status-dot';
+  const text = statusEl.querySelector('.status-text') || document.createElement('span');
+  text.className = 'status-text';
+  
+  if (!statusEl.contains(dot)) statusEl.appendChild(dot);
+  if (!statusEl.contains(text)) statusEl.appendChild(text);
 
-  if (day === 0) {
-    // Sunday — dinner 19:00 - 23:00
-    if (time >= dinnerStart && time < dinnerEnd) {
-      isOpen = true;
-    } else {
-      nextOpen = '19:00';
-    }
+  if (isOpen) {
+    dot.style.background = '#2ECC71'; // Green
+    dot.classList.add('pulse');
+    text.textContent = `Open now · Closes at 22:30`;
   } else {
-    // Mon–Sat
-    if ((time >= lunchStart && time < lunchEnd) || (time >= dinnerStart && time < dinnerEnd)) {
-      isOpen = true;
-    } else {
-      if (time < lunchStart) {
-        nextOpen = '12:00';
-      } else if (time < dinnerStart) {
-        nextOpen = '19:00';
-      } else {
-        nextOpen = '12:00'; // Tomorrow
-      }
-    }
-  }
-
-  const dot = statusEl.querySelector('.status-dot');
-  const text = statusEl.querySelector('.status-text');
-
-  if (dot && text) {
-    if (isOpen) {
-      dot.className = 'status-dot open';
-      text.textContent = t('status_open');
-    } else {
-      dot.className = 'status-dot closed';
-      text.textContent = `${t('status_closed')} ${nextOpen}`;
-    }
+    dot.style.background = '#E74C3C'; // Red
+    dot.classList.remove('pulse');
+    text.textContent = `Closed · Opens at 19:00`;
   }
 }
 

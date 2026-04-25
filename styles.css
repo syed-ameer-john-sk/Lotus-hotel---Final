@@ -103,6 +103,12 @@ input, select, textarea { font-family: var(--font-body); }
 /* ============================================================
    ANIMATIONS
    ============================================================ */
+@keyframes pulse-opacity {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.status-dot.pulse { animation: pulse-opacity 1.5s infinite; }
+
 .desktop-only { display: block; }
 .mobile-only { display: none; }
 
@@ -180,15 +186,27 @@ input, select, textarea { font-family: var(--font-body); }
 .top-bar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1100;
   height: 36px;
-  background: #050505;
+  background: rgba(8,8,8,0.9);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-gold);
   display: flex;
   align-items: center;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
+  justify-content: center;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+.opening-status {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.status-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  display: inline-block;
 }
 @media (max-width: 480px) {
-  .top-bar { height: 32px; font-size: 0.65rem; }
+  .top-bar { height: 32px; font-size: 12px; }
   body { padding-top: 32px; }
 }
 
@@ -815,27 +833,32 @@ input, select, textarea { font-family: var(--font-body); }
 .faq-item.open .faq-answer { max-height: 200px; padding: 0 1.5rem 1.25rem; }
 
 /* ============================================================
-   STICKY RESERVE BUTTON
+   STICKY RESERVE (Floating Side Stack)
    ============================================================ */
 #sticky-reserve {
-  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 400;
-  display: flex; flex-direction: column; gap: 0.6rem; align-items: flex-end;
+  position: fixed; right: 12px; bottom: 80px;
+  display: flex; flex-direction: column; gap: 10px;
+  z-index: 1200;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .sticky-btn {
-  display: flex; align-items: center; gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  border-radius: 50px;
-  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
-  transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  width: 48px; height: 48px;
+  border-radius: 50% !important;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  padding: 0 !important;
+  transition: transform 0.2s ease;
   text-decoration: none;
 }
-.sticky-btn.gold { background: var(--gold); color: var(--bg-page); }
-.sticky-btn.green { background: #25D366; color: #fff; }
-.sticky-btn:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.5); }
-.sticky-btn svg { width: 18px; }
-#sticky-reserve.hidden { opacity: 0; pointer-events: none; }
-.sticky-btn.phone { background: #3478F6; color: #fff; }
+.sticky-btn:hover { transform: scale(1.1); }
+.sticky-btn span { display: none; }
+.sticky-btn svg { width: 22px; height: 22px; }
+
+.sticky-btn.phone { background: #1976D2 !important; color: #fff; }
+.sticky-btn.green { background: #25D366 !important; color: #fff; }
+.sticky-btn.gold { background: #C9A84C !important; color: #fff; }
+
+#sticky-reserve.hidden { opacity: 0; pointer-events: none; transform: translateX(20px); }
 
 /* ============================================================
    FOOTER
@@ -993,10 +1016,30 @@ footer {
   .nav-mobile { display: flex; }
   .btn-reserve-nav { display: none; }
 
-  /* Navbar Logo Optimization */
-  .nav-logo-img { width: clamp(40px, 10vw, 52px); height: auto; }
-  .nav-logo-text { font-size: clamp(1.2rem, 5vw, 1.6rem); }
-  .nav-logo-sub { font-size: 0.45rem; letter-spacing: 0.15em; }
+  /* Navbar Mobile Layout Fixes */
+  #navbar { 
+    position: relative; 
+    top: 36px; 
+    height: 60px; 
+    padding: 0;
+    background: transparent;
+  }
+  .nav-logo {
+    position: absolute; top: 12px; left: 16px;
+    max-width: 120px; height: auto;
+    gap: 0.5rem;
+  }
+  .nav-logo-img { width: 32px !important; height: 32px !important; }
+  .nav-logo-text { font-size: 18px !important; }
+  .nav-logo-sub { font-size: 10px !important; }
+  
+  .lang-selector {
+    position: absolute; top: 12px; right: 16px;
+  }
+  .lang-btn {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
 
   .hero-hours { 
     left: 50%; bottom: 4rem; transform: translateX(-50%); 
