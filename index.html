@@ -28,7 +28,7 @@
     "image":"lotus_logo_3d_transparent_v1_1774705729375.png",
     "address":{
       "@type":"PostalAddress",
-      "streetAddress":"12 Rue d'Alsace-Lorraine",
+      "streetAddress":"24 Rue Jean Palaprat",
       "addressLocality":"Toulouse",
       "postalCode":"31000",
       "addressCountry":"FR"
@@ -41,6 +41,12 @@
     "sameAs":["https://www.instagram.com/lotus_restaurant_indien/","https://www.tiktok.com/@user823178205?_r=1&_t=ZN-95ht9UGVeh4"]
   }
   </script>
+
+  <style>
+    body { font-size: 1.05rem; letter-spacing: 0.02em; font-weight: 400; color: #FFF; }
+    p, .dish-desc, .menu-item-desc { opacity: 0.95 !important; }
+    h1, h2, h3, h4, .section-title { font-weight: 600 !important; }
+  </style>
 </head>
 <body>
   <!-- Top Bar with Dynamic Status -->
@@ -61,13 +67,13 @@
      STICKY RESERVE (Floating Side Stack)
      ============================================================ -->
 <div id="sticky-reserve">
-  <a class="sticky-btn phone" href="tel:+33652515551" title="Appeler">
+  <a class="sticky-btn phone" href="tel:+33988420260" title="Appeler">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
   </a>
   <a class="sticky-btn green" href="https://wa.me/33652515551" target="_blank" rel="noopener" title="WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.12 1.531 5.845L0 24l6.337-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.724.886.936-3.614-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
   </a>
-  <a class="sticky-btn gold" href="#reservation" title="Réserver">
+  <a class="sticky-btn gold" href="reservation.html" title="Réserver">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
   </a>
 </div>
@@ -82,7 +88,7 @@
   <a href="#menu" data-i18n="nav_menu">Menu</a>
   <a href="#gallery" data-i18n="nav_gallery">Galerie</a>
   <a href="#testimonials" data-i18n="test_eyebrow">Avis</a>
-  <a href="#reservation" data-i18n="nav_reservation">Réservation</a>
+  <a href="reservation.html" data-i18n="nav_reservation">Réservation</a>
   <a href="#location" data-i18n="nav_contact">Contact</a>
   <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap;">
     <button class="lang-option" data-lang="fr" style="background:none;border:1px solid var(--border);color:var(--warm-white);padding:.4rem .75rem;border-radius:4px;font-size:.75rem;cursor:pointer;">🇫🇷 FR</button>
@@ -112,7 +118,7 @@
     <li><a href="#menu" data-i18n="nav_menu">Menu</a></li>
     <li><a href="#gallery" data-i18n="nav_gallery">Galerie</a></li>
     <li><a href="#testimonials" data-i18n="test_eyebrow">Avis</a></li>
-    <li><a href="#reservation" data-i18n="nav_reservation">Réservation</a></li>
+    <li><a href="reservation.html" data-i18n="nav_reservation">Réservation</a></li>
     <li><a href="#location" data-i18n="nav_contact">Contact</a></li>
   </ul>
   <div class="nav-right">
@@ -131,7 +137,7 @@
         <button class="lang-option" data-lang="hi"><span class="lang-flag">🇮🇳</span> हिन्दी</button>
       </div>
     </div>
-    <a href="#reservation" class="btn-reserve-nav" data-i18n="nav_reserve">Réserver</a>
+    <a href="reservation.html" class="btn-reserve-nav" data-i18n="nav_reserve">Réserver</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -158,7 +164,7 @@
     <p class="hero-subtitle" data-i18n="hero_subtitle">Best Indian Restaurant in Toulouse</p>
     <p class="hero-desc" data-i18n="hero_desc">Experience authentic Indian cuisine crafted with tradition and modern elegance.</p>
     <div class="hero-btns">
-      <a href="#reservation" class="btn-primary" data-i18n="hero_btn1">Réserver une Table</a>
+      <a href="reservation.html" class="btn-primary" data-i18n="hero_btn1">Réserver une Table</a>
       <a href="#menu" class="btn-outline" data-i18n="hero_btn2">Explorer le Menu</a>
     </div>
   </div>
@@ -169,12 +175,12 @@
   <div class="hero-hours reveal">
     <p class="hero-hours-title" data-i18n="loc_hours_label">Horaires d'Ouverture</p>
     <div class="hero-hours-row">
-      <span data-i18n="loc_lun_sam">Lun – Sam</span>
-      <span data-i18n="loc_lun_sam_h">12h–14h30 / 19h–23h</span>
+      <span data-i18n="loc_lun_sam">Lun – Dim</span>
+      <span data-i18n="loc_lun_sam_h">11h30–15h00 / 18h30–23h00</span>
     </div>
     <div class="hero-hours-row">
-      <span data-i18n="loc_dim">Dimanche</span>
-      <span data-i18n="loc_dim_h">19h–23h</span>
+      <span data-i18n="loc_dim">Mercredi</span>
+      <span data-i18n="loc_dim_h">Fermé</span>
     </div>
   </div>
 </section>
@@ -242,7 +248,7 @@
       <!-- Dish 1 -->
       <article class="dish-card reveal">
         <div class="dish-badge" data-i18n="dish1_badge">Best-seller</div>
-        <div class="dish-img"><img src="gallary/unnamed (1).webp" alt="Butter Chicken Signature" loading="lazy"/></div>
+        <div class="dish-img"><img src="gallary/unnamed.webp" alt="Butter Chicken Signature" loading="lazy"/></div>
         <div class="dish-body">
           <h3 class="dish-name" data-i18n="dish1_name">Butter Chicken Signature</h3>
           <p class="dish-desc" data-i18n="dish1_desc">Poulet fermier grillé au tandoor, mijoté 12h dans une sauce tomate crémeuse.</p>
@@ -254,7 +260,7 @@
         <div class="dish-badge" data-i18n="dish2_badge">Chef's Choice</div>
         <div class="dish-img"><img src="gallary/unnamed (5).webp" alt="Biryani Royal" loading="lazy"/></div>
         <div class="dish-body">
-          <h3 class="dish-name" data-i18n="dish2_name">Biryani Royal à l'Agneau</h3>
+          <h3 class="dish-name" data-i18n="dish2_name">Biriyani</h3>
           <p class="dish-desc" data-i18n="dish2_desc">Riz basmati au safran du Cachemire, agneau fondant et fruits secs caramélisés.</p>
           <p class="dish-price">4.50€</p>
         </div>
@@ -271,12 +277,12 @@
       </article>
       <!-- Dish 4 -->
       <article class="dish-card reveal">
-        <div class="dish-badge" data-i18n="dish4_badge">Végétarien</div>
+        <div class="dish-badge" data-i18n="dish4_badge">Spécialité</div>
         <div class="dish-img"><img src="gallary/Lotus Food and Beverage_Chicken 65_1242x704.webp" alt="Dal Makhani Royale" loading="lazy"/></div>
         <div class="dish-body">
-          <h3 class="dish-name" data-i18n="dish4_name">Dal Makhani Royale</h3>
-          <p class="dish-desc" data-i18n="dish4_desc">Lentilles noires mijotées toute une nuit avec crème et beurre clarifié.</p>
-          <p class="dish-price">12.90€</p>
+          <h3 class="dish-name" data-i18n="dish4_name">Chicken 65</h3>
+          <p class="dish-desc" data-i18n="dish4_desc">Poulet mariné et frit, sauté avec poivron, oignon, ail, sauce pimentée, coriandre fraîche.</p>
+          <p class="dish-price">6.50€</p>
         </div>
       </article>
     </div>
@@ -706,71 +712,7 @@
 <!-- ============================================================
      RESERVATION
      ============================================================ -->
-<section id="reservation" class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="container">
-    <div class="res-inner">
-      <!-- Info col -->
-      <div class="reveal">
-        <p class="eyebrow" data-i18n="res_eyebrow">Réservation</p>
-        <span class="gold-line"></span>
-        <h2 class="section-title"><em data-i18n="res_title">Réservez Votre Expérience</em></h2>
-        <p style="font-size:.88rem;color:var(--text-muted);line-height:1.9;margin:1.5rem 0 2.5rem;">📍 12 Rue d'Alsace-Lorraine, 31000 Toulouse<br/>📞 06 52 51 55 51<br/>✉️ lotusrestoin@gmail.com<br/>🕐 Lun–Sam: 12h–14h30 / 19h–23h | Dim: 19h–23h</p>
-        <div class="res-actions">
-          <a class="btn-whatsapp" href="https://wa.me/33652515551?text=Bonjour%2C%20je%20voudrais%20réserver%20une%20table." target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.12 1.531 5.845L0 24l6.337-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.724.886.936-3.614-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
-            <span data-i18n="res_whatsapp">WhatsApp</span>
-          </a>
-          <a class="btn-call" href="tel:+33652515551">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <span data-i18n="res_call">Appeler</span>
-          </a>
-        </div>
-      </div>
-      <!-- Form col -->
-      <div class="reveal reveal-delay-1">
-        <form id="reservation-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="res-name" data-i18n="res_name">Nom Complet</label>
-              <input type="text" id="res-name" data-i18n-ph="res_name_ph" placeholder="Votre nom…" required/>
-            </div>
-            <div class="form-group">
-              <label for="res-phone" data-i18n="res_phone">Téléphone</label>
-              <input type="tel" id="res-phone" data-i18n-ph="res_phone_ph" placeholder="+33…" required/>
-            </div>
-          </div>
-          <div class="form-row" style="margin-top:1.5rem;">
-            <div class="form-group">
-              <label for="res-date" data-i18n="res_date">Date</label>
-              <input type="date" id="res-date" required/>
-            </div>
-            <div class="form-group">
-              <label for="res-time" data-i18n="res_time">Heure</label>
-              <input type="time" id="res-time" required/>
-            </div>
-          </div>
-          <div class="form-group" style="margin-top:1.5rem;">
-            <label for="res-guests" data-i18n="res_guests">Convives</label>
-            <select id="res-guests">
-              <option data-i18n="res_guest_opt1">1 Personne</option>
-              <option selected data-i18n="res_guest_opt2">2 Personnes</option>
-              <option data-i18n="res_guest_opt3">3–4 Personnes</option>
-              <option data-i18n="res_guest_opt4">5–6 Personnes</option>
-              <option data-i18n="res_guest_opt5">7+ Personnes</option>
-            </select>
-          </div>
-          <div class="form-group" style="margin-top:1.5rem;">
-            <label for="res-note" data-i18n="res_note">Notes Spéciales</label>
-            <textarea id="res-note" data-i18n-ph="res_note_ph" placeholder="Allergies, anniversaire, preferences…"></textarea>
-          </div>
-          <div style="margin-top:2rem;">
-            <button type="submit" class="btn-primary" style="width:100%;padding:1.1rem;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;border-radius:4px;" data-i18n="res_btn">Confirmer la Réservation</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 
 <!-- ============================================================
@@ -790,25 +732,25 @@
       <div class="location-info reveal reveal-delay-1">
         <div class="loc-block">
           <p class="loc-block-title" data-i18n="loc_address_label">Adresse</p>
-          <p class="loc-block-text">12 Rue d'Alsace-Lorraine<br/>31000 Toulouse, France</p>
+          <p class="loc-block-text">24 Rue Jean Palaprat<br/>31000 Toulouse, France</p>
           <a class="loc-link" href="https://maps.google.com/?q=Lotus+Restaurant+Toulouse" target="_blank" rel="noopener" style="font-size:.8rem;margin-top:.5rem;display:inline-block;">Ouvrir sur Google Maps →</a>
           <a class="btn-directions" href="https://maps.google.com/maps/dir//Lotus+Restaurant+Toulouse" target="_blank" rel="noopener" data-i18n="loc_directions">📍 Get Directions</a>
         </div>
         <div class="loc-block">
           <p class="loc-block-title" data-i18n="loc_phone_label">Téléphone</p>
-          <a href="tel:+33652515551" class="loc-block-text" style="color:var(--gold);font-family:var(--font-head);font-style:italic;font-size:1.3rem;">06 52 51 55 51</a>
+          <a href="tel:+33988420260" class="loc-block-text" style="color:var(--gold);font-family:var(--font-head);font-style:italic;font-size:1.3rem;">09 88 42 02 60</a>
           <a href="mailto:lotusrestoin@gmail.com" style="font-size:.82rem;color:var(--text-muted);margin-top:.25rem;display:block;">lotusrestoin@gmail.com</a>
         </div>
         <div class="loc-block">
           <p class="loc-block-title" data-i18n="loc_hours_label">Horaires d'Ouverture</p>
           <div class="hours-grid">
             <div class="hours-row">
-              <span class="hours-day" data-i18n="loc_lun_sam">Lun – Sam</span>
-              <span data-i18n="loc_lun_sam_h">12h–14h30 / 19h–23h</span>
+              <span class="hours-day" data-i18n="loc_lun_sam">Lun – Dim</span>
+              <span data-i18n="loc_lun_sam_h">11h30–15h00 / 18h30–23h00</span>
             </div>
             <div class="hours-row">
-              <span class="hours-day" data-i18n="loc_dim">Dimanche</span>
-              <span data-i18n="loc_dim_h">19h–23h</span>
+              <span class="hours-day" data-i18n="loc_dim">Mercredi</span>
+              <span data-i18n="loc_dim_h">Fermé</span>
             </div>
           </div>
         </div>
@@ -849,7 +791,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question"><span data-i18n="faq_q4">Où êtes-vous situé à Toulouse ?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-answer"><p data-i18n="faq_a4">Nous sommes au 12 Rue d'Alsace-Lorraine, 31000 Toulouse, en plein centre-ville.</p></div>
+        <div class="faq-answer"><p data-i18n="faq_a4">Nous sommes au 24 Rue Jean Palaprat, 31000 Toulouse, en plein centre-ville.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question"><span data-i18n="faq_q5">Proposez-vous des services de traiteur ?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
@@ -932,28 +874,28 @@
           <a href="#menu" data-i18n="nav_menu">Menu</a>
           <a href="#gallery" data-i18n="nav_gallery">Galerie</a>
           <a href="#testimonials" data-i18n="test_eyebrow">Avis</a>
-          <a href="#reservation" data-i18n="nav_reservation">Réservation</a>
+          <a href="reservation.html" data-i18n="nav_reservation">Réservation</a>
         </div>
       </div>
       <!-- Contact -->
       <div>
         <p class="footer-col-title" data-i18n="footer_contact">Contact</p>
         <div class="footer-contact-item">
-          <span>12 Rue d'Alsace-Lorraine</span>
+          <span>24 Rue Jean Palaprat</span>
           <span>31000 Toulouse, France</span>
         </div>
         <div class="footer-contact-item" style="display:flex;flex-direction:column;gap:0.25rem;">
           <a href="tel:+33561211212">05 61 21 12 12</a>
-          <a href="tel:+33652515551" style="font-size:0.85rem;opacity:0.8;">06 52 51 55 51 (WhatsApp)</a>
+          <a href="tel:+33988420260" style="font-size:0.85rem;opacity:0.8;">09 88 42 02 60 (WhatsApp)</a>
         </div>
         <div class="footer-contact-item" style="font-size:.8rem;color:var(--text-muted);">
-          Lun–Sam: 12h–14h30 / 19h–23h<br/>Dim: 19h–23h
+          Lun–Dim: 11h30–15h00 / 18h30–23h00<br/>(Mercredi fermé)
         </div>
       </div>
       <!-- Reserve CTA -->
       <div style="display:flex;flex-direction:column;gap:1rem;">
         <p class="footer-col-title" data-i18n="nav_reserve">Réserver</p>
-        <a href="#reservation" class="btn-primary" style="text-align:center;" data-i18n="hero_btn1">Réserver une Table</a>
+        <a href="reservation.html" class="btn-primary" style="text-align:center;" data-i18n="hero_btn1">Réserver une Table</a>
         <a class="btn-whatsapp" href="https://wa.me/33652515551" target="_blank" rel="noopener" style="justify-content:center;">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.12 1.531 5.845L0 24l6.337-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.213-3.724.886.936-3.614-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
           WhatsApp
@@ -983,7 +925,7 @@
     
     <div class="legal-section">
       <h3>Lotus Restaurant</h3>
-      <p>12 Rue d'Alsace-Lorraine, 31000 Toulouse</p>
+      <p>24 Rue Jean Palaprat, 31000 Toulouse</p>
     </div>
 
     <div class="legal-section">

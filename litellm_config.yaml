@@ -1,0 +1,12 @@
+model_list:
+  - model_name: claude-3-7-sonnet-20250219
+    litellm_params:
+      model: openai/z-ai/glm4.7
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: "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"
+  
+  - model_name: claude-3-5-sonnet-20241022
+    litellm_params:
+      model: openai/z-ai/glm4.7
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: "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"
