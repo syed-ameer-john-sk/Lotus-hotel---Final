@@ -14,7 +14,7 @@ async function build() {
         await fs.emptyDir(outDir);
 
         // 2. Define files to copy and minify
-        const filesToProcess = ['index.html', 'styles.css', 'main.js', 'translations.js'];
+        const filesToProcess = ['index.html', 'styles.css', 'main.js', 'translations.js', 'reservation.html'];
         
         // 3. Define directories/files to copy as-is
         const itemsToCopy = ['gallary', 'lotus-3d-icon.png', 'lotus_logo_3d_transparent_v1_1774705729375-removebg-preview.png', 'lotus_logo_3d_transparent_v1_1774705729375.png'];
@@ -49,6 +49,20 @@ async function build() {
             });
             await fs.writeFile(htmlPath, minifiedHtml);
             console.log('✅ Minified index.html');
+        }
+
+        // Minify reservation.html in public
+        const resPath = path.join(outDir, 'reservation.html');
+        if (await fs.pathExists(resPath)) {
+            const resContent = await fs.readFile(resPath, 'utf8');
+            const minifiedRes = minify(resContent, {
+                collapseWhitespace: true,
+                removeComments: true,
+                minifyCSS: true,
+                minifyJS: true
+            });
+            await fs.writeFile(resPath, minifiedRes);
+            console.log('✅ Minified reservation.html');
         }
 
         // Minify CSS in public
