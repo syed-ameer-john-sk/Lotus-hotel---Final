@@ -299,27 +299,127 @@ function initFAQ() {
   });
 }
 
-/* ==========================================================
-   OPENING STATUS (FRANCE TIME)
-   ========================================================== */
 function initOpeningStatus() {
   const statusEl = document.getElementById('opening-status');
   if (!statusEl) return;
 
+  const statusTexts = {
+    fr: {
+      open: "Ouvert · Ferme à",
+      closed_at: "Fermé · Ouvre à",
+      closed_wed: "Fermé le mercredi",
+      next_thu: "jeudi à 11h30"
+    },
+    en: {
+      open: "Open now · Closes at",
+      closed_at: "Closed · Opens at",
+      closed_wed: "Closed on Wednesdays",
+      next_thu: "Thursday at 11:30 AM"
+    },
+    es: {
+      open: "Abierto · Cierra a las",
+      closed_at: "Cerrado · Abre a las",
+      closed_wed: "Cerrado los miércoles",
+      next_thu: "el jueves a las 11h30"
+    },
+    de: {
+      open: "Geöffnet · Schließt um",
+      closed_at: "Geschlossen · Öffnet um",
+      closed_wed: "Mittwochs geschlossen",
+      next_thu: "Donnerstag um 11:30 Uhr"
+    },
+    it: {
+      open: "Aperto · Chiude alle",
+      closed_at: "Chiuso · Apre alle",
+      closed_wed: "Chiuso il mercoledì",
+      next_thu: "giovedì alle 11:30"
+    },
+    ar: {
+      open: "مفتوح · يغلق عند",
+      closed_at: "مغلق · يفتح عند",
+      closed_wed: "مغلق أيام الأربعاء",
+      next_thu: "الخميس الساعة 11:30 صباحًا"
+    },
+    hi: {
+      open: "खुला है · बंद होने का समय",
+      closed_at: "बंद है · खुलने का समय",
+      closed_wed: "बुधवार को बंद रहता है",
+      next_thu: "गुरुवार सुबह 11:30 बजे"
+    }
+  };
+
   const updateStatus = () => {
-    // Auto-detect France time
     const now = new Date();
-    const options = { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', hour12: false };
-    const franceTimeString = new Intl.DateTimeFormat('fr-FR', options).format(now);
-    const [h, m] = franceTimeString.split(':').map(Number);
+    
+    // Get current day and time in Europe/Paris
+    const parisDayOptions = { timeZone: 'Europe/Paris', weekday: 'long' };
+    const parisDay = new Intl.DateTimeFormat('en-US', parisDayOptions).format(now).toLowerCase();
+    
+    const parisTimeOptions = { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', hour12: false };
+    const [h, m] = new Intl.DateTimeFormat('fr-FR', parisTimeOptions).format(now).split(':').map(Number);
     const time = h * 60 + m;
 
-    // Real Hours: Open 19:00 – 22:30
-    const openTime = 19 * 60;
-    const closeTime = 22 * 60 + 30;
-
-    let isOpen = time >= openTime && time < closeTime;
+    const isWednesday = parisDay === 'wednesday';
     
+    // Slot 1: 11:30 (690) to 15:00 (900)
+    // Slot 2: 18:30 (1110) to 23:00 (1380)
+    const slot1Open = 11 * 60 + 30; 
+    const slot1Close = 15 * 60;     
+    const slot2Open = 18 * 60 + 30; 
+    const slot2Close = 23 * 60;     
+
+    let isOpen = false;
+    let statusMsg = "";
+    
+    const lang = currentLang || 'fr';
+    const texts = statusTexts[lang] || statusTexts['fr'];
+
+    if (!isWednesday) {
+      if (time >= slot1Open && time < slot1Close) {
+        isOpen = true;
+        const closeStr = lang === 'en' ? '3:00 PM' : '15h00';
+        statusMsg = `${texts.open} ${closeStr}`;
+      } else if (time >= slot2Open && time < slot2Close) {
+        isOpen = true;
+        const closeStr = lang === 'en' ? '11:00 PM' : '23h00';
+        statusMsg = `${texts.open} ${closeStr}`;
+      }
+    }
+
+    if (!isOpen) {
+      if (isWednesday) {
+        statusMsg = `${texts.closed_at} ${texts.next_thu}`;
+      } else if (parisDay === 'tuesday' && time >= slot2Close) {
+        statusMsg = `${texts.closed_at} ${texts.next_thu}`;
+      } else {
+        if (time < slot1Open) {
+          const openStr = lang === 'en' ? '11:30 AM' : '11h30';
+          statusMsg = `${texts.closed_at} ${openStr}`;
+        } else if (time >= slot1Close && time < slot2Open) {
+          const openStr = lang === 'en' ? '6:30 PM' : '18h30';
+          statusMsg = `${texts.closed_at} ${openStr}`;
+        } else {
+          const tomorrowIsWed = parisDay === 'tuesday';
+          let tomorrowOpenStr = "";
+          if (tomorrowIsWed) {
+            tomorrowOpenStr = texts.next_thu;
+          } else {
+            const tomorrowTexts = {
+              fr: "demain à 11h30",
+              en: "tomorrow at 11:30 AM",
+              es: "mañana a las 11h30",
+              de: "morgen um 11:30 Uhr",
+              it: "domani alle 11:30",
+              ar: "غدًا الساعة 11:30 صباحًا",
+              hi: "कल सुबह 11:30 बजे"
+            };
+            tomorrowOpenStr = tomorrowTexts[lang] || tomorrowTexts['fr'];
+          }
+          statusMsg = `${texts.closed_at} ${tomorrowOpenStr}`;
+        }
+      }
+    }
+
     const dot = statusEl.querySelector('.status-dot') || document.createElement('span');
     dot.className = 'status-dot';
     const text = statusEl.querySelector('.status-text') || document.createElement('span');
@@ -329,18 +429,17 @@ function initOpeningStatus() {
     if (!statusEl.contains(text)) statusEl.appendChild(text);
 
     if (isOpen) {
-      dot.style.background = '#2ECC71'; // Green
+      dot.style.background = '#2ECC71'; 
       dot.classList.add('pulse');
-      text.textContent = `Open now · Closes at 22:30`;
     } else {
-      dot.style.background = '#E74C3C'; // Red
+      dot.style.background = '#E74C3C'; 
       dot.classList.remove('pulse');
-      text.textContent = `Closed · Opens at 19:00`;
     }
+    text.textContent = statusMsg;
   };
 
   updateStatus();
-  setInterval(updateStatus, 60000); // Update every 60 seconds
+  setInterval(updateStatus, 60000); 
 }
 
 /* ==========================================================

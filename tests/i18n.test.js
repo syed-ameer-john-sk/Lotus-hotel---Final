@@ -34,9 +34,9 @@ const sandbox = {
     es: { flag: '🇪🇸', name: 'Español' }
   },
   translations: {
-    fr: { test_key: 'Test FR', html_key: '<b>FR</b>', status_open: 'Ouvert', status_closed: 'Fermé', nav_menu: 'Menu' },
-    en: { test_key: 'Test EN', html_key: '<b>EN</b>', status_open: 'Open', status_closed: 'Closed', nav_menu: 'Menu' },
-    ar: { test_key: 'Test AR', html_key: '<b>AR</b>', status_open: 'مفتوح', status_closed: 'مغلق', nav_menu: 'قائمة' }
+    fr: { test_key: 'Test FR', html_key: '<em>FR</em>', status_open: 'Ouvert', status_closed: 'Fermé', nav_menu: 'Menu' },
+    en: { test_key: 'Test EN', html_key: '<em>EN</em>', status_open: 'Open', status_closed: 'Closed', nav_menu: 'Menu' },
+    ar: { test_key: 'Test AR', html_key: '<em>AR</em>', status_open: 'مفتوح', status_closed: 'مغلق', nav_menu: 'قائمة' }
   }
 };
 
@@ -104,7 +104,7 @@ test('applyTranslations updates input/textarea placeholders with data-i18n', () 
 test('applyTranslations updates HTML content with data-i18n-html', () => {
   sandbox.document.body.innerHTML = '<div data-i18n-html="html_key"></div>';
   sandbox.applyTranslations('en');
-  assert.strictEqual(sandbox.document.querySelector('[data-i18n-html="html_key"]').innerHTML, '<b>EN</b>');
+  assert.strictEqual(sandbox.document.querySelector('[data-i18n-html="html_key"]').innerHTML, '<em>EN</em>');
 });
 
 test('applyTranslations updates active lang button state', () => {

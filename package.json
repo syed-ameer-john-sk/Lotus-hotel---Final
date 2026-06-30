@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "node --test",
-    "build": "node build.js"
+    "build": "node build.js",
+    "dev": "npx -y http-server public"
   },
   "repository": {
     "type": "git",

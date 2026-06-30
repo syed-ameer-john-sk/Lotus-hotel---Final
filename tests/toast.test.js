@@ -39,12 +39,12 @@ global.document = {
 function resetMockDOM() {
   mockElements = {};
   appends = [];
+  delete require.cache[require.resolve('../main.js')];
 }
-
-const { showToast } = require('../main.js');
 
 test('showToast creates a toast element if it does not exist', (t) => {
   resetMockDOM();
+  const { showToast } = require('../main.js');
   t.mock.timers.enable({ apis: ['setTimeout'] });
 
   showToast('Hello World');
@@ -62,6 +62,7 @@ test('showToast creates a toast element if it does not exist', (t) => {
 
 test('showToast reuses existing toast element if it already exists', (t) => {
   resetMockDOM();
+  const { showToast } = require('../main.js');
   t.mock.timers.enable({ apis: ['setTimeout'] });
 
   // Pre-create the element
@@ -82,6 +83,7 @@ test('showToast reuses existing toast element if it already exists', (t) => {
 
 test('showToast sets text content, adds show class, and removes it after 4000ms', (t) => {
   resetMockDOM();
+  const { showToast } = require('../main.js');
   t.mock.timers.enable({ apis: ['setTimeout'] });
 
   showToast('Test Message');
